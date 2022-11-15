@@ -1,8 +1,4 @@
-# 마크다운 (Markdown)
-
-- 자료 출처: [ihoneymon/how-to-write-by-markdown.md](https://gist.github.com/ihoneymon/652be052a0727ad59601#file-how-to-write-by-markdown-md)
-
-# 1. 마크다운 사용법(문법)
+# 1. 마크다운 (Markdown) 사용법(문법)
 
 ## 1.1. 헤더Headers
 
@@ -24,21 +20,21 @@
 
 * 글머리: 1~6까지만 지원
 
-```
-# This is a H1
-## This is a H2
-### This is a H3
-#### This is a H4
-##### This is a H5
-###### This is a H6
-```
-# This is a H1
-## This is a H2
-### This is a H3
-#### This is a H4
-##### This is a H5
-###### This is a H6
-####### This is a H7(지원하지 않음)
+    ```
+    # This is a H1
+    ## This is a H2
+    ### This is a H3
+    #### This is a H4
+    ##### This is a H5
+    ###### This is a H6
+    ```
+    # This is a H1
+    ## This is a H2
+    ### This is a H3
+    #### This is a H4
+    ##### This is a H5
+    ###### This is a H6
+    ####### This is a H7(지원하지 않음)
 
 ## 1.2. BlockQuote
 
@@ -115,7 +111,7 @@
   - 녹색
     - 파랑
 
-혼합해서 사용하는 것도 가능하며, 혼합한 것이 가독성이 좀 더 좋다
+혼합해서 사용하는 것도 가능하며, 혼합했을 때 가독성이 좀 더 좋다
 
 ```
 * 1단계
@@ -161,7 +157,7 @@ This is a normal paragraph:
 end code block.
 ```
 
-적용예:
+한줄 띄어쓰기를 하지 않았을 때 예시:
 
 *****
 This is a normal paragraph:
@@ -273,40 +269,40 @@ public class BootSpringBootApplication {
 
 * 참조링크
 
-```
-[link keyword][id]
+    ```
+    [link keyword][id]
 
-[id]: URL "Optional Title here"
+    [id]: URL "Optional Title here"
 
-// code
-Link: [Google][googlelink]
+    // code
+    Link: [Google][googlelink]
 
-[googlelink]: https://google.com "Go google"
-```
+    [googlelink]: https://google.com "Go google"
+    ```
 
-Link: [Google][googlelink]
+    Link: [Google][googlelink]
 
-[googlelink]: https://google.com "Go google"
+    [googlelink]: https://google.com "Go google"
 
 * 외부링크
 
-```
-사용문법: [Title](link)
-적용예: [Google](https://google.com, "google link")
-```
-Link: [Google](https://google.com, "google link")
+    ```
+    사용문법: [Title](link)
+    적용예: [Google](https://google.com, "google link")
+    ```
+    Link: [Google](https://google.com, "google link")
 
 * 자동연결
 
-```
-일반적인 URL 혹은 이메일주소인 경우 적절한 형식으로 링크를 형성한다
+    ```
+    일반적인 URL 혹은 이메일주소인 경우 적절한 형식으로 링크를 형성한다
 
-* 외부링크: <http://example.com/>
-* 이메일링크: <address@example.com>
-```
+    * 외부링크: <http://example.com/>
+    * 이메일링크: <address@example.com>
+    ```
 
-* 외부링크: <http://example.com/>
-* 이메일링크: <address@example.com>
+    * 외부링크: <http://example.com/>
+    * 이메일링크: <address@example.com>
 
 ## 2.7. 강조
 
@@ -324,8 +320,8 @@ __double underscores__
 * __double underscores__
 * ~~cancelline~~
 
-> ```문장 중간에 사용할 경우에는 **띄어쓰기** 를 사용하는 것이 좋다.```   
-> 문장 중간에 사용할 경우에는 띄어쓰기를 사용하는 것이 좋다.
+> ```문장 중간에 사용할 경우에는 **띄어쓰기** 를 사용하는 것이 좋다```   
+> 문장 중간에 사용할 경우에는 띄어쓰기를 사용하는 것이 좋다
 
 ## 1.8. 이미지
 
@@ -336,7 +332,7 @@ __double underscores__
 ![석촌호수 러버덕](http://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0)
 ![석촌호수 러버덕](http://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0 "RubberDuck")
 
-사이즈 조절 기능은 없기 때문에 ```<img width="" height=""></img>```를 이용한다
+Markdown의 경우 이미지 사이즈를 조절하는 기능이 없기 때문에 ```<img width="" height=""></img>```를 이용한다
 
 예시:
 
@@ -353,19 +349,23 @@ __double underscores__
 3칸 이상 띄어쓰기(` `)를 하면 줄이 바뀐다
 
 ```
-* 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기해야 한다. 
+* 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기해야 한다 
 이렇게
 
-* 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기해야 한다.___\\ 띄어쓰기
+* 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기해야 한다___\\ 띄어쓰기
 이렇게
 ```
 
-* 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기해야 한다. 이렇게
+* 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기해야 한다 이렇게
 
-* 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기해야 한다.    \
+* 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기해야 한다    \
 이렇게
 
-# 참고 문헌
+# 2. 자료 출처
+
+- [ihoneymon/how-to-write-by-markdown.md](https://gist.github.com/ihoneymon/652be052a0727ad59601#file-how-to-write-by-markdown-md)
+
+# 3. 참고 문헌
 
 - [Markdown Official Guide](https://www.markdownguide.org)
 - [Getting started with writing and formatting on GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
