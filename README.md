@@ -7,6 +7,9 @@
 ## Base
 
 - [Linux](linux/README.md)
+    - [Commands](linux/commands/README.md)
+    - [vi editor](linux/vi/README.md)
+    - [Bash Scripting](linux/bash/README.md)
 - [Vagrant](tools/vagrant/README.md)
 
 ## Major Subjects
@@ -24,6 +27,8 @@
 
 - [Language](language/README.md)
     - [C](language/c/README.md)
+        - [GCC](tools/gcc/README.md)
+        - [GDB](tools/gdb/README.md)
     - [JAVA](language/java/README.md)
         - [Spring](language/java/spring/README.md)
     - [Python](language/python/README.md)
