@@ -369,3 +369,35 @@ char input[32]; // ex) input : Computer Engineering
 gets(input);  // output : Computer Engineering
 ```
 
+### String Function
+
+```
+#include <string.h> // essential
+
+// Length
+strlen(str) 
+
+// Copy
+strcpy(str1,str2) // str2 -> str1 으로 복사
+strncpy(str1,str2,size) // str2->str1 , size 만큼
+
+// interconnect
+strcat(str1,str2) // str1 에 str2 이어 붙임
+strncat(str1,str2,size) // size 만큼
+
+// Upper,Lower -> iteration 필요
+toupper(str[i]) 
+tolower(str[i]) 
+// Java의 toUpperCase() / toLowerCase() 는 iteration 필요 X
+
+// compare
+
+strcmp(str1,str2)
+strncmp(str1,str2,size)
+
+// str1 < str2 음수
+// str1 > str2 양수
+// str1 == str2 0을 반환
+
+
+```
