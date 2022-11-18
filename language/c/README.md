@@ -317,6 +317,7 @@ int main() {
 ### Input Function
 
 1. printf
+
 Point : 문자열 이외도 출력 가능 -> 사용 빈도 높음
 
 ``` 
