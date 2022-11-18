@@ -266,3 +266,14 @@ struct name {
 name.x
 name->x
 ```
+
+## Scanf Format
+
+```
+%d : integer
+%f : float
+%lf : double
+%s : string // char array
+%c : single character 
+
+```
