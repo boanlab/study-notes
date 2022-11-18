@@ -312,6 +312,7 @@ int main() {
 }
 
 ```
+## Input / Output Function
 
 ### Input Function
 
