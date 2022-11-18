@@ -253,6 +253,18 @@ name[index1][index2]
 NULL
 ```
 
+### example
+```
+int a = 100;
+int *b = &a;
+
+printf("%d", &a);
+printf("%d", b); // same
+printf("%d", *b);  // 100 ->dereference(역참조) 
+
+```
+
+
 ## Structure
 
 ```
