@@ -262,6 +262,9 @@ printf("%d", &a);
 printf("%d", b); // same
 printf("%d", *b);  // 100 ->dereference(역참조) 
 
+
+(*ptr).name // *역참조 -> '.' 필드참조
+ptr -> name // 역참조+필드참조
 ```
 
 
