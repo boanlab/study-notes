@@ -290,7 +290,7 @@ name->x
 %lf : double
 %s : string // char array
 %c : single character 
-
+%p : pointer address
 ```
 
 
