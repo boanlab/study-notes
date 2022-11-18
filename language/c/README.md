@@ -277,3 +277,38 @@ name->x
 %c : single character 
 
 ```
+
+
+## Union
+
+Point : 공유를 통한 메모리 절약
+
+```
+
+union Student
+{
+    char name[20];
+    char major[32];
+    char number[8];
+    float credit;
+}; 
+
+### example
+
+int main() {
+
+    // declare
+    union Student Hwan;
+    // Student Hwan  typedef 
+
+    Hwan.major = "Computer Engineering // error (Pointer)
+    strcpy(Hwan.major, "Computer Engineering); 
+    Hwan.credit = 4.3; // Hwan에는 4.3만 저장됨
+
+    printf("%ld \n",sizeof(Hwan)); // 32bit (major)
+    
+
+    return 0;
+}
+
+```
