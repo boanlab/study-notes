@@ -312,3 +312,56 @@ int main() {
 }
 
 ```
+
+### Input Function
+
+1. printf
+Point : 문자열 이외도 출력 가능 -> 사용 빈도 높음
+
+``` 
+printf("서식", 변수)
+
+``` 
+
+2. puts
+
+Point : only 문자열, /n 자동 출력
+
+```
+puts("")
+
+```
+
+### Output Function
+
+1. scanf
+Point : 여러 format 지정 가능 / 공백 읽을 수 없음 / 값 입력 시 **주소**를 필요로 함
+
+```
+int a;
+char b[10];
+
+scanf("%d", a); // error 주소 필요
+scanf("%d", &a); 
+
+scanf("%s", b); // best b 자체가 주소
+scanf("%s", &b); // warning
+
+```
+
+```
+char input[32];
+
+scanf("%s",input); // ex) input : Computer Engineering
+printf("%s",input); // output : Computer (공백 전까지 입력)
+```
+
+2. gets
+Point : 공백을 포함한 문자열 입력 가능
+
+
+```
+char input[32]; // ex) input : Computer Engineering
+gets(input);  // output : Computer Engineering
+```
+
