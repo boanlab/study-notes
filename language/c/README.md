@@ -416,3 +416,22 @@ strncmp(str1,str2,size)
 
 
 ```
+
+### Dynamic Memory Allocation
+
+
+```
+int *a;
+
+a = (int*)malloc(10*sizeof(int)); // 10 * 4 = 40bytes
+
+if(a == NULL) { // memory exception handling
+    ...
+}
+
+    ...
+    
+free(a) // dynamic memory free
+
+```
+
