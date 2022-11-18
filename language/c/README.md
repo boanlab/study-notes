@@ -435,3 +435,14 @@ free(a) // dynamic memory free
 
 ```
 
+### Pointer Array
+
+```
+arr[3] = { a,b,c};
+int* ptrArr = arr; // == &arr[0]
+
+arr[i] = *(arr+i);
+
+```
+
+### Array Pointer
