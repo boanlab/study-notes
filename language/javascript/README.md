@@ -1,5 +1,25 @@
 # Javascript
 
+## Operators
+
+
+```
++, -, *, /, %                  // 산술 연산자
+=, +=, -=, *=, /=, %=          // 대입 연산자
+++, --                         // 증감 연산자
+==, ===, !=, !==, >, >=, <, <= // 비교 연산자
+&&, ||, !                      // 논리 연산자
+&, !, ^, ~, <<, >>, >>>        // 비트 연산자
+```
+
+```
+expr1 ? expr2 : expr3        // 삼항 연산자
+delete exp[idx]              // delete 연산자
+typeof operand               // typeof 연산자
+expr1 instanceof (Data type) // instanceof 연산자 
+```
+
+
 ## Data type
 
 ### Primitive type
