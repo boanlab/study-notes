@@ -123,3 +123,43 @@ try {
 
 console.log(boanLab); // expected output: 522
 ```
+
+## Condition
+
+```
+if (condition) {
+    // true 
+}
+
+if (condition) // true -> 구문이 하나일 때
+```
+
+```
+if (condition) {
+    // true
+} else {
+    // false
+}
+
+// if-else 구문의 중첩
+if (condition1) {
+    // true
+} else if (condition2) {
+    // true
+} else {
+    // false
+}
+```
+
+```
+switch (flag) {
+    case 0:
+        // statement
+        break;
+    case 'a':
+        // statement
+        break;
+    default:
+        // statement
+}
+```
