@@ -76,7 +76,7 @@ console.log(x);     // expected output: 2
 let x = 1;          // 변수 선언 및 초기화
 
 if (x === 1) {
-    let x = 2;
+    let x = 2;      // 변수 재선언
 
     console.log(x); // expected output: 2
 }
@@ -97,6 +97,21 @@ console.log(x);     // expected output: 2
 ```
 
 ### const
+
+```
+const boanLab = 522;     // 변수 선언 및 초기화
+
+try {
+    const boanLab = 99;  // 변수 재선언
+    
+    console.log(boanLab) // expected output: 99
+} catch (err) {
+    console.log(err); 
+}
+
+console.log(boanLab);    // expected output: 522
+```
+
 ```
 const boanLab = 522;  // 변수 선언 및 초기화
 
