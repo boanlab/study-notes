@@ -49,7 +49,7 @@ typeof new Set()          // "object" -> Set
 typeof new WeakSet()      // "object" -> WeakSet
 ```
 
-## Declarations
+## Declarations & Initialization
 
 ```
 var   -> 함수 스코프(scope)를 가짐
