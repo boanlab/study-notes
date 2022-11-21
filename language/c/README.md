@@ -260,11 +260,11 @@ int *b = &a;
 
 printf("%d", &a);
 printf("%d", b); // same
-printf("%d", *b);  // 100 ->dereference(역참조) 
+printf("%d", *b);  // 100 -> dereference(역참조) 
 
 
-(*ptr).name // *역참조 -> '.' 필드참조
-ptr -> name // 역참조+필드참조
+(*ptr).name // '*' : dereference -> '.' : field reference
+ptr -> name //  dereference + field reference
 ```
 
 
@@ -384,10 +384,10 @@ char input[32]; // ex) input : Computer Engineering
 gets(input);  // output : Computer Engineering
 ```
 
-### String Function
+## String Function
 
 ```
-#include <string.h> // essential
+#include <string.h> // to use the String Function
 
 // Length
 strlen(str) 
@@ -417,7 +417,7 @@ strncmp(str1,str2,size)
 
 ```
 
-### Dynamic Memory Allocation
+## Dynamic Memory Allocation
 
 
 ```
@@ -435,7 +435,7 @@ free(a) // dynamic memory free
 
 ```
 
-### Pointer Array
+## Pointer Array
 
 ```
 arr[3] = { a,b,c};
@@ -445,4 +445,4 @@ arr[i] = *(arr+i);
 
 ```
 
-### Array Pointer
+## Array Pointer
