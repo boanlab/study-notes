@@ -446,3 +446,75 @@ arr[i] = *(arr+i);
 ```
 
 ## Array Pointer
+
+```
+
+```
+
+
+
+## Global / Static Variable
+
+### 1. global variable
+
+
+point : 프로그램 전체에서 사용 가능 , 자동 0으로 초기화
+
+
+```
+int num;  // 지역변수와 달리 자동으로 0으로 초기화
+
+int main() {
+
+...
+
+}
+```
+
+```
+extern int num;  // 외부 파일에서 사용할 때 extern 키워드 사용
+```
+
+### 2. static variable
+
+```
+// 1. static local variable : 지역변수이자 정적변수
+
+void func(){
+
+    static int num;  // static local variable
+    
+    ...
+}
+
+int main(){
+
+    printf("%d",num) // error (local variable)
+}
+
+```
+
+
+```
+// 2. static global variable : 전역변수이자 정적변수, 외부 파일에서 참조 불가능
+
+static int num; // static global variable
+
+int main(){
+
+    printf("%d",num); 
+
+}
+
+```
+
+```
+// 외부 파일
+
+extern int num; // error (static variable 은 외부파일에서 사용 불가능)
+
+```
+
+
+
+
