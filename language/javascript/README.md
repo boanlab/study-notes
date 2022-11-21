@@ -163,3 +163,50 @@ switch (flag) {
         // statement
 }
 ```
+
+## Iteration
+
+```
+for (let i = 0; i<LAST; i++) {
+    // statement
+}
+```
+
+```
+// 배열의 순회 방법
+const arr = [1, 2, 3, 4, 5]
+
+for (let i=0; i<arr.length; i++) {
+    console.log(i);
+}
+
+arr.forEach((item, index) => {
+    console.log(i);
+})
+
+for (let item of arr) {
+    console.log(i);
+}
+```
+
+```
+while (flag) {
+    // statement
+}
+```
+
+```
+do {
+    // statement
+} while (flag);
+```
+
+```
+break;    // 루프를 종료하고 다음 코드로 넘어감
+continue; // 루프의 나머지 코드를 건너뜀
+```
+
+```
+return; // 함수의 나머지 코드를 건너뛰고 함수를 즉시 종료함
+throw;  // 코드의 실행을 중단시키고 에러를 발생시킴
+```
