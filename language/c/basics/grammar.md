@@ -586,7 +586,7 @@ sizeof(object) -> size of object
 %p : pointer address
 ```
 
-## Union
+## 공용체(Union)
 
 - 공용체 : 공유를 통한 메모리 절약
 
@@ -600,27 +600,31 @@ union Student
     float credit;
 }; 
 
-### example
-
-int main() {
-
-    union Student Hwan;
-
-    Hwan.major = "Computer Engineering // error (Pointer)
-    
-    strcpy(Hwan.major, "Computer Engineering); 
-    
-    Hwan.credit = 4.3; // Hwan에는 4.3만 저장됨
-
-    printf("%ld \n",sizeof(Hwan)); // 32bit (major)
-    
-    return 0;
-}
-
 ```
-## Input / Output Function
 
-- Input Function
+- example
+
+        ```
+        int main() {
+
+        union Student Hwan;
+
+        Hwan.major = "Computer Engineering // error (포인터라서)
+    
+        strcpy(Hwan.major, "Computer Engineering); 
+            
+        Hwan.credit = 4.3; // Hwan에는 4.3만 저장됨
+        
+        printf("%ld \n",sizeof(Hwan)); // 32bit (major)
+
+        return 0;
+        }
+
+        ```
+        
+## 입출력 함수(Input / Output Function)
+
+- 입력 함수(Input Function)
     - printf
        - 문자열 이외도 출력 가능 -> 보통 printf 사용
 
@@ -637,7 +641,7 @@ int main() {
 
           ```
           
-- Output Function
+- 출력 함수(Output Function)
     - scanf
         - 여러 format 지정 가능 / 공백 읽을 수 없음 / 값 입력 시 **주소**를 필요로 함
 
@@ -670,28 +674,28 @@ int main() {
             gets(input);  // output : Computer Engineering
             ```
 
-## String Function
+## 문자열 함수(String Function)
 
 ```
 #include <string.h> // to use the String Function
 
-// Length
+// 길이(Length)
 strlen(str) 
 
-// Copy
+// 복사(Copy)
 strcpy(str1,str2) // str2 -> str1 으로 복사
 strncpy(str1,str2,size) // str2->str1 , size 만큼
 
-// interconnect
+// 연결(interconnect)
 strcat(str1,str2) // str1 에 str2 이어 붙임
 strncat(str1,str2,size) // size 만큼
 
-// Upper,Lower -> iteration 필요
+// 대소문자 변환(Upper,Lower) -> iteration 필요
 toupper(str[i]) 
 tolower(str[i]) 
 // Java의 toUpperCase() / toLowerCase() 는 iteration 필요 X
 
-// compare
+// 비교(compare)
 
 strcmp(str1,str2)
 strncmp(str1,str2,size)
@@ -703,25 +707,26 @@ strncmp(str1,str2,size)
 
 ```
 
-## Dynamic Memory Allocation
+## 동적 메모리 할당(Dynamic Memory Allocation)
 
+- malloc
+    ```
+    int *a;
 
-```
-int *a;
+    a = (int*)malloc(10*sizeof(int)); // 10 * 4 = 40bytes
 
-a = (int*)malloc(10*sizeof(int)); // 10 * 4 = 40bytes
+    if(a == NULL) { // 메모리 예외처리
+     ...
+     
+    }
 
-if(a == NULL) { // memory exception handling
-    ...
-}
-
-    ...
+     ...
     
-free(a) // dynamic memory free
+    free(a) // 동적 메모리 해제
 
-```
+    ```
 
-## Pointer Array
+## 포인터 배열(Pointer Array)
 
 ```
 arr[3] = { a,b,c};
@@ -739,70 +744,129 @@ arr[i] = *(arr+i);
 
 
 
-## Global / Static Variable
+## 전역/정적 변수 (Global / Static Variable)
 
-### 1. global variable
+- global variable(전역변수) : 프로그램 전체에서 사용 가능 , 자동 0으로 초기화
 
+    ```
+    int num;  // 지역변수와 달리 자동으로 0으로 초기화
 
-- 전역변수 : 프로그램 전체에서 사용 가능 , 자동 0으로 초기화
+    int main() {
 
-```
-int num;  // 지역변수와 달리 자동으로 0으로 초기화
+    ...
 
-int main() {
+    }
 
-...
+    ```
 
-}
+- static variable 
 
-```
+    - static local variable : 지역변수이자 정적변수
 
+    ```
+    void func(){
 
-### 2. static variable
-
-
-- static local variable : 지역변수이자 정적변수
-
-```
-void func(){
-
-static int num;  // static local variable
+    static int num;  // static local variable
     
-...
-}
+    ...
+    }
 
 
-int main(){
+    int main(){
 
-    printf("%d",num) // error (local variable)
-}
+        printf("%d",num) // error (local variable)
+    }
+
+    ```
+
+
+
+
+    - static global variable : 전역변수이자 정적변수, 외부 파일에서 참조 불가능
+
+    ```
+
+    static int num; // static global variable
+
+    int main(){
+
+        printf("%d",num); 
+
+    }
+        
+    ```
+    
+    ```
+    // 외부 파일
+
+    extern int num; // error (static variable 은 외부파일에서 사용 불가능)
+
+    ```
+
+
+## 열거형(Enum)
+
+- 열거형 선언
+```
+enum language{
+
+    C, Java, Python, JavaScript   // C : 0 , Java : 1 ..
+    
+}; 
 
 ```
 
+- 초기화 지정
 
+```
+enum language{
 
-
-- static global variable : 전역변수이자 정적변수, 외부 파일에서 참조 불가능
+    C,Java = 2, Python, JavaScript  // C : 0 , Java = 2, Python : 3 ..
+    
+};
 
 ```
 
-static int num; // static global variable
+- 사용 방법
 
-int main(){
+```
 
-    printf("%d",num); 
+typedef enum laguage {
 
-}
+    C, Java, Python, JavaScript
+    
+}Programming;
+
 
 ```
 
 ```
-// 외부 파일
 
-extern int num; // error (static variable 은 외부파일에서 사용 불가능)
+enum language my_favorite = C;
+
+printf("my favorite : %d, my_favorite);  // my favorite : 0
+
 
 ```
 
+## void형 데이터
 
+- 어떤 타입이든 가리킬 수 있는 포인터
+  
+  대상의 크기 지정을 미루고 싶을 때 활용
+  적절히 형변환하여 사용
 
+```
 
+int p = 10;
+double q = 3.0;
+
+void *a = &p;   // a는 int형 변수인 p를 가리킴
+
+a = &q          // a는 double 형 변수인 q를 가리킴 (타입이 지정된 포인터였다면 에러 발생)
+
+*((double*)a) = 2.0;  // (double*)a : double로 형변환 이후 역참조
+
+printf("%f.2\n", q);  // 2.00
+
+```
