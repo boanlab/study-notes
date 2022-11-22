@@ -4,10 +4,6 @@
 - 지금은 한 우물을 팔 때가 아니다.
 - 최대한 많은 용어들을 익혀두어야 큰 그림을 보자.
 
-## prerequisite
-
-- [Markdown](markdown.md)
-
 ## Base
 
 - [Linux](linux/README.md)
@@ -15,6 +11,7 @@
     - [vi editor](linux/vi/README.md)
     - [Bash Scripting](linux/bash/README.md)
 - [Vagrant](tools/vagrant/README.md)
+- [Markdown](markdown.md)
 
 ## Major Subjects
 
