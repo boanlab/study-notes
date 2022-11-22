@@ -471,8 +471,29 @@
     ```
 
 ## 배열 (TODO)
+- 1차원 배열
 
-    - TBF
+    ```
+    // 자료형 변수명[배열의 길이];
+
+    int arr[3]; // 배열 선언
+    int arr[3] = {1,2,3}; // 배열 초기화
+    int arr[] = {1,2,3,4,5};
+
+    ```
+- 2차원 배열
+
+    ```
+    // 반환형 배열명[행][열];
+    int arr2[3][3];
+    int arr2[3][3] = { {1,2,3}, {4,5,6}, {7,8,9} }; // 배열 초기화
+    
+    ```
+ - 3차원 배열
+
+    ```
+    int arr3[2][3][4];
+    ```
 
 ## 포인터 (TODO)
 
@@ -560,7 +581,7 @@ sizeof(object) -> size of object
 %d : integer
 %f : float
 %lf : double
-%s : string // char array
+%s : string // char 
 %c : single character 
 %p : pointer address
 ```
