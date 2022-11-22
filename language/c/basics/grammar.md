@@ -601,17 +601,15 @@ int main() {
 
 - Input Function
     - printf
+       - 문자열 이외도 출력 가능 -> 보통 printf 사용
 
-          문자열 이외도 출력 가능 -> 보통 printf 사용
-
-           ``` 
+           ```
            printf("서식", 변수)
-
+           
            ``` 
 
-        -puts
-
-         문자열만 출력 가능, /n 자동 출력
+    - puts
+        - 문자열만 출력 가능, /n 자동 출력
 
           ```
           puts("")
@@ -619,10 +617,8 @@ int main() {
           ```
           
 - Output Function
-
-        - scanf
-
-          여러 format 지정 가능 / 공백 읽을 수 없음 / 값 입력 시 **주소**를 필요로 함
+    - scanf
+        - 여러 format 지정 가능 / 공백 읽을 수 없음 / 값 입력 시 **주소**를 필요로 함
 
           ```
             int a;
@@ -641,17 +637,17 @@ int main() {
 
             scanf("%s",input); // ex) input : Computer Engineering
             printf("%s",input); // output : Computer (공백 전까지 입력)
+            
           ```
 
-**2. gets**
+    - gets
+        -   공백을 포함한 문자열 입력 가능
 
-Point : 공백을 포함한 문자열 입력 가능
 
-
-```
-char input[32]; // ex) input : Computer Engineering
-gets(input);  // output : Computer Engineering
-```
+            ```
+            char input[32]; // ex) input : Computer Engineering
+            gets(input);  // output : Computer Engineering
+            ```
 
 ## String Function
 
@@ -727,8 +723,7 @@ arr[i] = *(arr+i);
 ### 1. global variable
 
 
-point : 프로그램 전체에서 사용 가능 , 자동 0으로 초기화
-
+- 전역변수 : 프로그램 전체에서 사용 가능 , 자동 0으로 초기화
 
 ```
 int num;  // 지역변수와 달리 자동으로 0으로 초기화
@@ -738,23 +733,23 @@ int main() {
 ...
 
 }
-```
 
 ```
-extern int num;  // 외부 파일에서 사용할 때 extern 키워드 사용
-```
+
 
 ### 2. static variable
 
-```
-// 1. static local variable : 지역변수이자 정적변수
 
+- static local variable : 지역변수이자 정적변수
+
+```
 void func(){
 
-    static int num;  // static local variable
+static int num;  // static local variable
     
-    ...
+...
 }
+
 
 int main(){
 
@@ -764,8 +759,11 @@ int main(){
 ```
 
 
+
+
+- static global variable : 전역변수이자 정적변수, 외부 파일에서 참조 불가능
+
 ```
-// 2. static global variable : 전역변수이자 정적변수, 외부 파일에서 참조 불가능
 
 static int num; // static global variable
 
