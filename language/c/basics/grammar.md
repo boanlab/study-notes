@@ -619,7 +619,7 @@ int main() {
 
           ```
           
--Output Function
+- Output Function
 
         - scanf
 
