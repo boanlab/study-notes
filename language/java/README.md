@@ -290,6 +290,42 @@ public class Person {
 
 ## Inheritance
 
+```
+// Parent class
+class Animal {
+
+  public void feeding() {
+  
+    System.out.println("Animal Yummy!");
+    
+  }
+}
+
+// Child class
+class Cat extends Animal {
+
+  public void feeding() {
+  
+    System.out.println("Cat Yummy!");
+    
+  }
+}
+
+class MainClass {
+
+  public static void main(String[] args) {
+  
+    Animal animal = new Animal();           // Animal object
+    Animal cat = new Cat();                 // Cat object
+    
+    animal.feeding();                       // prints "Animal Yummy!"
+    cat.feeding();                          // prints "Cat Yummy!"
+    
+  }
+}
+```
+
+
 
 ## Comment
 
