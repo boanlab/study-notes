@@ -96,7 +96,10 @@
     - Vagrant 템플릿 생성
     - Vagrantfile을 직접 만들었다면 vagrant init을 실행할 필요가 없다
 
-## 5. Vagrant를 통해 가상 
-머신 
-머신 생성
+## 5. Vagrant를 통해 가상 머신 생성
 
+  - TBF
+
+## 6. 가상 머신 접속 및 활용
+
+  - TBF
