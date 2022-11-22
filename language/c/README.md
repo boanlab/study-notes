@@ -27,9 +27,9 @@
 ## Contents
 
 - [C언어 문법](basics/grammar.md)
+- [포인터](basics/pointer.md)
 - [문자열 처리](basics/string.md)
 - [파일 입출력](basics/file_io.md)
-- [소켓 프로그래밍](basics/socket.md)
 
 ## Case Study
 
@@ -39,10 +39,11 @@
 - [시그널 핸들러](case_study/signal.md)
 - [병렬 처리](case_study/parallel.md)
 - [동기화](case_study/sync.md)
+- [소켓 프로그래밍](case_study/socket.md)
 - [문자열 매칭](case_study/string_match.md)
 - [정규 표현식](case_study/regex.md)
 - [해시 테이블](case_study/hash.md)
-- [암호화](case_study/crypto.md)
+- [암호화 모듈](case_study/crypto.md)
 
 ## Projects
 

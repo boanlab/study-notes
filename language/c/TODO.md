@@ -27,20 +27,12 @@
 
 - 비트필드
 
+## basics/pointer.md
+
 - 포인터
 
     - 맴버참조 연산자 (. / ->)
     - 함수 포인터
-
-## basics/string.md
-
-정리
-
-## basics/file_io.md
-
-정리
-
-## basics/memory.md
 
 - 메모리 관리
 
@@ -50,6 +42,14 @@
         - calloc
         - memset
 
+## basics/string.md
+
+정리
+
+## basics/file_io.md
+
+정리
+
 ## case_study
 
 - 명령 행 인자
@@ -58,6 +58,7 @@
 - 시그널 핸들러
 - 병렬처리
 - 동기화
+- 소켓 프로그래밍
 - 문자열 매칭
 - 정규 표현식
 - 해시 테이블
