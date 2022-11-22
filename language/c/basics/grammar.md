@@ -567,7 +567,7 @@ sizeof(object) -> size of object
 
 ## Union
 
-Point : 공유를 통한 메모리 절약
+- 공용체 : 공유를 통한 메모리 절약
 
 ```
 
@@ -583,67 +583,66 @@ union Student
 
 int main() {
 
-    // declare
     union Student Hwan;
-    // Student Hwan  typedef 
 
     Hwan.major = "Computer Engineering // error (Pointer)
+    
     strcpy(Hwan.major, "Computer Engineering); 
+    
     Hwan.credit = 4.3; // Hwan에는 4.3만 저장됨
 
     printf("%ld \n",sizeof(Hwan)); // 32bit (major)
     
-
     return 0;
 }
 
 ```
 ## Input / Output Function
 
-### Input Function
+- Input Function
 
-**1. printf**
+        - printf
 
-Point : 문자열 이외도 출력 가능 -> 사용 빈도 높음
+          문자열 이외도 출력 가능 -> 보통 printf 사용
 
-``` 
-printf("서식", 변수)
+           ``` 
+           printf("서식", 변수)
 
-``` 
+           ``` 
 
-**2. puts**
+        -puts
 
-Point : only 문자열, /n 자동 출력
+         문자열만 출력 가능, /n 자동 출력
 
-```
-puts("")
+          ```
+          puts("")
 
-```
+          ```
+          
+-Output Function
 
-### Output Function
+        - scanf
 
-**1. scanf**
+          여러 format 지정 가능 / 공백 읽을 수 없음 / 값 입력 시 **주소**를 필요로 함
 
-Point : 여러 format 지정 가능 / 공백 읽을 수 없음 / 값 입력 시 **주소**를 필요로 함
+          ```
+            int a;
+            char b[10];
 
-```
-int a;
-char b[10];
+            scanf("%d", a); // error 주소 필요
+            scanf("%d", &a); 
 
-scanf("%d", a); // error 주소 필요
-scanf("%d", &a); 
+            scanf("%s", b); // best b 자체가 주소
+            scanf("%s", &b); // warning
 
-scanf("%s", b); // best b 자체가 주소
-scanf("%s", &b); // warning
+          ```
 
-```
+          ```
+            char input[32];
 
-```
-char input[32];
-
-scanf("%s",input); // ex) input : Computer Engineering
-printf("%s",input); // output : Computer (공백 전까지 입력)
-```
+            scanf("%s",input); // ex) input : Computer Engineering
+            printf("%s",input); // output : Computer (공백 전까지 입력)
+          ```
 
 **2. gets**
 
