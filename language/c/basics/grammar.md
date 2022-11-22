@@ -600,8 +600,7 @@ int main() {
 ## Input / Output Function
 
 - Input Function
-
-        - printf
+    - printf
 
           문자열 이외도 출력 가능 -> 보통 printf 사용
 
