@@ -210,3 +210,84 @@ continue; // 루프의 나머지 코드를 건너뜀
 return; // 함수의 나머지 코드를 건너뛰고 함수를 즉시 종료함
 throw;  // 코드의 실행을 중단시키고 에러를 발생시킴
 ```
+
+## Comment
+
+```
+// comment
+```
+
+```
+/*
+    comment1
+    comment2
+    ...
+*/
+```
+
+## Function
+
+```
+function functionName(parameter1, parameter2, ...) {
+    // 
+    
+    return value;
+}
+```
+
+### function*
+
+```
+function* generator(i) {
+  yield i;
+  yield i + 10;
+}
+
+const gen = generator(10);
+
+console.log(gen.next().value); // expected output: 10
+
+console.log(gen.next().value); // expected output: 20
+```
+
+## Object
+
+```
+// Create object using literal notation
+const obj = {
+    property name1 : property value1,
+    property name2 : property value2,
+    ...
+};
+```
+
+```
+// Create object using constructor
+const day = new Date()      // new 연산자를 통해 Date 객체 생성
+```
+
+```
+// Create object using Object.create() method
+const obj = Object.create(prototype, {
+    property name1 : property value1,
+    property name2 : property value2,
+    ...
+});
+
+obj.name1;                  // expected output: value1
+obj.name2;                  // expected output: value2
+Object.getPrototypeOf(obj); // expected output: prototype
+```
+
+## Array
+
+```
+// Create array using literal notation
+var arr = [1, true, "BoanLab",...];
+
+// Create array using constructor
+var arrObj = Array(1, true, "BoanLab", ...);
+
+// Create array using array object's new operator
+var arrNewObj = new Array(1, true, "BoanLab", ...);
+```
