@@ -249,3 +249,32 @@ console.log(gen.next().value); // expected output: 10
 
 console.log(gen.next().value); // expected output: 20
 ```
+
+## Object
+
+```
+// Create object using literal notation
+const obj = {
+    property name1 : property value1,
+    property name2 : property value2,
+    ...
+};
+```
+
+```
+// Create object using constructor
+const day = new Date()     // new 연산자를 통해 Date 객체 생성
+```
+
+```
+// Create object using Object.create() method
+const obj = Object.create(prototype, {
+    property name1 : property value1,
+    property name2 : property value2,
+    ...
+});
+
+obj.name1                  // expected output: value1
+obj.name2                  // expected output: value2
+Object.getPrototypeOf(obj) // expected output: prototype
+```
