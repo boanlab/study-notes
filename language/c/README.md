@@ -1,448 +1,50 @@
-# C
+# C 언어
 
-## Main function
+## Environment Setup
 
-```
-void main(void)
-{
-    //
-}
-```
+- Ubuntu
 
-```
-int main(int argc, char *argv[])
-{
-    //
-}
-```
+    - build-essentials를 설치하면 gcc, g++, make 등 개발에 필요한 기본적인 패키지들이 설치된다
 
-## Operators
+        ```
+        sudo apt-get -y install build-essentials
+        ```
 
-```
-++, --
-+, -, *, /, %
-==, !=, >, >=, <, <=
-&, |, ^
-&&, ||
-```
+- CentOS
 
-```
-+=, -=, *=, /=, &=, |=, ...
-```
+    - gcc, g++, make를 개별적으로 설치한다
 
-```
-expr1 ? expr2 : expr3
-```
+        ```
+        sudo dnf -y install gcc gcc-g++ make
+        ```
 
-```
-TYPE1 x;
-(TYPE2) x; // type cast
-```
+    - 또는 Ubuntu의 build-essentials처럼 Development Tools를 설치하여 개발에 필요한 기본적인 패키지들을 한 번에 설치할 수도 있다
 
-## Preprocessor
+        ```
+        sudo yum groupinstall 'Development Tools'
+        ```
 
-```
-#include <filename> // include library file
-#include "filename" // include user file
-```
+## Contents
 
-```
-#define name text
-#define name(param, ...) text
-```
+- [C언어 문법](basics/grammar.md)
+- [포인터](basics/pointer.md)
+- [문자열 처리](basics/string.md)
+- [파일 입출력](basics/file_io.md)
 
-```
-#if
-#elif
-#else
-#endif
-```
+## Case Study
 
-```
-#ifdef
-#ifndef
-```
+- [명령 행 인자](case_study/command-line_argument.md)
+- [환경 변수](case_study/env_variable.md)
+- [메모리 덤프](case_study/memory_dump.md)
+- [시그널 핸들러](case_study/signal.md)
+- [병렬 처리](case_study/parallel.md)
+- [동기화](case_study/sync.md)
+- [소켓 프로그래밍](case_study/socket.md)
+- [문자열 매칭](case_study/string_match.md)
+- [정규 표현식](case_study/regex.md)
+- [해시 테이블](case_study/hash.md)
+- [암호화 모듈](case_study/crypto.md)
 
-```
-#if defined(name)
-```
+## Projects
 
-## Data type
-
-```
-char      -> character (1 byte)
-short     -> 16-bit integer
-int       -> 32-bit integer
-long      -> 32-bit integer (Win) / 64-bit integer (Linux)
-long long -> 64-bit integer
-```
-
-```
-float     -> 32-bit real number
-double    -> 64-bit real number
-```
-
-```
-unsigned TYPE
-```
-
-## Declarations
-
-```
-signed -> positive / negative
-unsigned -> non-negative (no sign bit)
-TYPE* -> pointer of TYPE
-```
-
-```
-const TYPE x
-TYPE const x
-```
-
-```
-int main()
-{
-    const int MAX=10;
-    MAX = 15; // error
-
-    int a=1, b=2;
-    const int *p1 = &a;
-    int* const p2 = &a;
-
-    p1 = &b;
-    *p1 = 3; // error
-
-    p2 = &b; // error
-    *p2 = 3;
-
-    p3 = &b; // error
-    *p3 = 3; // error
-}
-```
-
-```
-static TYPE func() {...} // only allow calling in the same file
-static TYPE x; // keep x persistently
-extern TYPE func() // allow other files to call func()
-extern TYPE x; // allow other files to use x
-```
-
-```
-typedef type name; // allow using name instead of type
-```
-
-```
-sizeof(TYPE) -> size of data type
-sizeof(object) -> size of object
-```
-
-## Initialization
-
-```
-type name = value;
-type name1 = value1, name2 = value2;
-type name[] = {value1, value2, ...};
-```
-
-```
-char str[] = "string";
-```
-
-## Condition
-
-```
-if (condition) {
-    // true
-}
-```
-
-```
-if (condition) {
-    // true
-} else {
-    // false
-}
-```
-
-```
-switch (flag) {
-    case 0:
-        // statement
-        break;
-    case 'a':
-        // statement
-        break;
-    default:
-        // statement
-        break;
-}
-```
-
-## Iteration
-
-```
-for (i=0; i<LAST; i++) {
-    //
-}
-```
-
-```
-while (flag) {
-    //
-}
-```
-
-```
-do {
-    //
-} while (flag);
-```
-
-
-```
-break;
-continue;
-```
-
-```
-label:
-    statement
-```
-
-```
-goto label;
-```
-
-## Comment
-
-```
-// comment
-```
-
-```
-/*
-    comment
-*/
-```
-
-## Function
-
-```
-type func1(type1 param1, ..., typeN paramN);
-```
-
-```
-type func1(type1 param1, ..., typeN paramN)
-{
-    //
-
-    return value;
-}
-```
-
-## Pointer
-
-```
-TYPE *name;
-TYPE *func();
-TYPE (*pfunc)();
-*pointer
-&name
-name[index]
-name[index1][index2]
-NULL
-```
-
-### example
-```
-int a = 100;
-int *b = &a;
-
-printf("%d", &a);
-printf("%d", b); // same
-printf("%d", *b);  // 100 ->dereference(역참조) 
-
-
-(*ptr).name // *역참조 -> '.' 필드참조
-ptr -> name // 역참조+필드참조
-```
-
-
-## Structure
-
-```
-struct name {
-    TYPE x;
-    declarations
-};
-```
-
-```
-name.x
-name->x
-```
-
-## Scanf Format
-
-```
-%d : integer
-%f : float
-%lf : double
-%s : string // char array
-%c : single character 
-%p : pointer address
-```
-
-
-## Union
-
-Point : 공유를 통한 메모리 절약
-
-```
-
-union Student
-{
-    char name[20];
-    char major[32];
-    char number[8];
-    float credit;
-}; 
-
-### example
-
-int main() {
-
-    // declare
-    union Student Hwan;
-    // Student Hwan  typedef 
-
-    Hwan.major = "Computer Engineering // error (Pointer)
-    strcpy(Hwan.major, "Computer Engineering); 
-    Hwan.credit = 4.3; // Hwan에는 4.3만 저장됨
-
-    printf("%ld \n",sizeof(Hwan)); // 32bit (major)
-    
-
-    return 0;
-}
-
-```
-## Input / Output Function
-
-### Input Function
-
-**1. printf**
-
-Point : 문자열 이외도 출력 가능 -> 사용 빈도 높음
-
-``` 
-printf("서식", 변수)
-
-``` 
-
-**2. puts**
-
-Point : only 문자열, /n 자동 출력
-
-```
-puts("")
-
-```
-
-### Output Function
-
-**1. scanf**
-
-Point : 여러 format 지정 가능 / 공백 읽을 수 없음 / 값 입력 시 **주소**를 필요로 함
-
-```
-int a;
-char b[10];
-
-scanf("%d", a); // error 주소 필요
-scanf("%d", &a); 
-
-scanf("%s", b); // best b 자체가 주소
-scanf("%s", &b); // warning
-
-```
-
-```
-char input[32];
-
-scanf("%s",input); // ex) input : Computer Engineering
-printf("%s",input); // output : Computer (공백 전까지 입력)
-```
-
-**2. gets**
-
-Point : 공백을 포함한 문자열 입력 가능
-
-
-```
-char input[32]; // ex) input : Computer Engineering
-gets(input);  // output : Computer Engineering
-```
-
-### String Function
-
-```
-#include <string.h> // essential
-
-// Length
-strlen(str) 
-
-// Copy
-strcpy(str1,str2) // str2 -> str1 으로 복사
-strncpy(str1,str2,size) // str2->str1 , size 만큼
-
-// interconnect
-strcat(str1,str2) // str1 에 str2 이어 붙임
-strncat(str1,str2,size) // size 만큼
-
-// Upper,Lower -> iteration 필요
-toupper(str[i]) 
-tolower(str[i]) 
-// Java의 toUpperCase() / toLowerCase() 는 iteration 필요 X
-
-// compare
-
-strcmp(str1,str2)
-strncmp(str1,str2,size)
-
-// str1 < str2 음수
-// str1 > str2 양수
-// str1 == str2 0을 반환
-
-
-```
-
-### Dynamic Memory Allocation
-
-
-```
-int *a;
-
-a = (int*)malloc(10*sizeof(int)); // 10 * 4 = 40bytes
-
-if(a == NULL) { // memory exception handling
-    ...
-}
-
-    ...
-    
-free(a) // dynamic memory free
-
-```
-
-### Pointer Array
-
-```
-arr[3] = { a,b,c};
-int* ptrArr = arr; // == &arr[0]
-
-arr[i] = *(arr+i);
-
-```
-
-### Array Pointer
+- 추후 업데이트 예정
