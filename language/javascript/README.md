@@ -263,7 +263,7 @@ const obj = {
 
 ```
 // Create object using constructor
-const day = new Date()     // new 연산자를 통해 Date 객체 생성
+const day = new Date()      // new 연산자를 통해 Date 객체 생성
 ```
 
 ```
@@ -274,7 +274,20 @@ const obj = Object.create(prototype, {
     ...
 });
 
-obj.name1                  // expected output: value1
-obj.name2                  // expected output: value2
-Object.getPrototypeOf(obj) // expected output: prototype
+obj.name1;                  // expected output: value1
+obj.name2;                  // expected output: value2
+Object.getPrototypeOf(obj); // expected output: prototype
+```
+
+## Array
+
+```
+// Create array using literal notation
+var arr = [1, true, "BoanLab",...];
+
+// Create array using constructor
+var arrObj = Array(1, true, "BoanLab", ...);
+
+// Create array using array object's new operator
+var arrNewObj = new Array(1, true, "BoanLab", ...);
 ```
