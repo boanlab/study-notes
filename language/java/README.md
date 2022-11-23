@@ -325,7 +325,36 @@ class MainClass {
 }
 ```
 
+## 2D Arrays ( Two Dimensional )
 
+```
+int[][] arr = {{1,2,3},
+               {4,5,6}};
+```
+```
+String[][] animals;
+
+stringValues = new String[][] {{"lion", "tiger"}, {"cat", "dog"}, {"fox", "wolf"}};     
+```
+
+**Row-Major**
+
+```
+for(int i = 0; i < animals.length; i++) {
+    for(int j = 0; j < animals[i].length; j++) {
+        System.out.println(animals[i][j]);
+    }
+}
+```
+**Column-Major**
+
+```
+for(int i = 0; i < animals[0].length; i++) {
+    for(int j = 0; j < animals.length; j++) {
+        System.out.println(animals[j][i]);
+    }
+}
+```
 
 ## Comment
 
