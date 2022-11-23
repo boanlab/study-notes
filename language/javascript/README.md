@@ -224,3 +224,28 @@ throw;  // 코드의 실행을 중단시키고 에러를 발생시킴
     ...
 */
 ```
+
+## Function
+
+```
+function functionName(parameter1, parameter2, ...) {
+    // 
+    
+    return value;
+}
+```
+
+### function*
+
+```
+function* generator(i) {
+  yield i;
+  yield i + 10;
+}
+
+const gen = generator(10);
+
+console.log(gen.next().value); // expected output: 10
+
+console.log(gen.next().value); // expected output: 20
+```
