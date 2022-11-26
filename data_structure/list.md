@@ -86,11 +86,11 @@ HEAD -> Node <-> Node <-> Node <- Tail
 ![image](https://user-images.githubusercontent.com/113777043/204079011-a935fbe2-6758-4e3d-8dba-db390e3cafda.png)
  - Node 삭제
 
-```
- - // 선행노드와의 연결부터 끊어준다
- - del -> llink -> rlink = del -> rlink // 삭제할 노드의 llink의 rlink = 삭제할노드의 rlink
- - del -> rlink -> llink = del -> llink
-```
+    ```
+    - // 선행노드와의 연결부터 끊어준다
+    - del -> llink -> rlink = del -> rlink // 삭제할 노드의 llink의 rlink = 삭제할노드의 rlink
+    - del -> rlink -> llink = del -> llink
+    ```
 
 
 
