@@ -57,7 +57,7 @@
 ```
 HEAD -> Node <-> Node <-> Node <- Tail
 ```
-**Node**
+ - Node
 
 ```
  - *Llink // 이전 노드를 가리키는 포인터
@@ -65,17 +65,17 @@ HEAD -> Node <-> Node <-> Node <- Tail
  - *Rlink // 다음 노드를 가리키는 포인터
 ```
 
-*Node 추가*
+ - Node 추가
 ![image](https://user-images.githubusercontent.com/113777043/204078990-c0a340f7-0fd1-4941-96b9-a61b781034d5.png)
 
 
-    * newnode와 선행노드 연결
+    - newnode와 선행노드 연결
 
         ```
         - tail -> llink -> rlink = new     // new 노드의 선행노드의 rlink = new, 선행노드부터 연결시킴
         - new -> llink = tail -> llink     // new 노드의 llink = 후행노드의 llink
         ```
-    * newnode와 후행노드 연결
+    - newnode와 후행노드 연결
 
         ```
         - tail -> llink = new              // 후행노드의 llink = new
@@ -84,7 +84,7 @@ HEAD -> Node <-> Node <-> Node <- Tail
 
 
 ![image](https://user-images.githubusercontent.com/113777043/204079011-a935fbe2-6758-4e3d-8dba-db390e3cafda.png)
-*Node 삭제*
+ - Node 삭제
 
 ```
  - // 선행노드와의 연결부터 끊어준다
