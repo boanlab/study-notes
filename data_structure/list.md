@@ -48,7 +48,7 @@
 >단일 연결 리스트의 경우 Head 노드를 참조하는 주소를 잃어버릴 경우, 데이터 전체를 못 쓰게 되는 단점이 있다. 또한 다음 노드를 참조하는 주소 중 하나가 잘못되면, 링크 체인이 끊어져 끊어진 뒤쪽 데이터들을 유실하게 된다. 즉, 안정적인 자료구조는 아니다.
 
 
-## Doubly Linked List ( 이중 연결 리스트 )
+### Doubly Linked List ( 이중 연결 리스트 )
 
 
 ![image](https://user-images.githubusercontent.com/113777043/204078252-5804e394-5921-4bfc-a25c-c89456c1a7bf.png)
