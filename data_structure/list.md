@@ -54,9 +54,6 @@
 ![image](https://user-images.githubusercontent.com/113777043/204078252-5804e394-5921-4bfc-a25c-c89456c1a7bf.png)
 
 
-```
-HEAD -> Node <-> Node <-> Node <- Tail
-```
  - Node
 
 ```
