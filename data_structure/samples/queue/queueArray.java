@@ -48,7 +48,6 @@ public class queueArray {
     void enqueue(int value){
         if(isFull()){
             System.out.println("큐가 가득찼습니다.");
-            return;
         }
         else{
             queue[++rear] = value;
