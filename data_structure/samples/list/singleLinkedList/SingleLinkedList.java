@@ -171,10 +171,6 @@ public class SingleLinkedList<E> {
         head = tail = null;
         size = 0;
     }
-
-
-
-
 }
 
 class Node<E> {
