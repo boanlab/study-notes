@@ -53,7 +53,7 @@ class SingleLinkedList:
         for v in self:
             if v._value == value:
                 return v
-            return None
+        return None   
     
     # 인덱스에 해당하는 값 출력
     def nodeAt(self, index):
@@ -67,3 +67,19 @@ class SingleLinkedList:
         for i in range(index):
             current = current._next
         return current
+
+# 테스트
+s = SingleLinkedList()      # 객체 생성
+s.addFirst('BoanLab')
+s.addFirst('Apdul')
+s.addAfter('PeachPotato', s._head._next)
+s.addFirst('RoyRoy')
+
+print(s)                    # expected output: RoyRoy -> Apdul -> BoanLab -> PeachPotato
+print(s.search('Apdul'))    # expected output: Apdul
+print(s.nodeAt(2))          # expected output: BoanLab     
+
+s.deleteFirst()
+s.deleteAfter(s._head)      
+
+print(s)                    # expected output: Apdul -> PeachPotato
