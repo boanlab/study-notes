@@ -48,3 +48,47 @@
 >단일 연결 리스트의 경우 Head 노드를 참조하는 주소를 잃어버릴 경우, 데이터 전체를 못 쓰게 되는 단점이 있다. 또한 다음 노드를 참조하는 주소 중 하나가 잘못되면, 링크 체인이 끊어져 끊어진 뒤쪽 데이터들을 유실하게 된다. 즉, 안정적인 자료구조는 아니다.
 
 
+### 이중 연결 리스트
+
+
+![image](https://user-images.githubusercontent.com/113777043/204078252-5804e394-5921-4bfc-a25c-c89456c1a7bf.png)
+
+
+ - Node
+
+```
+ - *Llink // 이전 노드를 가리키는 포인터
+ -  Data  // 데이터를 담을 변수
+ - *Rlink // 다음 노드를 가리키는 포인터
+```
+
+ - Node 추가
+![image](https://user-images.githubusercontent.com/113777043/204078990-c0a340f7-0fd1-4941-96b9-a61b781034d5.png)
+
+
+    - newnode와 선행노드 연결
+
+        ```
+        - tail -> llink -> rlink = new     // new 노드의 선행노드의 rlink = new, 선행노드부터 연결시킴
+        - new -> llink = tail -> llink     // new 노드의 llink = 후행노드의 llink
+        ```
+    - newnode와 후행노드 연결
+
+        ```
+        - tail -> llink = new              // 후행노드의 llink = new
+        - new -> rlink = tail              // new 노드의 rlink = tail
+        ```
+
+
+![image](https://user-images.githubusercontent.com/113777043/204079011-a935fbe2-6758-4e3d-8dba-db390e3cafda.png)
+ - Node 삭제
+
+    ```
+    - // 선행노드와의 연결부터 끊어준다
+    - del -> llink -> rlink = del -> rlink // 삭제할 노드의 llink의 rlink = 삭제할노드의 rlink
+    - del -> rlink -> llink = del -> llink
+    ```
+
+
+
+
