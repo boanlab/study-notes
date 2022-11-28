@@ -6,7 +6,6 @@
 
 >순열(Sequence)이라고도 불리며, 순서를 가지고 일렬로 나열한 원소들의 모임으로 정의한 자료구조이다. 데이터를 순차적으로 저장하기 때문에 선형 구조를 띄며 값이 중복될 수 있다.
 
-
 ### 리스트의 연산
 
 - 빈 리스트를 만드는 연산(Constructor, 생성자)
@@ -23,6 +22,7 @@
     3. 환형 연결 리스트(원형 연결 리스트)
 
 ### 순차 리스트와 연결 리스트 비교
+
 >**데이터의 삽입 & 삭제 측면**<br>
 순차 리스트는 데이터의 삽입이나 삭제 후 연속적인 물리적 위치를 유지하기 위해 원소를 옮기는 추가 작업이 필요하지만 연결 리스트는 특정 노드를 삽입하거나 삭제할 때 노드의 링크 필드만 수정하면 되므로 순차 리스트에 비해 연산 속도가 빠르다.
 
@@ -47,12 +47,9 @@
 
 >단일 연결 리스트의 경우 Head 노드를 참조하는 주소를 잃어버릴 경우, 데이터 전체를 못 쓰게 되는 단점이 있다. 또한 다음 노드를 참조하는 주소 중 하나가 잘못되면, 링크 체인이 끊어져 끊어진 뒤쪽 데이터들을 유실하게 된다. 즉, 안정적인 자료구조는 아니다.
 
-
 ### 이중 연결 리스트
 
-
 ![image](https://user-images.githubusercontent.com/113777043/204078252-5804e394-5921-4bfc-a25c-c89456c1a7bf.png)
-
 
  - Node
 
@@ -63,8 +60,8 @@
 ```
 
  - Node 추가
-![image](https://user-images.githubusercontent.com/113777043/204078990-c0a340f7-0fd1-4941-96b9-a61b781034d5.png)
 
+    ![image](https://user-images.githubusercontent.com/113777043/204078990-c0a340f7-0fd1-4941-96b9-a61b781034d5.png)
 
     - newnode와 선행노드 연결
 
@@ -79,16 +76,12 @@
         - new -> rlink = tail              // new 노드의 rlink = tail
         ```
 
-
-![image](https://user-images.githubusercontent.com/113777043/204079011-a935fbe2-6758-4e3d-8dba-db390e3cafda.png)
  - Node 삭제
+
+    ![image](https://user-images.githubusercontent.com/113777043/204079011-a935fbe2-6758-4e3d-8dba-db390e3cafda.png)
 
     ```
     - // 선행노드와의 연결부터 끊어준다
     - del -> llink -> rlink = del -> rlink // 삭제할 노드의 llink의 rlink = 삭제할노드의 rlink
     - del -> rlink -> llink = del -> llink
     ```
-
-
-
-
