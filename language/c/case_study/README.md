@@ -11,19 +11,18 @@
 - (TODO) [병렬 처리](parallel.md)
 
     - 멀티 프로세싱
-    - 멀티 스레딩
 
-        ##
+    - 멀티 스레딩
 
 - (TODO) [동기화](sync.md)
 
 - (TODO) [소켓 프로그래밍](socket.md)
 
     - TCP 소켓
-    - UDP 소켓
-    - Unix 도메인 소켓
 
-        ##
+    - UDP 소켓
+
+    - Unix 도메인 소켓
 
 - (TODO) [메시지 큐](message_queue.md)
 
