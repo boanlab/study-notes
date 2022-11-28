@@ -687,18 +687,6 @@
 
 아래 내용은 정리가 필요
 
-## Scanf Format
-
-```
-%d : integer
-%f : float
-%lf : double
-%s : string // char 
-%c : single character 
-%p : pointer address
-```
-
-
         
 ## 입출력 함수(Input / Output Function)
 
@@ -798,27 +786,5 @@ enum language my_favorite = C;
 
 printf("my favorite : %d, my_favorite);  // my favorite : 0
 
-
-```
-
-## void형 데이터 (void pointer)
-
-- 어떤 타입이든 가리킬 수 있는 포인터
-  
-  대상의 크기 지정을 미루고 싶을 때 활용
-  적절히 형변환하여 사용
-
-```
-
-int p = 10;
-double q = 3.0;
-
-void *a = &p;   // a는 int형 변수인 p를 가리킴
-
-a = &q          // a는 double 형 변수인 q를 가리킴 (타입이 지정된 포인터였다면 에러 발생)
-
-*((double*)a) = 2.0;  // (double*)a : double로 형변환 이후 역참조
-
-printf("%f.2\n", q);  // 2.00
 
 ```
