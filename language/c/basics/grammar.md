@@ -182,6 +182,45 @@
     number count;
     ```
 
+- 자료형/변수 크기
+
+    ```
+    sizeof(자료형) -> 자료형 크기
+    sizeof(변수) -> 변수 크기
+    ```
+
+- 변수 상수화
+
+    ```
+    const 자료형 변수이름
+    자료형 const 변수이름
+    ```
+
+    ```
+    int main()
+    {
+        // 일반적적으로 두 경우 같은 의미
+
+        const int MAX1=10;
+        int const MAX2=20;
+
+        MAX1 = 15; // error
+        MAX2 = 25; // error
+
+        // 하지만, 포인터의 경우 의미가 달라짐
+
+        int a=1, b=2;
+        const int *p1 = &a; // (*p1) 값을 상수 취급
+        int* const p2 = &a; // (p2) 주소값을 상수 취급
+
+        p1 = &b; // 포인터 변경 가능
+        *p1 = 3; // 내용 변경 불가
+
+        p2 = &b; // 포인터 변경 불가
+        *p2 = 3; // 내용 변경 가능
+    }
+    ```
+
 ## 연산자
 
 - 기본 연산자 (이항 연산자)
@@ -470,7 +509,8 @@
     #endif
     ```
 
-## 배열 (TODO)
+## 배열
+
 - 1차원 배열
 
     ```
@@ -479,15 +519,14 @@
     int arr[3]; // 배열 선언
     int arr[3] = {1,2,3}; // 배열 초기화
     int arr[] = {1,2,3,4,5};
-
     ```
 - 2차원 배열
 
     ```
     // 반환형 배열명[행][열];
+
     int arr2[3][3];
     int arr2[3][3] = { {1,2,3}, {4,5,6}, {7,8,9} }; // 배열 초기화
-    
     ```
  - 3차원 배열
 
@@ -495,85 +534,158 @@
     int arr3[2][3][4];
     ```
 
-## 포인터 (TODO)
+## 구조체 (Structure)
 
-```
-TYPE *name;
-TYPE *func();
-TYPE (*pfunc)();
-*pointer
-&name
-name[index]
-name[index1][index2]
-NULL
-```
-
-- Example
+- 선언
 
     ```
-    int a = 100;
-    int *b = &a;
-
-    printf("%d", &a);
-    printf("%d", b); // same
-    printf("%d", *b);  // 100 -> dereference(역참조) 
-
-
-    (*ptr).name // '*' : dereference -> '.' : field reference
-    ptr -> name //  dereference + field reference
+    struct 구조체이름 {
+        자료형 항목이름;
+    };
     ```
 
-## 구조체 (TODO)
+    struct {} 뒤에 꼭 ;을 붙임
 
-```
-struct name {
-    TYPE x;
-    declarations
-};
-```
+- 초기화
 
-```
-name.x
-name->x
-```
+    ```
+    struct 구조체이름 변수이름 = {값1, 값2, 값3};
+    ```
 
-## 그 외
+    구조체 내 정의한 순서대로 값을 초기화할 수 있음
 
-```
-const TYPE x
-TYPE const x
-```
+- 사용
 
-```
-int main()
-{
-    const int MAX=10;
-    MAX = 15; // error
+    ```
+    구조체변수이름.항목이름;
+    구조체변수이름->항목이름; // 구조체 변수가 포인터 형태일 때
+    ```
 
-    int a=1, b=2;
-    const int *p1 = &a;
-    int* const p2 = &a;
+- 선언과 동시에 초기화 후 사용도 가능
 
-    p1 = &b;
-    *p1 = 3; // error
+    ```
+    struct 구조체이름 {
+        자료형 항목이름;
+    } 변수이름 = {값};
+    ```
 
-    p2 = &b; // error
-    *p2 = 3;
+    ```
+    main()
+    {
+        struct args_t {
+            int a1;
+            int a2;
+        } args = {1, 2, 3};
 
-    p3 = &b; // error
-    *p3 = 3; // error
-}
-```
+        printf("%d %d %d\n", args.a1, args.a2, args.a3);
+    }
+    ```
 
-```
-sizeof(TYPE) -> size of data type
-sizeof(object) -> size of object
-```
+- 구조체 중첩
 
+    ```
+    struct 구조체이름2 {
+        구조체2's 항목선언;
+    };
 
-----
-----
+    struct 구조체이름1 {
+        struct 구조체이름2 항목이름2;
+    };
 
+    구조체1 = {{값1, 값2}, {값3, 값4}}; // 중첩된 구조체는 이와 같이 초기화할 수 있음
+    ```
+
+    ```
+    struct coord {
+        int x;
+        int y;
+    };
+
+    struct rect {
+        struct coord top;
+        struct coord bot;
+    } box;
+    ```
+
+- 구조체 포인터
+
+    ```
+    struct 구조체이름 *구조체포인터;
+    구조체포인터->항목이름;
+    ```
+
+- typedef 문
+
+    ```
+    typedef 자료형 새자료형;
+
+    typedef struct mytype_s {
+        자료형 항목이름;
+    } mytype_t;
+
+    mytype_t 변수이름;
+    ```
+
+## 공용체 (Union)
+
+- 정의
+
+    ```
+    union 공용체이름 {
+        자료형 항목이름;
+    };
+    ```
+
+    ```
+    union data_block_t {
+        unsigned long long v64;
+        unsigned int    v32[2];
+        unsigned short  v16[4];
+        unsigned char    v8[8];
+    };
+    ```
+
+- 선언 및 사용
+
+    ```
+    union 공용체이름 공용체변수이름;
+    ```
+
+    ```
+    union data_block_t block;
+    ```
+
+    ```
+    공용체변수이름.항목이름;
+    공용체변수이름->항목이름; // 공용체 변수가 포인터 형태일 때
+    ```
+
+    ```
+    // block.v64
+    // block.v32[1]
+    // block.v16[3]
+    // block.v8[7]
+    ```
+
+## 포인터
+
+- ['포인터'로 이동](pointer.md)
+
+## 문자열
+
+- ['문자열'로 이동](string.md)
+
+## 동적 메모리
+
+- ['동적 메모리'으로 이동](dynamic_memory.md)
+
+## 파일 입출력
+
+- ['파일 입출력'으로 이동](file_input_output.md)
+
+---
+
+아래 내용은 정리가 필요
 
 ## Scanf Format
 
@@ -586,41 +698,7 @@ sizeof(object) -> size of object
 %p : pointer address
 ```
 
-## 공용체(Union)
 
-- 공용체 : 공유를 통한 메모리 절약
-
-```
-
-union Student
-{
-    char name[20];
-    char major[32];
-    char number[8];
-    float credit;
-}; 
-
-```
-
-- example
-
-        ```
-        int main() {
-
-        union Student Hwan;
-
-        Hwan.major = "Computer Engineering // error (포인터라서)
-    
-        strcpy(Hwan.major, "Computer Engineering); 
-            
-        Hwan.credit = 4.3; // Hwan에는 4.3만 저장됨
-        
-        printf("%ld \n",sizeof(Hwan)); // 32bit (major)
-
-        return 0;
-        }
-
-        ```
         
 ## 입출력 함수(Input / Output Function)
 
