@@ -1,6 +1,6 @@
-# 1. 마크다운 (Markdown) 사용법(문법)
+# 마크다운 (Markdown) 사용법(문법)
 
-## 1.1. 헤더Headers
+## Headers
 
 * 큰제목: 문서 제목
     ```
@@ -36,7 +36,7 @@
     ###### This is a H6
     ####### This is a H7(지원하지 않음)
 
-## 1.2. BlockQuote
+## BlockQuote
 
 이메일에서 사용하는 ```>``` 블럭인용문자를 이용한다
 
@@ -57,7 +57,7 @@
 >	code
 >	```
 
-## 1.3. 목록
+## 목록
 
 ### ● 순서있는 목록(번호)
 
@@ -125,11 +125,11 @@
     + 3단계
       + 4단계
 
-## 1.4. 코드
+## 코드
 
 4개의 공백 또는 하나의 탭으로 들여쓰기를 만나면 변환되기 시작하여 들여쓰지 않은 행을 만날때까지 변환이 계속된다
 
-### 1.4.1. 들여쓰기
+### 들여쓰기
 
 ```
 This is a normal paragraph:
@@ -165,7 +165,7 @@ This is a normal paragraph:
 end code block.
 *****
 
-### 1.4.1. 코드블럭
+### 코드블럭
 
 코드블럭은 다음과 같이 2가지 방식을 사용할 수 있다:
 
@@ -238,7 +238,7 @@ public class BootSpringBootApplication {
 }
 ```
 
-## 1.5. 수평선 ```<hr/>```
+## 수평선 ```<hr/>```
 
 아래 줄은 모두 수평선을 만든다. 마크다운 문서를 미리보기로 출력할 때 *페이지 나누기* 용도로 많이 사용한다
 
@@ -265,7 +265,7 @@ public class BootSpringBootApplication {
 
 ---------------------------------------
 
-## 1.6. 링크
+## 링크
 
 * 참조링크
 
@@ -304,7 +304,7 @@ public class BootSpringBootApplication {
     * 외부링크: <http://example.com/>
     * 이메일링크: <address@example.com>
 
-## 2.7. 강조
+## 강조
 
 ```
 *single asterisks*
@@ -323,7 +323,7 @@ __double underscores__
 > ```문장 중간에 사용할 경우에는 **띄어쓰기** 를 사용하는 것이 좋다```   
 > 문장 중간에 사용할 경우에는 띄어쓰기를 사용하는 것이 좋다
 
-## 1.8. 이미지
+## 이미지
 
 ```
 ![Alt text](/path/to/img.jpg)
@@ -344,7 +344,7 @@ Markdown의 경우 이미지 사이즈를 조절하는 기능이 없기 때문�
 <img src="http://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br/>
 <img src="http://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0" width="40%" height="30%" title="%(비율) 크기 설정" alt="RubberDuck"></img>
 
-## 1.9. 줄바꿈
+## 줄바꿈
 
 3칸 이상 띄어쓰기(` `)를 하면 줄이 바뀐다
 
@@ -361,11 +361,11 @@ Markdown의 경우 이미지 사이즈를 조절하는 기능이 없기 때문�
 * 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기해야 한다    \
 이렇게
 
-# 2. 자료 출처
+# 자료 출처
 
 - [ihoneymon/how-to-write-by-markdown.md](https://gist.github.com/ihoneymon/652be052a0727ad59601#file-how-to-write-by-markdown-md)
 
-# 3. 참고 문헌
+# 참고 문헌
 
 - [Markdown Official Guide](https://www.markdownguide.org)
 - [Getting started with writing and formatting on GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
