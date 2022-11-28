@@ -26,7 +26,7 @@
 
 ## Contents
 
-- [C언어 문법](basics/grammar.md)
+- [C언어 기본문법](basics/grammar.md)
 
 - [포인터](basics/pointer.md)
 

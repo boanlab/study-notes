@@ -1,6 +1,6 @@
 # Basics
 
-- [C언어 문법](grammar.md)
+- [C언어 기본문법](grammar.md)
 
 - [포인터](pointer.md)
 
