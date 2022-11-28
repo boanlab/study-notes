@@ -27,11 +27,12 @@
 ## Contents
 
 - [C언어 문법](basics/grammar.md)
-- [포인터](basics/pointer.md)
-- [문자열 처리](basics/string.md)
-- [파일 입출력](basics/file_io.md)
 
-    ##
+- [포인터](basics/pointer.md)
+
+- [문자열 처리](basics/string.md)
+
+- [파일 입출력](basics/file_io.md)
 
 ## Case Study
 
@@ -46,19 +47,18 @@
 - (TODO) [병렬 처리](case_study/parallel.md)
 
     - 멀티 프로세싱
-    - 멀티 스레딩
 
-        ##
+    - 멀티 스레딩
 
 - (TODO) [동기화](case_study/sync.md)
 
 - (TODO) [소켓 프로그래밍](case_study/socket.md)
 
     - TCP 소켓
-    - UDP 소켓
-    - Unix 도메인 소켓
 
-        ##
+    - UDP 소켓
+
+    - Unix 도메인 소켓
 
 - (TODO) [메시지 큐](case_study/message_queue.md)
 
@@ -83,9 +83,6 @@
 - (TODO) [파일/디렉토리 모니터링](case_study/file_dir_monitor.md)
 
 - (TODO) [메모리 덤프](case_study/memory_dump.md)
-
-
-    ##
 
 ## Projects
 
