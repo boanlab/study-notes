@@ -6,7 +6,7 @@
 
 ##
 
-- [분할 정복](divide-conquer.md)
+- [분할 정복](divide_conquer.md)
 
     - 개요
 
@@ -18,7 +18,7 @@
 
 ##
 
-- [백트래킹](back-tracking.md)
+- [백트래킹](back_tracking.md)
 
   - 개요
 
