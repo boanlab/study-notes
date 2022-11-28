@@ -1,5 +1,27 @@
 # Python
 
+## Environment Setup
+
+- Ubuntu
+
+    - python3, python3-pip르 설치한다
+
+        ```
+        sudo apt-get -y install python3 python3-pip
+        ```
+
+## Contents
+
+- [Python 문법](basics/grammar.md)
+
+## Case Study
+
+- TODO
+
+## Projects
+
+- 추후 업데이트 예정
+
 ## 출력
 
 ```
