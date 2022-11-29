@@ -687,18 +687,6 @@
 
 아래 내용은 정리가 필요
 
-## Scanf Format
-
-```
-%d : integer
-%f : float
-%lf : double
-%s : string // char 
-%c : single character 
-%p : pointer address
-```
-
-
         
 ## 입출력 함수(Input / Output Function)
 
@@ -752,134 +740,8 @@
             gets(input);  // output : Computer Engineering
             ```
 
-## 문자열 함수(String Function)
-
-```
-#include <string.h> // to use the String Function
-
-// 길이(Length)
-strlen(str) 
-
-// 복사(Copy)
-strcpy(str1,str2) // str2 -> str1 으로 복사
-strncpy(str1,str2,size) // str2->str1 , size 만큼
-
-// 연결(interconnect)
-strcat(str1,str2) // str1 에 str2 이어 붙임
-strncat(str1,str2,size) // size 만큼
-
-// 대소문자 변환(Upper,Lower) -> iteration 필요
-toupper(str[i]) 
-tolower(str[i]) 
-// Java의 toUpperCase() / toLowerCase() 는 iteration 필요 X
-
-// 비교(compare)
-
-strcmp(str1,str2)
-strncmp(str1,str2,size)
-
-// str1 < str2 음수
-// str1 > str2 양수
-// str1 == str2 0을 반환
 
 
-```
-
-## 동적 메모리 할당(Dynamic Memory Allocation)
-
-- malloc
-    ```
-    int *a;
-
-    a = (int*)malloc(10*sizeof(int)); // 10 * 4 = 40bytes
-
-    if(a == NULL) { // 메모리 예외처리
-     ...
-     
-    }
-
-     ...
-    
-    free(a) // 동적 메모리 해제
-
-    ```
-
-## 포인터 배열(Pointer Array)
-
-```
-arr[3] = { a,b,c};
-int* ptrArr = arr; // == &arr[0]
-
-arr[i] = *(arr+i);
-
-```
-
-## Array Pointer
-
-```
-
-```
-
-
-
-## 전역/정적 변수 (Global / Static Variable)
-
-- global variable(전역변수) : 프로그램 전체에서 사용 가능 , 자동 0으로 초기화
-
-    ```
-    int num;  // 지역변수와 달리 자동으로 0으로 초기화
-
-    int main() {
-
-    ...
-
-    }
-
-    ```
-
-- static variable 
-
-    - static local variable : 지역변수이자 정적변수
-
-    ```
-    void func(){
-
-    static int num;  // static local variable
-    
-    ...
-    }
-
-
-    int main(){
-
-        printf("%d",num) // error (local variable)
-    }
-
-    ```
-
-
-
-
-    - static global variable : 전역변수이자 정적변수, 외부 파일에서 참조 불가능
-
-    ```
-
-    static int num; // static global variable
-
-    int main(){
-
-        printf("%d",num); 
-
-    }
-        
-    ```
-    
-    ```
-    // 외부 파일
-
-    extern int num; // error (static variable 은 외부파일에서 사용 불가능)
-
-    ```
 
 
 ## 열거형(Enum)
@@ -924,27 +786,5 @@ enum language my_favorite = C;
 
 printf("my favorite : %d, my_favorite);  // my favorite : 0
 
-
-```
-
-## void형 데이터 (void pointer)
-
-- 어떤 타입이든 가리킬 수 있는 포인터
-  
-  대상의 크기 지정을 미루고 싶을 때 활용
-  적절히 형변환하여 사용
-
-```
-
-int p = 10;
-double q = 3.0;
-
-void *a = &p;   // a는 int형 변수인 p를 가리킴
-
-a = &q          // a는 double 형 변수인 q를 가리킴 (타입이 지정된 포인터였다면 에러 발생)
-
-*((double*)a) = 2.0;  // (double*)a : double로 형변환 이후 역참조
-
-printf("%f.2\n", q);  // 2.00
 
 ```
