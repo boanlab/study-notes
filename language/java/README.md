@@ -356,6 +356,89 @@ for(int i = 0; i < animals[0].length; i++) {
 }
 ```
 
+## Generic
+
+  - 정의
+    - 특정 데이터 타입을 클래스 내부에서 지정하는 것이 아닌 외부에서 사용자에 의해 지정되는 것을 의미
+  
+  - 주로 쓰는 타입
+  
+  ```
+    - <T>	      // Type
+    - <E>	      // Element
+    - <K>	      // Key
+    - <V>	      // Value
+    - <N>	      // Number
+  ```
+  
+  - 주의할 점
+    - 타입 파라미터로 명시할 수 있는 것은 참조 타입(Reference Type) 뿐이다.
+    
+  - 참조 타입이란?
+    - 사용자의 정의한 클래스나 Integer, Double 같은 Wrapper 타입
+    
+  - 왜 Generic을 쓰는가?
+  
+    - 정적(static) 메소드로 선언할 때 필요하기 때문이다.
+    
+    - 잘못된 예
+    
+    ```
+    class Name <E> {
+    
+      // static method는 객체가 생성되기 이전에 메모리에 먼저 올라가기 때문에 
+      // E 타입을 클래스로부터 얻어올 방법이 없다.
+      
+      static E genericMethod (E e) {
+      
+        return e;
+        
+      }
+    }
+    ```
+    
+    - Main
+    
+    ```
+    Name.genericMethod(3);    //error
+    ```
+    
+    #
+    
+    
+    - 좋은 예
+    
+    - 제네릭이 사용되는 메소드를 정적메소드로 두고 싶은 경우
+      제네릭 클래스와 별도로 독립적인 제네릭이 사용되어야 한다.
+      
+    ```
+    class Name <E> {
+    
+      
+     // [접근 제어자] <제네릭타입> [반환타입] [메소드명]([제네릭타입] [파라미터])
+     
+        static <E> E genericMethod (E e) {
+      
+        return e;
+        
+      }
+    }
+    ```
+    
+    - Main
+    
+    ```
+    Name.genericMethod(3);                        // 3
+    Name.genericMethod(3).getClass().getName();   //  java.lang.Integer
+    ```
+    
+    
+    
+
+
+
+
+
 ## Comment
 
 ```
