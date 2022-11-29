@@ -40,9 +40,17 @@
 ## Cloud Computing
 
 - [AWS](cloud_computing/aws/README.md)
+    - EC2
+    - S3
+    - RDS
+    - EKS
+    - Lambda
 - [OpenStack](cloud_computing/openstack/README.md)
 - [Docker](cloud_computing/docker/README.md)
+    - Docker-compose
 - [Kubernetes](cloud_computing/kubernetes/README.md)
+    - Knative
+    - Kubeflow
 
 ## DevOps
 
