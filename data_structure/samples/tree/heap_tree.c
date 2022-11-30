@@ -4,7 +4,7 @@
 
 
 
-/*--------±¸Á¶Ã¼ ¼±¾ð--------*/
+/*--------êµ¬ì¡°ì²´ ì„ ì–¸--------*/
 
 typedef struct NODE{
     int data;
@@ -19,7 +19,7 @@ typedef struct HEAP{
 
 
 
-/*----------ÇÔ¼ö ¼±¾ð--------*/
+/*----------í•¨ìˆ˜ ì„ ì–¸--------*/
 
 void Input_Data(Heap *hp, int data);
 void Delete_Data(Heap *hp);
