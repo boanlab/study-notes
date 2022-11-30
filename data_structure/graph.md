@@ -33,3 +33,15 @@
 ### 방법
 - Kruskal 알고리즘
 - Prim 알고리즘
+
+
+## 깊이 우선 순회(DFS : Depth First Search)
+![image](https://user-images.githubusercontent.com/57708995/204734660-5eebf6a4-c72b-414d-986f-dcf742ddc9f3.png)
+
+
+### 정의
+- 자식 노드를 우선적으로 탐색하는 탐색 기법(아직 방문되지 않은 인접 노드(자식 노드)를 우선적으로 탐색)
+- 주로 Stack을 활용함
+- 시간복잡도
+    - 인접 리스트 사용 : O(V+E)
+    - 인접 행렬 사용 : O(V^2)
