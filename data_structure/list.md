@@ -85,3 +85,51 @@
     - del -> llink -> rlink = del -> rlink // 삭제할 노드의 llink의 rlink = 삭제할노드의 rlink
     - del -> rlink -> llink = del -> llink
     ```
+
+### 환형 연결 리스트(원형 연결 리스트)
+![2-3-1](https://user-images.githubusercontent.com/57708995/204690252-68bb3a17-e739-4926-a392-e1b3fc17a54b.JPG)
+
+- Node
+
+```
+ -  head // 마지막 노드를 가리키는 포인터
+ -  item  // 데이터를 담을 변수
+ -  head->link // 첫 번째 노드를 가리키는 포인터
+```
+
+ - Node 추가
+
+    ![image](https://user-images.githubusercontent.com/57708995/204696674-fd5c00c3-3a65-4f37-85be-6f74dcddae66.png)
+    ![image](https://user-images.githubusercontent.com/57708995/204696817-c8d61be5-5170-49a2-ac4e-8a4b7108f3d3.png)
+
+    
+    - 첫 번째 노드 생성
+
+        ```
+        - head =  node
+        - node->link = head
+        ```
+    - 앞부분 삽입(두 번째 이후의 노드일 때 삽입)
+
+        ```
+        - node->link = head->link    // node의 link를 head의 link로 할당
+        - head->link = node          // head의 link를 node로 할당
+        ```
+    - 뒷부분 삽입(두 번째 이후의 노드일 때 삽입)
+
+        ```
+        - node->link = head->link    // node의 link를 head의 link로 할당
+        - head->link = node;	     // head의 link를 node로 할당
+        - head = node;	             // head를 node로 할당
+        ```
+
+ - Node 삭제
+    ```
+    Node* rpos = cur;             //소멸 대상의 주소 값을 rpos에 저장
+	LData rdata = rpos->data; //삭제할 데이터 임시 저장
+	before->link = cur->link; //소멸 대상을 리스트에서 제거
+	cur = before;             //cur이 가리키는 위치를 재조정
+	delete(rpos);
+	numOfData--;
+	return rdata;             //삭제된 데이터의 반환
+    ```
