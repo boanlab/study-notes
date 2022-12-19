@@ -1,10 +1,4 @@
-# 스터디 노트
-
-- 당장 보기 좋은 것들이 10년 후에도 보기 좋은 것은 아니다.
-- 지금은 한 우물을 팔 때가 아니다.
-- 최대한 많은 용어들을 익혀서 큰 그림을 보자.
-
-## 기반 지식
+# Summary
 
 - [Markdown 문법](things_to_know/markdown/README.md)
 - [Vagrant 개발 환경](things_to_know/vagrant/README.md)
@@ -14,8 +8,6 @@
     - [파일 구조](linux/file_system/README.md)
     - [Bash 스크립트](linux/bash_script/README.md)
     - [VI 편집기](linux/vim/README.md)
-
-## 프로그래밍 언어
 
 - [프로그래밍 언어](language/README.md)
     - [C](language/c/README.md)
@@ -28,8 +20,6 @@
     - [Kotlin](language/kotlin/README.md)
     - [Go](language/go/README.md)
     - [Rust](language/rust/README.md)
-
-## 컴퓨터 공학 전공
 
 - [자료구조](major_subjects/data_structure/README.md)
     - [리스트](major_subjects/data_structure/list.md)
@@ -79,20 +69,15 @@
     - [소프트웨어 유지보수](major_subjects/sw_engineering/maintenance.md)
     - [객체지향 개발 with UML](major_subjects/sw_engineering/uml.md)
 
-## 인공지능
-
 - [머신러닝](machine_learning/README.md)
-- [딥러닝](deep_learning/README.md)
 
-## DevOps
+- [딥러닝](deep_learning/README.md)
 
 - [DevOps](devops/README.md)
     - [Git](devops/git/README.md)
     - [GitHub Actions](devops/github_actions/README.md)
     - [Jenkins](devops/jenkins/README.md)
     - [Sonarqube](devops/sonarqube/README.md)
-
-## 클라우드
 
 - [클라우드 컴퓨팅](cloud_computing/README.md)
     - [AWS](cloud_computing/aws/README.md)
@@ -101,29 +86,4 @@
     - [Kubernetes](cloud_computing/kubernetes/README.md)
     - [Knative](cloud_computing/knative/README.md)
 
-## 플랫폼, 프레임워크, 라이브러리 등
-
-- [gRPC](platforms/grpc/README.md)
-    - [Protobuf](platforms/grpc/protobuf/README.md)
-
-- [MySQL/MariaDB](platforms/mysql/README.md)
-- [MongoDB](platforms/mongodb/README.md)
-
-- [Node.js](platforms/node.js/README.md)
-- [Redis](platforms/redis/README.md)
-
-- [Elasticsearch](platforms/elasticsearch/README.md)
-- [Kibana](platforms/kibana/README.md)
-- [Kafka](platforms/kafka/README.md)
-
-- [Prometheus](platforms/prometheus/README.md)
-- [Grafana](platforms/grafana/README.md)
-
-- [Hadoop](platforms/hadoop/README.md)
-    - [MapReduce](platforms/hadoop/mapreduce/README.md)
-    - [Spark](platforms/hadoop/spark/README.md)
-    - [Hive](platforms/hadoop/hive/README.md)
-    - [Hbase](platforms/hadoop/hbase/README.md)
-    - [HDFS](platforms/hadoop/hdfs/README.md)
-    - [Cassandra](platforms/hadoop/cassandra/README.md)
-    - [ZooKeeper](platforms/hadoop/zookeeper/README.md)
+- 플랫폼, 프레임워크, 라이브러리 등
