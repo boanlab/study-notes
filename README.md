@@ -31,6 +31,8 @@
 
 ## 컴퓨터 공학 전공
 
+- [컴퓨터 개론](major_subjects/introduction/README.md)
+
 - [자료구조](major_subjects/data_structure/README.md)
     - [리스트](major_subjects/data_structure/list.md)
     - [스택](major_subjects/data_structure/stack.md)
@@ -53,14 +55,29 @@
     - [NP-완전 문제](major_subjects/algorithm/np.md)
 
 - [컴퓨터구조](major_subjects/computer_architecture/README.md)
+    - 업데이트 예정
 
 - [운영체제](major_subjects/operating_system/README.md)
+    - [운영체제 개요](major_subjects/operating_system/introduction.md)
+    - [프로세스 관리](major_subjects/operating_system/process_mgmt.md)
+    - [프로세스 동기화](major_subjects/operating_system/process_sync.md)
+    - [저장장치 관리](major_subjects/operating_system/storage_mgmt.md)
+    - [파일 시스템](major_subjects/operating_system/file_system.md)
 
 - [컴퓨터 네트워크](major_subjects/network/README.md)
+    - [네트워크 개요](major_subjects/network/introduction.md)
+    - [데이터 링크](major_subjects/network/data_link.md)
+    - [IP 프로토콜](major_subjects/network/ip_protocol.md)
+    - [TCP/UDP 프로토콜](major_subjects/network/tcp_udp_protocol.md)
+    - [라우팅 프로토콜](major_subjects/network/routing.md)
+    - [애플리케이션 프로토콜](major_subjects/network/app_protocol.md)
+    - [네트워크 보안](major_subjects/network/security.md)
 
 - [데이터베이스](major_subjects/database/README.md)
+    - 업데이트 예정
 
 - [분산시스템](major_subjects/distributed_system/README.md)
+    - [Introduction](major_subjects/distributed_system/introduction.md)
     - [Architectural Styles](major_subjects/distributed_system/architecture.md)
     - [Communications](major_subjects/distributed_system/communication.md)
     - [Naming](major_subjects/distributed_system/naming.md)
@@ -69,6 +86,7 @@
     - [Fault Tolerance](major_subjects/distributed_system/fault_tolerance.md)
 
 - [소프트웨어공학](major_subjects/sw_engineering/README.md)
+    - [소프트웨어공학 개요](major_subjects/sw_engineering/introduction.md)
     - [소프트웨어 개발 프로세스](major_subjects/sw_engineering/dev_process.md)
     - [소프트웨어 프로젝트 관리](major_subjects/sw_engineering/project_mgmt.md)
     - [소프트웨어 품질](major_subjects/sw_engineering/quality.md)
@@ -92,7 +110,7 @@
     - [Jenkins](devops/jenkins/README.md)
     - [Sonarqube](devops/sonarqube/README.md)
 
-## 클라우드
+## 클라우드 컴퓨팅
 
 - [클라우드 컴퓨팅](cloud_computing/README.md)
     - [AWS](cloud_computing/aws/README.md)
@@ -100,6 +118,7 @@
     - [Docker](cloud_computing/docker/README.md)
     - [Kubernetes](cloud_computing/kubernetes/README.md)
     - [Knative](cloud_computing/knative/README.md)
+    - [Kubeflow](cloud_computing/kubeflow/README.md)
 
 ## 플랫폼, 프레임워크, 라이브러리 등
 

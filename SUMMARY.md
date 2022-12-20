@@ -1,5 +1,7 @@
 # Summary
 
+## 기반 지식
+
 - [Markdown 문법](things_to_know/markdown/README.md)
 - [Vagrant 개발 환경](things_to_know/vagrant/README.md)
 
@@ -8,6 +10,8 @@
     - [파일 구조](linux/file_system/README.md)
     - [Bash 스크립트](linux/bash_script/README.md)
     - [VI 편집기](linux/vim/README.md)
+
+## 프로그래밍 언어
 
 - [프로그래밍 언어](language/README.md)
     - [C](language/c/README.md)
@@ -20,6 +24,10 @@
     - [Kotlin](language/kotlin/README.md)
     - [Go](language/go/README.md)
     - [Rust](language/rust/README.md)
+
+## 컴퓨터 공학 전공
+
+- [컴퓨터 개론](major_subjects/introduction/README.md)
 
 - [자료구조](major_subjects/data_structure/README.md)
     - [리스트](major_subjects/data_structure/list.md)
@@ -69,9 +77,12 @@
     - [소프트웨어 유지보수](major_subjects/sw_engineering/maintenance.md)
     - [객체지향 개발 with UML](major_subjects/sw_engineering/uml.md)
 
-- [머신러닝](machine_learning/README.md)
+## 인공지능
 
+- [머신러닝](machine_learning/README.md)
 - [딥러닝](deep_learning/README.md)
+
+## DevOps
 
 - [DevOps](devops/README.md)
     - [Git](devops/git/README.md)
@@ -79,11 +90,15 @@
     - [Jenkins](devops/jenkins/README.md)
     - [Sonarqube](devops/sonarqube/README.md)
 
+## 클라우드 컴퓨팅
+
 - [클라우드 컴퓨팅](cloud_computing/README.md)
     - [AWS](cloud_computing/aws/README.md)
     - [OpenStack](cloud_computing/openstack/README.md)
     - [Docker](cloud_computing/docker/README.md)
     - [Kubernetes](cloud_computing/kubernetes/README.md)
     - [Knative](cloud_computing/knative/README.md)
+
+## 플랫폼, 프레임워크, 라이브러리 등
 
 - 플랫폼, 프레임워크, 라이브러리 등
