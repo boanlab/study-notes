@@ -54,6 +54,9 @@
     - [백트래킹](major_subjects/algorithm/back_tracking.md)
     - [NP-완전 문제](major_subjects/algorithm/np.md)
 
+- [프로그래밍 언어](major_subjects/programming_language/README.md)
+    - 업데이트 예정
+
 - [컴퓨터구조](major_subjects/computer_architecture/README.md)
     - 업데이트 예정
 

@@ -50,13 +50,30 @@
     - [백트래킹](major_subjects/algorithm/back_tracking.md)
     - [NP-완전 문제](major_subjects/algorithm/np.md)
 
+- [프로그래밍 언어](major_subjects/programming_language/README.md)
+    - 업데이트 예정
+
 - [컴퓨터구조](major_subjects/computer_architecture/README.md)
+    - 업데이트 예정
 
 - [운영체제](major_subjects/operating_system/README.md)
+    - [운영체제 개요](major_subjects/operating_system/introduction.md)
+    - [프로세스 관리](major_subjects/operating_system/process_mgmt.md)
+    - [프로세스 동기화](major_subjects/operating_system/process_sync.md)
+    - [저장장치 관리](major_subjects/operating_system/storage_mgmt.md)
+    - [파일 시스템](major_subjects/operating_system/file_system.md)
 
 - [컴퓨터 네트워크](major_subjects/network/README.md)
+    - [네트워크 개요](major_subjects/network/introduction.md)
+    - [데이터 링크](major_subjects/network/data_link.md)
+    - [IP 프로토콜](major_subjects/network/ip_protocol.md)
+    - [TCP/UDP 프로토콜](major_subjects/network/tcp_udp_protocol.md)
+    - [라우팅 프로토콜](major_subjects/network/routing.md)
+    - [애플리케이션 프로토콜](major_subjects/network/app_protocol.md)
+    - [네트워크 보안](major_subjects/network/security.md)
 
 - [데이터베이스](major_subjects/database/README.md)
+    - 업데이트 예정
 
 - [분산시스템](major_subjects/distributed_system/README.md)
     - [Architectural Styles](major_subjects/distributed_system/architecture.md)

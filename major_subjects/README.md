@@ -23,6 +23,9 @@
     - [백트래킹](algorithm/back_tracking.md)
     - [NP-완전 문제](algorithm/np.md)
 
+- [프로그래밍 언어](programming_language/README.md)
+    - 업데이트 예정
+
 - [컴퓨터구조](computer_architecture/README.md)
     - 업데이트 예정
 
