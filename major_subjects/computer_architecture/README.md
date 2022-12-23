@@ -3,9 +3,9 @@
 
 ## Contents
 
-- [Intro](Intro/README.md.md)
-- [Data](Data/README.md.md)
-- [Instruction](Instruction/README.md.md)
-- [CPU_basic](CPU_basic/README.md.md)
-- [CPU_advance](CPU_advance/README.md.md)
-- [Memory&Cache](MemoryAndCache/README.md.md)
+- [Intro](Intro/README.md)
+- [Data](Data/README.md)
+- [Instruction](Instruction/README.md)
+- [CPU_basic](CPU_basic/README.md)
+- [CPU_advance](CPU_advance/README.md)
+- [Memory&Cache](MemoryAndCache/README.md)
