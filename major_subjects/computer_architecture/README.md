@@ -1,10 +1,11 @@
 # 컴퓨터구조론
 
+
 ## Contents
 
-- [Intro](Intro/intro.md)
-- [Data](Data/data.md)
-- [Instruction](Instruction/instruction.md)
-- [CPU_basic](CPU_basic/cpu_basic.md)
-- [CPU_advance](CPU_advance/cpu_advance.md)
-- [Memory&Cache](MemoryAndCache/memory_cache.md)
+- [Intro](Intro/README.md.md)
+- [Data](Data/README.md.md)
+- [Instruction](Instruction/README.md.md)
+- [CPU_basic](CPU_basic/README.md.md)
+- [CPU_advance](CPU_advance/README.md.md)
+- [Memory&Cache](MemoryAndCache/README.md.md)
