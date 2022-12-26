@@ -11,3 +11,9 @@
 
 ## 1. Classful Addressing
   - Classful Addressing은 전체 IP주소를 5개의 클래스로 구분하여 주소를 할당하는 방법이다.
+<img width="722" alt="KakaoTalk_Photo_2022-12-26-21-13-31" src="https://user-images.githubusercontent.com/110087065/209547818-219e7d09-a27d-40d1-9582-5d244028a8a0.png">
+- class A: 대규모 네트워크 환경에 사용됨
+- class B: 중규모 네트워크 환경에 사용됨
+- class C: 소규모 네트워크 환경에 사용됨
+- class D: 소규모 네트워크 환경에 사용됨
+- class E: 향후 다른 목적을 위해 일반적으로 사용하지 않는 클래스
