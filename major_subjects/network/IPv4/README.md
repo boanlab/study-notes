@@ -18,5 +18,5 @@
 - class D: 소규모 네트워크 환경에 사용됨.<br/>
 - class E: 향후 다른 목적을 위해 일반적으로 사용하지 않는 클래스.<br/>
 
-## 2. Two-Level Addressing
+### 1-2. Two-Level Addressing
 
