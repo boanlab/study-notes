@@ -22,7 +22,8 @@
   
 ## 2.  TCP/IP Protocol Suite
 
-  <img width="92" alt="KakaoTalk_Photo_2022-12-26-20-41-58" src="https://user-images.githubusercontent.com/110087065/209545120-9bc032e0-3c9d-4233-853e-ad2a370199a6.png">
+![KakaoTalk_Photo_2022-12-26-21-43-29](https://user-images.githubusercontent.com/110087065/209550437-15a201a8-b73d-4dc7-9130-1f3dc390a348.png)
+
 
 - 각 계층별 통신 단위
   - Physical layer에서 통신 단위로 bit를 사용.
