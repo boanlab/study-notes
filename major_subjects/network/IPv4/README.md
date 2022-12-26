@@ -22,3 +22,5 @@
 - IP Address는 Netid와 Hostid, 두 영역으로 구분 가능한데, 해당하는 클래스에 따라 영역이 달라진다.
 ![KakaoTalk_Image_2022-12-26-21-28-23](https://user-images.githubusercontent.com/110087065/209549029-8b37da89-bed6-4f3a-ace3-1c696df52d6d.png)
 - 위의 정보로 IP 주소가 주어진 경우 알 수 있는 정보는 주소의 '해당 클래스','주소의 수','시작 주소와 끝 주소'이다.
+  - EX) IP 주소 10.100.100.100은 주소가 속한 클래스: A CLASS, 주소 수: 2^24개, 시작 주소:10.0.0.0, 끝 주소: 10.255.255.255
+  - 예외 사항으로 시작 주소는 loopback address, 끝 주소는 broadcast address로 사용하여 할당하지 않는다.
