@@ -17,6 +17,7 @@ image
   - Datalink layer: hop-to-hop 전달을 제공하기 위해 비트를 프레임으로 구성
   - Physical layer: 기계적, 전기적 특성을 제공하기 위해 매체를 통해 비트를 전송하는 것
   
+  
   2. TCP/IP Protocol Suite
   
   image
@@ -27,6 +28,7 @@ image
   - Network layer에서 통신 단위로 datagram을 사용.
   - Transport layer에서 통신 단위는 사용하는 프로토콜에 따라 segment, user datagram, packet을 사용.
   - Application layer에서 통신 단위로 message를 사용.
+  
   
   3. Addressing
   - Data link layer (Frame) -> Physical addresses
