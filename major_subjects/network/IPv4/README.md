@@ -43,5 +43,10 @@
 - Supernetting 방법
   - 각 네트워크의 비트열이 같은 부분까지를 네트워크 부분으로 보고 계산하여 적용한다.
 
+
 ## 2. Classless Addressing
-  - Classful Addressing의
+  - Classful Addressing의 subnetting과 supernetting은 IPv4의 주소 고갈 문제를 해결할 수 없었고, IPv6라는 장기적인 해결법이 고안되었지만, 단기적인 해결법으로 IPv4의 Classless Addressing을 사용.
+  
+### 2-1. Variable-Length Blocks
+
+  
