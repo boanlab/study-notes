@@ -33,4 +33,15 @@
   
 ### 1-4. Three-Level Addressing
 - Subnetting
-  - Classful Addressing 
+  - Classful Addressing 방식에서 배정받은 네트워크를 자체적으로 분할하여 주소 체계를 내부적으로 개편하는 방법.
+  - 배정받은 네트워크는 Class A, B, C 네트워크 중 하나를 의미한다. (Unicast 주소)
+  - 하나의 네트워크에 포함된 호스트들을 여러 그룹으로 묶는 방식이기 때문에, 서브넷팅이 진행되면 본 주소에서 Net-id의 Bit 필드는 늘어나고, Host-id 필드는 줄어들게 된다.
+  - Class A, B, C는 각각 X.X.X.X/8, X.X.X.X/16, X.X.X.X/24와 같은 주소 형태를 보이는데, 서브넷팅된 네트워크의 주소는 X.X.X.X/9, X.X.X.X/15, X.X.X.X/19, X.X.X.X/28과 같이 Net-id와 Host-id를 더 이상 Byte 단위로 해석할 수 없게 된다.
+  
+### 1-5. supernetting
+- Subnet과는 반대로 여러 개의 주 네트워크르 축약하는 방법이다.
+- Supernetting 방법
+  - 각 네트워크의 비트열이 같은 부분까지를 네트워크 부분으로 보고 계산하여 적용한다.
+
+## 2. Classless Addressing
+  - Classful Addressing의
