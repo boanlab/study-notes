@@ -10,7 +10,7 @@
   - IPv4 주소는 0.0.0.0부터 255.255.255.255까지 총 2^32개의 주소로 표현할 수 있다.
 
 ## 1. Classful Addressing
-  - Classful Addressing은 전체 IP주소를 5개의 클래스로 구분하여 주소를 할당하는 방법이다.
+  - Classful Addressing은 전체 IP주소를 첫 8bytes의 수에 따라 5개의 클래스로 구분하여 주소를 할당하는 방법이다.
 <img width="722" alt="KakaoTalk_Photo_2022-12-26-21-13-31" src="https://user-images.githubusercontent.com/110087065/209547818-219e7d09-a27d-40d1-9582-5d244028a8a0.png">
 - class A: 대규모 네트워크 환경에 사용됨
 - class B: 중규모 네트워크 환경에 사용됨
