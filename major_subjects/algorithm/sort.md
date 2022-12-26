@@ -40,7 +40,5 @@
     - 재귀를 사용하여 부분 리스트 크기가 0이나 1이 될 때까지 반복한다.
 
 ### 예시
-
-
-
+![퀵 정렬](https://github.com/Apdul0329/study-notes/blob/main/major_subjects/algorithm/sample/sort/quickSort/quick%20sort.PNG?raw=true)
 
