@@ -22,7 +22,7 @@
   
 ## 2.  TCP/IP Protocol Suite
 
-![KakaoTalk_Photo_2022-12-26-21-43-29](https://user-images.githubusercontent.com/110087065/209550437-15a201a8-b73d-4dc7-9130-1f3dc390a348.png)
+![KakaoTalk_Photo_2022-12-26-21-45-51](https://user-images.githubusercontent.com/110087065/209550575-80fbc30a-8820-4e6d-966d-126ff2ba58fd.png)
 
 
 - 각 계층별 통신 단위
