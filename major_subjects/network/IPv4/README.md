@@ -28,5 +28,5 @@
 ### 1-3. Network mask
 - network mask address는 network address(시작 주소)를 찾을 때 사용되고, 해당 클래스마다 mask가 다르다.
 - mask와 주어진 IP주소를 AND연산하면 network address(시작 주소)를 도출할 수 있다.
-
+<img width="519" alt="KakaoTalk_Image_2022-12-26-22-15-20" src="https://user-images.githubusercontent.com/110087065/209552929-17f32d3d-c7b4-42bc-8020-373d2eca3e04.png">
   - EX) IP 주소 10.100.100.100 주소가 주어진 경우 A class임을 알 수 있고, A class의 mask와 AND 연산하여 10.0.0.0 이라는 network address(시작 주소)를 도출할 수 있다. 
