@@ -26,4 +26,4 @@
   - 예외 사항으로 시작 주소는 network address, 끝 주소는 broadcast address로 사용하여 할당하지 않는다.
   
 ### 1-3. Network mask
-- network mask address
+- network mask address는 network address(시작 주소)를 찾을 때 사용되고, 해당 클래스마다 mask가 다르다.
