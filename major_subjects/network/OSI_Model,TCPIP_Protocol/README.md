@@ -1,7 +1,8 @@
 - protocol이란
-  개체간의 데이터 통신을 원할하게 하기 위해 필요한 통신 규약
+  - 개체간의 데이터 통신을 원할하게 하기 위해 필요한 통신 규약
 
-1.  OSI 7 Layer Model
+
+## 1.  OSI 7 Layer Model
 
 <img width="104" alt="KakaoTalk_Photo_2022-12-26-20-39-05" src="https://user-images.githubusercontent.com/110087065/209544909-9f73237e-5200-4329-b705-9ff8296daa66.png">
 
@@ -18,9 +19,10 @@
   - Physical layer: 기계적, 전기적 특성을 제공하기 위해 매체를 통해 비트를 전송하는 것
   
   
-2.  TCP/IP Protocol Suite
   
-  image
+## 2.  TCP/IP Protocol Suite
+
+  <img width="92" alt="KakaoTalk_Photo_2022-12-26-20-41-58" src="https://user-images.githubusercontent.com/110087065/209545120-9bc032e0-3c9d-4233-853e-ad2a370199a6.png">
 
 - 각 계층별 통신 단위
   - Physical layer에서 통신 단위로 bit를 사용.
@@ -30,7 +32,8 @@
   - Application layer에서 통신 단위로 message를 사용.
   
   
-3.  Addressing
+  
+## 3.  Addressing
   - Data link layer (Frame) -> Physical addresses
   - Network layer (Datagram) -> Logical addresses
   - Transport layer (Segment) -> Port addresses
