@@ -51,6 +51,11 @@
 - Classless Addressing에서 Prefix는 Network를 정의하고 Suffix는 host를 정의한다.
 - Classless Addressing에서 Prefix length는 0에서 32까지 가능하다.
 <img width="505" alt="image" src="https://user-images.githubusercontent.com/110087065/209616318-97b9c651-6d1d-4229-9165-b5abc49c6da0.png">
+- Classless Addressing에서는 Slash 뒤에 Prefix length를 알 수 있고, block의 주소 중 하나를 알 수 있다.
+- Classless Addressing에서 주소는 주소가 속한 block을 정의할 수 없다.
+  - EX) 주소 230.8.24.56으 관련 prefix에 따라 아래에 표와 같이 많은 block에 속할 수 있다.
+  <img width="527" alt="image" src="https://user-images.githubusercontent.com/110087065/209617175-a7abdf10-00ef-42a0-ba9f-ff548f6abaa3.png">
 
-- Classless Addressing에서는 Slash 뒤에 Prefix length로 해당 하는 클래스를 알 수 있다.
+### 2-2. Two-Level Addressing
+  
   
