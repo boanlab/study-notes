@@ -118,6 +118,115 @@ def transpose(array, x):
 ### 단점
 - 리스트의 크기가 커질수록 효율이 감소한다.
 
+#
+
+# 이진 탐색 (Binary Search)
+
+### 정의
+
+- 정렬된 리스트에서 검색 범위를 줄여 나가면서 검색 값을 찾는 알고리즘
+    - 정렬된 리스트에만 사용할 수 있다는 단점
+    - 검색이 반복될 때마다 검색 범위가 반으로 줄기 때문에 속도가 빠르다는 장점
+
+### 원리
+
+- 배열의 중간 값을 가져온다.
+
+- 중간 값과 검색 값을 비교한다.
+
+    - (중간 값 = 검색 값) ==> 종료
+    - (중간 값 < 검색 값) ==> 중간 값 기준 오른쪽 구간 대상 탐색
+    - (중간 값 > 검색 값) ==> 중간 값 기준 왼쪽 구간 대상 탐색
+    
+- 값을 찾거나 간격이 비어있을 때까지 반복
+</br>
+
+### 코드
+
+```c
+
+#include <stdio.h>
+
+
+// data : 탐색할 오름차순으로 정렬된 정수 배열
+// n : 정수 배열의 크기
+// key : 찾고자하는 값
+
+int binsearch (int data[], int n, int key) {
+
+    int low, high;
+    int mid;
+ 
+    low = 0;
+    high = n - 1;
+
+    while (low <= high) {
+
+        mid = (low + high) / 2;
+
+        if (key == data[mid]) {            //탐색 성공
+
+            return mid;        
+
+        }
+        else if (key < data[mid]) {        //탐색 범위를 밑으로
+
+            high = mid - 1;
+
+        }
+        else if (key > data[mid]) {        //탐색 범위를 위로
+
+            low = mid + 1;
+            
+        }
+    }
+
+    return -1;                            //탐색 실패
+}
+
+
+ 
+int main() {
+
+    int a[10] = { 2, 8, 13, 16, 20, 22, 34, 45, 56, 77 };  // 
+    int index;
+    int key;
+ 
+    scanf("%d", &key);
+
+    index = binsearch(a, 10, key);
+
+    if (index == -1) {
+
+        printf("자료가 없습니다!\n");
+
+    }
+    else {
+
+        printf("자료가 %d번째에 있습니다.\n", index + 1);
+
+    }
+    
+    return 0;
+
+}
+
+```
+
+</br>
+
+### 장점
+- O(logn)으로 빠르게 탐색 가능
+
+### 단점
+- 자료가 정렬이 된 상태여야 한다는 점
+
+### 시간 복잡도
+
+- O(logn)
+    - 자료를 반으로 계속 줄여가면서 탐색, O(n)에 비해 훨씬 빠른 속도
+
+
 
 
 ---
