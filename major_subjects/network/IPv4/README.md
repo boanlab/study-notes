@@ -63,7 +63,8 @@
   - 주소의 개수: 2^32 - 2^n = 32
   - 시작 주소  
   <img width="480" alt="image" src="https://user-images.githubusercontent.com/110087065/209618647-7619541a-0144-4507-be6e-bced602cf370.png">
-  - last address
+  
+  - 끝 주소
   <img width="481" alt="image" src="https://user-images.githubusercontent.com/110087065/209618783-d77d680f-ac81-432c-b7b2-ebbcd0232744.png">
 
 ### 2-3. Block Allocation
