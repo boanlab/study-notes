@@ -16,7 +16,14 @@
 - Forwarding은 packet을 목적지까지의 경로에 배치하는 것을 의미한다.
 - Forwarding은 packet을 next hop(목적지 또는 중간 장치)으로 전달하는 것을 의미합니다.
 
+- Routing table
+  - 라우팅 테이블으 IP Network르 통하여 이동하는 packetㅇ 어디로 향하게 될지 결정하는데 사용되는 일련의 규칙으로, 보통 Table 형태로 표현된다.
+  - 라우티 테이블에는 패킷이 대상을 향한 최상의 경로를 따라 전달하는데 필요한 정보가 포함되어 있다.
+
 ### Next-Hop Routing
+- Next-Hop Routing에서 Routing table은 next hop의 주소만 보유합니다.
+
 ### Network-Specific Routing
+
 ### Host-Specific Routing
 ### Default Routing
