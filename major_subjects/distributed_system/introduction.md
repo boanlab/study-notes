@@ -21,7 +21,7 @@
     
 2. Unstructured Overlay 구조화 되지 않은 오버레이
     
-    ![Untitled](Introduction%20fd17a02089664795972812af707444da/Untitled%201.png)
+    <img src="introduction/Untitled 2.png" width="500"/>
     
 
 특징 2 : Single Coherent System 단일 코히어런트 시스템
@@ -43,8 +43,7 @@
 
 - Distributed system organized in a middleware layer
 
-![Untitled](Introduction%20fd17a02089664795972812af707444da/Untitled%202.png)
-
+<img src="introduction/Untitled 3.png" width="500"/>
 ### 분산 시스템의 속성
 
 - Heterogeneity 이기종성
