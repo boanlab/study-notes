@@ -95,29 +95,29 @@ Centralized architectures 중앙 입중식 아키텍처
 
 다계층 아키텍처 구조
 
-![Untitled](Architecture%20bad7d1e9d6e54f53868e8eef03ec35e3/Untitled%201.png)
+<img src="architecture/Untitled%201.png" width="500"/>
 
-![Untitled](Architecture%20bad7d1e9d6e54f53868e8eef03ec35e3/Untitled%202.png)
+<img src="architecture/Untitled%202.png" width="500"/>
 
 Decentralized Architectures 분산 아키텍처 - P2P시스템 → 거의 모든경우에 오버레이 네트워크를 다루고 있음. 
 
 - Peer to Peer Architecture
     - Structured P2P
     
-    ![Untitled](Architecture%20bad7d1e9d6e54f53868e8eef03ec35e3/Untitled%203.png)
+    <img src="architecture/Untitled%203.png" width="500"/>
     
     - Unstructured P2P
         
-        ![Untitled](Architecture%20bad7d1e9d6e54f53868e8eef03ec35e3/Untitled%204.png)
-        
+    <img src="architecture/Untitled%204.png" width="500"/>
+    
         - searching 방식 : Flooding / Random walk
     - Super-peer Networks
     
     브로커를 사용하여 각 브로커에서 해당 노드가 연결, 브로커는 브로커 끼리 연결
     
-    ![Untitled](Architecture%20bad7d1e9d6e54f53868e8eef03ec35e3/Untitled%205.png)
+    <img src="architecture/Untitled%205.png" width="500"/>
     
 - Hybrid Architectures 하이브리드 P2P 아키텍처
     - Edge-server systems (Edge Computing)
     
-    ![Untitled](Architecture%20bad7d1e9d6e54f53868e8eef03ec35e3/Untitled%206.png)
+    <img src="architecture/Untitled%206.png" width="500"/>
