@@ -39,7 +39,7 @@
   - Class A, B, C는 각각 X.X.X.X/8, X.X.X.X/16, X.X.X.X/24와 같은 주소 형태를 보이는데, 서브넷팅된 네트워크의 주소는 X.X.X.X/9, X.X.X.X/15, X.X.X.X/19, X.X.X.X/28과 같이 Net-id와 Host-id를 더 이상 Byte 단위로 해석할 수 없게 된다.
   
 ### 1-5. supernetting
-- Subnet과는 반대로 여러 개의 주 네트워크르 축약하는 방법이다.
+- Subnet과는 반대로 여러 개의 주 네트워크를 축약하는 방법이다.
 - Supernetting 방법
   - 각 네트워크의 비트열이 같은 부분까지를 네트워크 부분으로 보고 계산하여 적용한다.
 
@@ -68,12 +68,19 @@
   <img width="481" alt="image" src="https://user-images.githubusercontent.com/110087065/209618783-d77d680f-ac81-432c-b7b2-ebbcd0232744.png">
 
 ### 2-3. Block Allocation
-### 2-4. Subnetting
+- 만약 1000개의 주소 block을 요구할 때, 2의 거듭제곱인 1024개의 주소를 부여함.
+- block의 prefix length는 n = 32 - log2(1024) = 22
+- 시작 주소는 
 
+### 2-4. Subnetting
+- IP주소 낭비를 방지하기 위한 원본 네트워크를 여러 개의 네트워크로 분리하는 과정(자신의 네트워크 주소를 더 작은 서브 네트워크로 2의 제곱으로 나누는 과정)
 
 ## 3. Special Address
-- Special Address란 IP 주소 중에서 특별한 목적으로 쓰이는 주소.
+- Special Address란 IP 주소 중에서 특별한 목적으로 쓰이는 주소들을 말한다.
 
+- all-zero address
+  - 내가 누군지 모를 때 사용하는 주소(발신지로만 사용 가능)
+  
 - directed broadcast address
   - 라우터가 브로드캐스트 할 일이 있을 때 이 주소를 사용한다. 이 때 목적지 주소는 해당 네트워크 의 마지막 주소가 된다.
   
