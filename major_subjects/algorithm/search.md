@@ -98,12 +98,12 @@ def move_to_front(arr,key):
 ### **코드**
 
 ```python
-def move_to_front(arr,key):
-    for i in range(len(arr)):
-        if arr[i] == key:
-            for j in range(i-1,-1,-1):  # key 값의 앞 부분만 뒤로 한 칸씩 밀리면 된다.
-                arr[j+1] = arr[j]
-            arr[0] = key # 맨 처음 값은 key값으로
+def transpose(array, x):
+    for i in range(len(array)):
+        if x == array[i]: # 탐색된 경우
+            if i != 0:
+                # 탐색된 값을 바로 앞 인덱스 값의 자리와 교환
+                array[i], array[i-1] = array[i-1], array[i]  
             return i
     return False
 ```
