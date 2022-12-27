@@ -17,7 +17,7 @@
 - 조직 - 오버레이 네트워크로 구성됨
 1. Structured Overlay 구조화 된 오버레이
     
-    ![Untitled](Introduction%20fd17a02089664795972812af707444da/Untitled.png)
+    <img src="Untitled.png" width="500"/>
     
 2. Unstructured Overlay 구조화 되지 않은 오버레이
     
