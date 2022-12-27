@@ -43,5 +43,31 @@
 - Fragmentation Offset
 
 - Time to Live
+  - TTL 값이 0이 되는 경우 Datagram을 삭제한다.
+  - 이 값은 두 호스트 사이의 최대 라우터 수의 대략 두배이다.
+  - TTL 값이 1인 경우 첫 라우터에 도착할 때 Datagram을 삭제한다.
   
+- Protocol
+  - IP datagram이 전달되어야 하는 최종 목적지 프로토콜을 정의한다.
+  - IP 프로토콜은 서로 다른 상위 프로토콜의 데이터를 다중화 및 역다중화하므로 이 필드의 값은 역다중화 프로세스에 도움이 됩니다.
+  
+- Source Address
+  - 발생지의 IP 주소 정의
+
+- Destination Address
+  - 목적지의 IP 주소 정의
+  
+  
+## Fragmentation
+
+### MTU(Maximum Transfer Unit)
+- 각 data link 계층 프로토콜에는 고유하 프레임 형식이 있습니다.
+- MTU는 데이터 필드의 최대 크기이다.
+- datagram이 frame에 캡슐화되면 datagram의 총 크기는 MTU보다 작아야 한다.
+- 만일 MTU 사이즈보다 큰 경우 데이터 조각화를 필요 함.
+
+### Fragmentation 관련 Fields
+- datagram이 조각화되면 헤더의 필요한 부분을 모든 조각을 복사해야 한다.
+- datagram을 분할하는 호스트 또느 라우터에 의해 변경되어야하는 세가지 필드
+  - Flag, Fragmentation Offset, Total Length
   
