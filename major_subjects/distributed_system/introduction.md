@@ -17,11 +17,11 @@
 - 조직 - 오버레이 네트워크로 구성됨
 1. Structured Overlay 구조화 된 오버레이
     
-    <img src="introduction/Untitled 1.png" width="500"/>
+    <img src="introduction/Untitled.png" width="500"/>
     
 2. Unstructured Overlay 구조화 되지 않은 오버레이
     
-    <img src="introduction/Untitled 2.png" width="500"/>
+    <img src="introduction/Untitled 1.png" width="500"/>
     
 
 특징 2 : Single Coherent System 단일 코히어런트 시스템
@@ -43,7 +43,7 @@
 
 - Distributed system organized in a middleware layer
 
-<img src="introduction/Untitled 3.png" width="500"/>
+<img src="introduction/Untitled 2.png" width="500"/>
 ### 분산 시스템의 속성
 
 - Heterogeneity 이기종성
