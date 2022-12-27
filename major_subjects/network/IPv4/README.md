@@ -48,7 +48,9 @@
   - IPv4의 약 42억개 주소 공간은 현재 주소 고갈 문제를 일으키고, Classful Addressing의 subnetting과 supernetting은 IPv4의 주소 고갈 문제를 해결할 수 없었고, IPv6라는 장기적인 해결법이 고안되었지만, 단기적인 해결법으로 IPv4의 Classless Addressing을 사용했다.
   
 ### 2-1. Variable-Length Blocks
-- Classless Addressing에서 Prefix는 Network르 정의하고 Suffix는 host를 정의한다.
+- Classless Addressing에서 Prefix는 Network를 정의하고 Suffix는 host를 정의한다.
 - Classless Addressing에서 Prefix length는 0에서 32까지 가능하다.
+<img width="505" alt="image" src="https://user-images.githubusercontent.com/110087065/209616318-97b9c651-6d1d-4229-9165-b5abc49c6da0.png">
 
+- Classless Addressing에서는 Slash 뒤에 Prefix length로 해당 하는 클래스를 알 수 있다.
   
