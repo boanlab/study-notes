@@ -15,3 +15,8 @@
 ## 2. Forwarding
 - Forwarding은 packet을 목적지까지의 경로에 배치하는 것을 의미한다.
 - Forwarding은 packet을 next hop(목적지 또는 중간 장치)으로 전달하는 것을 의미합니다.
+
+### Next-Hop Routing
+### Network-Specific Routing
+### Host-Specific Routing
+### Default Routing
