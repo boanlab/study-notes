@@ -17,14 +17,14 @@
 - 조직 - 오버레이 네트워크로 구성됨
 1. Structured Overlay 구조화 된 오버레이
     
-    ![Untitled](Introduction%20fd17a02089664795972812af707444da/Untitled.png)
+    <img src="introduction/Untitled.png" width="500"/>
     
 2. Unstructured Overlay 구조화 되지 않은 오버레이
     
-    ![Untitled](Introduction%20fd17a02089664795972812af707444da/Untitled%201.png)
+    <img src="introduction/Untitled 1.png" width="500"/>
     
 
-특징 2 : Single Coherent System 단일 코히어런트 시스템  
+특징 2 : Single Coherent System 단일 코히어런트 시스템
 
 - 분산시스템은 하나의 일관된 시스템으로 나타나야 한다는 의미
 - 즉 노드의 집합 전체는 사용자와 시스템간의 상호작용이 어디서, 언제, 어떻게 발생하는지에 관계없이 동일하게 작동하여야 함
@@ -43,8 +43,7 @@
 
 - Distributed system organized in a middleware layer
 
-![Untitled](Introduction%20fd17a02089664795972812af707444da/Untitled%202.png)
-
+<img src="introduction/Untitled 2.png" width="500"/>
 ### 분산 시스템의 속성
 
 - Heterogeneity 이기종성
