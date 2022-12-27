@@ -51,11 +51,20 @@
 - Classless Addressing에서 Prefix는 Network를 정의하고 Suffix는 host를 정의한다.
 - Classless Addressing에서 Prefix length는 0에서 32까지 가능하다.
 <img width="505" alt="image" src="https://user-images.githubusercontent.com/110087065/209616318-97b9c651-6d1d-4229-9165-b5abc49c6da0.png">
-- Classless Addressing에서는 Slash 뒤에 Prefix length를 알 수 있고, block의 주소 중 하나를 알 수 있다.
-- Classless Addressing에서 주소는 주소가 속한 block을 정의할 수 없다.
+- Classless Addressing에서는 Slash 뒤에 Prefix length를 알 수 있고, block의 주소 중 하나를 알 수 있다.<br/>
+- Classless Addressing에서 주소는 주소가 속한 block을 정의할 수 없다.<br/>
   - EX) 주소 230.8.24.56으 관련 prefix에 따라 아래에 표와 같이 많은 block에 속할 수 있다.
   <img width="527" alt="image" src="https://user-images.githubusercontent.com/110087065/209617175-a7abdf10-00ef-42a0-ba9f-ff548f6abaa3.png">
 
 ### 2-2. Two-Level Addressing
-  
-  
+- 167.199.170.82/27 이란 주소가 있을 때, 주소의 개수, 시작 주소, 끝 주소 를 구하는 방법.
+  - n = 27
+  - 따라서 network mask는 11111111 11111111 11111111 11100000
+  - 주소의 개수: 2^32 - 2^n = 32
+  - 시작 주소  
+  <img width="480" alt="image" src="https://user-images.githubusercontent.com/110087065/209618647-7619541a-0144-4507-be6e-bced602cf370.png">
+  - last address
+  <img width="481" alt="image" src="https://user-images.githubusercontent.com/110087065/209618783-d77d680f-ac81-432c-b7b2-ebbcd0232744.png">
+
+### 2-3. Block Allocation
+
