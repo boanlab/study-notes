@@ -8,5 +8,10 @@
 - Network 주소가 같으면 같은 block안에 존재한다.
 
 ### Indirect Delivery
+<img width="511" alt="image" src="https://user-images.githubusercontent.com/110087065/209628214-c359404e-be9c-4de9-a3e0-7ee8d58e5250.png">
+- 위의 그림에서 A에서 목적지 B로 가기 위해 2번의 간접 전달과 1번의 직접 전달이 이루어진다.
+
 
 ## 2. Forwarding
+- Forwarding은 packet을 목적지까지의 경로에 배치하는 것을 의미한다.
+- Forwarding은 packet을 next hop(목적지 또는 중간 장치)으로 전달하는 것을 의미합니다.
