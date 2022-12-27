@@ -7,7 +7,7 @@ def quick_sort(array):
 
     # 리스트 표현식을 사용하여 pivot 기준 왼쪽 리스트와 오른쪽 리스트 분리
     left_array = [x for x in tail if  x <= pivot]   # pivot보다 크기가 작은 원소들을 저장하는 left_array 리스트
-    right_array = [x for x in tail if x > pivot]    # pivot보다 크기가 큰 원소들을 저장하는 left_array 리스트
+    right_array = [x for x in tail if x > pivot]    # pivot보다 크기가 큰 원소들을 저장하는 right_array 리스트
 
     # 재귀 호출을 이용
     return quick_sort(left_array) + [pivot] + quick_sort(right_array)
