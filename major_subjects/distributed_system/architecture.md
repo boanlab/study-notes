@@ -18,7 +18,7 @@
     - 혼합 계층 구조
     - 상향 호출이 있는 계층 구조
         
-        <img src="architecture/Untitled.png" width="200"/>
+        <img src="architecture/Untitled.png" width="600"/>
         
     
     - 어플리케이션의 논리적 계층화
