@@ -24,7 +24,7 @@
     ![Untitled](Introduction%20fd17a02089664795972812af707444da/Untitled%201.png)
     
 
-특징 2 : Single Coherent System 단일 코히어런트 시스템  
+특징 2 : Single Coherent System 단일 코히어런트 시스템
 
 - 분산시스템은 하나의 일관된 시스템으로 나타나야 한다는 의미
 - 즉 노드의 집합 전체는 사용자와 시스템간의 상호작용이 어디서, 언제, 어떻게 발생하는지에 관계없이 동일하게 작동하여야 함
