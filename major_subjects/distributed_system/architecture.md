@@ -1,6 +1,6 @@
 # Architecture
 
-# What is Architecture?
+## What is Architecture?
 
 - 분산 시스템의 구성을 보는 다양한 방법
     
@@ -18,7 +18,7 @@
     - 혼합 계층 구조
     - 상향 호출이 있는 계층 구조
         
-        ![Untitled](architecture/Untitled.png){: width="100" height="100"}
+        <img src="architecture/Untitled.png" width="200"/>
         
     
     - 어플리케이션의 논리적 계층화
