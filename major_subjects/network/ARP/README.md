@@ -31,6 +31,11 @@
 - Destination address, Source address에는 MAC 주소로 존재한다.
 
 ### ARP Operation
+<img width="691" alt="image" src="https://user-images.githubusercontent.com/110087065/209836108-1e1f8855-e159-4525-951f-e9274c1182a3.png">
+- A가 B에게 데이터를 전송하고 싶은데 MAC 주소를 모르는 상황
+- LAN의 모든 컴퓨터에 broadcast로 ARP request를 보낸다.
+- B가 이 패킷을 받고 ARP reply를 보낸다. ARP reply에는 B의 MAC 주소가 존재한다.
+- A는 B의 reply를 받고 ARP Table에 B의 MAC 주소를 저장한다. 
 
 ## ARP Package
 <img width="678" alt="image" src="https://user-images.githubusercontent.com/110087065/209832471-6a84d6f2-07b2-4a83-b64d-0d794fb8da10.png">
