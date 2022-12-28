@@ -29,7 +29,7 @@ To maintain a global state : 시간을 전역상태로 유지하며 메시지를
     
      1. Cristian’s Algorithm
     
-    ![Untitled](Coordination%202501d79c99d845cf9dde6f3d67bcab07/Untitled.png)
+    <img src="coordination/1.png" width="500"/>
     
     T1에서 서버로 받은 시간 : Tr
     
@@ -49,7 +49,7 @@ To maintain a global state : 시간을 전역상태로 유지하며 메시지를
         
         순서2. Master sends adjustment to each slave
         
-        ![Untitled](Coordination%202501d79c99d845cf9dde6f3d67bcab07/Untitled%201.png)
+        <img src="coordination/2.png" width="500"/>
         
     
     Happened before Relationship → Notion of ordering
@@ -78,7 +78,7 @@ To maintain a global state : 시간을 전역상태로 유지하며 메시지를
             
             → received by process Pj, Pj adjusts its locat counter Cj = max{Cj, ts(m)}; then Cj+1
             
-            ![Untitled](Coordination%202501d79c99d845cf9dde6f3d67bcab07/Untitled%202.png)
+            <img src="coordination/3.png" width="500"/>
             
         - Middleware를 사용하여 time sync를 맞추는 방법 : order 대로 실행, 나중순서가 먼저 있다면, buffer에 저장 후 후실행.
 - Total-ordered Multicast : 1대 다수의 연결(multicast)상황
@@ -101,7 +101,7 @@ To maintain a global state : 시간을 전역상태로 유지하며 메시지를
     
     이전의 Logical clock의 리스트화이며 방법도 동일 함.
     
-    ![Untitled](Coordination%202501d79c99d845cf9dde6f3d67bcab07/Untitled%203.png)
+    <img src="coordination/4.png" width="500"/>
     
     ts(m)을 비교하면 이전에 일어난 사건인지 또는 영향이 없는 사건인지 판별 가능하다.
     
@@ -128,7 +128,7 @@ To maintain a global state : 시간을 전역상태로 유지하며 메시지를
                 
                 performance bottleneck이 발생할 수 있다.
                 
-                ![Untitled](Coordination%202501d79c99d845cf9dde6f3d67bcab07/Untitled%204.png)
+                <img src="coordination/5.png" width="500"/>
                 
             - distributed algorithm - Ricart and Agrawala’s Distributed Algorithm
                 
@@ -138,7 +138,7 @@ To maintain a global state : 시간을 전역상태로 유지하며 메시지를
                 
                 만약 동시에 엑세스를 희망한경우, 들어오는 메시지의 timestamp가 낮은(조금이라도 더 빨리) 요청한 process가 이긴다. 
                 
-                ![Untitled](Coordination%202501d79c99d845cf9dde6f3d67bcab07/Untitled%205.png)
+                <img src="coordination/6.png" width="500"/>
                 
     - Token-based Solution
         
@@ -170,7 +170,7 @@ To maintain a global state : 시간을 전역상태로 유지하며 메시지를
             
             만약 죽었던 원래의 coordinator가 살아나면 다시 election과정을 반복한다.
             
-            ![Untitled](Coordination%202501d79c99d845cf9dde6f3d67bcab07/Untitled%206.png)
+            <img src="coordination/7.png" width="500"/>
             
         - Ring based Election
             
@@ -178,10 +178,10 @@ To maintain a global state : 시간을 전역상태로 유지하며 메시지를
             
             모든 프로세스는 후임자에게 election message를 보낼 수 있다. 만약 다운된 경우 메시지는 다음 계승자에게 전달된다. 메시지가 전달되면 보낸 사람이 보낸 목록에 자신을 추가한 뒤 목록을 넘긴다. 이후 모든 프로세스가 포함 된 목록이 생성되면, 가장 높은 우선순위를 가진 process가 coordinator로 elected된다.
             
-            ![Untitled](Coordination%202501d79c99d845cf9dde6f3d67bcab07/Untitled%207.png)
+            <img src="coordination/8.png" width="500"/>
             
         - Election in Wireless Networks
             
-            ![Untitled](Coordination%202501d79c99d845cf9dde6f3d67bcab07/Untitled%208.png)
+            <img src="coordination/9.png" width="500"/>
             
-            ![Untitled](Coordination%202501d79c99d845cf9dde6f3d67bcab07/Untitled%209.png)
+            <img src="coordination/10.png" width="500"/>
