@@ -63,8 +63,14 @@
   - Timestamp request and reply message는 시간이 동기화되지 않은 경우에도 소스와 대상 시스템간의 왕복 시간을 계산하는데 사용할 수 있습니다.
   - Timestamp request and reply message는 정확한 단방향 시간을 알고 있는 경우, 두 시스템에서 두 시간을 동기화할 수 있습니다.
 
-### 디버깅 도구
+### Debugging Tools
 - 호스트 라우터가 살아 있는지 실행 중 인지 확인할 수 있다.
 - 패킷의 경로를 추적할 수 있다.
 - ICMP에서 디버깅을 위해 사용하는 두 가지 도구로 Ping, traceroute가 존재한다.
+
+### ICMP Package
+- ICMP message의 송수신을 처리하는 방법에 대한 아이디어르 제공하기 위해 두 모듈로 구성된 ICMP Package가 존재한다.
+- Input Modulem, Output Module
+<img width="546" alt="image" src="https://user-images.githubusercontent.com/110087065/209854368-2c56756b-1c88-4022-a7bc-17a05e9f2fcc.png">
+
 
