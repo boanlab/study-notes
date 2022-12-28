@@ -77,7 +77,7 @@
 ### TCP 특징
 - 연결형 서비스
   - 연결형 서비스로 연결이 성공해야 통신이 가능하다
-  <img width="400" alt="image" src="https://user-images.githubusercontent.com/110087065/209868355-51fd6de0-b875-4141-8dec-9739728ed5ee.png">
+  <img width="300" alt="image" src="https://user-images.githubusercontent.com/110087065/209868355-51fd6de0-b875-4141-8dec-9739728ed5ee.png"><br/>
   - 3-way handshaking 과정으로 연결 설정
   - 4-way handshaking 과정으로 연결 해제
 
