@@ -43,7 +43,7 @@
 - 스택 최상단 노드인 1에 방문하지 않은 인접노드는 2,3,8 번 노드이다. 그 중에서 **가장 작은** 2번 노드를 스택에 넣고 방문처리를 한다.
     - 스택 : [1,2]
 
-<img src = "https://user-images.githubusercontent.com/88774925/209829183-ba8b565b-c3c1-427a-ab41-358416a01925.jpg" width = "670" height = "350" />
+<img src = "https://user-images.githubusercontent.com/88774925/209829183-ba8b565b-c3c1-427a-ab41-358416a01925.jpg" width = "630" height = "310" />
 
 
 
@@ -53,7 +53,7 @@
     - 스택 : [1,2,7,6]
 
 
-<img src = "https://user-images.githubusercontent.com/88774925/209829227-d87ae810-eb10-493c-b9b2-0c77d1890455.jpg" width = "670" height = "350" />
+<img src = "https://user-images.githubusercontent.com/88774925/209829227-d87ae810-eb10-493c-b9b2-0c77d1890455.jpg" width = "630" height = "310" />
 
 
 - 스택의 최상단 노드인 6번 노드에 방문하지 않은 인접노드가 없으므로 **스택에서 6번 노드를 꺼낸다.**
@@ -143,7 +143,7 @@ def dfs(graph, v, visited):     # v: 시작 노드를 매개변수로 입력 받
     2. 새롭게 진입차수가 0이된 노드를 큐에 넣는다.
     
     
-<img src = "https://user-images.githubusercontent.com/88774925/209552066-bf57249f-bfa0-4a70-9ef1-88c82b29cba2.jpg" width="500" height="350"/>
+<img src = "https://user-images.githubusercontent.com/88774925/209552066-bf57249f-bfa0-4a70-9ef1-88c82b29cba2.jpg" width="450" height="300"/>
 
 | 노드 | 1  | 2 | 3 | 4 | 5 | 6 | 7 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -154,7 +154,7 @@ def dfs(graph, v, visited):     # v: 시작 노드를 매개변수로 입력 받
 - 진입차수가 0인 1번 노드를 처음으로 큐에 넣는다. (1번 과정)
 
 
-<img src = "https://user-images.githubusercontent.com/88774925/209552880-609db32e-54ee-4324-9bff-04f5c0cef305.jpg" width="500" height="350"/>
+<img src = "https://user-images.githubusercontent.com/88774925/209552880-609db32e-54ee-4324-9bff-04f5c0cef305.jpg" width="450" height="300"/>
 
 | 노드 | 1  | 2 | 3 | 4 | 5 | 6 | 7 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -224,7 +224,7 @@ def dfs(graph, v, visited):     # v: 시작 노드를 매개변수로 입력 받
 이 경우 노드의 트리 구조는 다음과 같다.  
 
 
-<img src = "https://user-images.githubusercontent.com/88774925/209554730-7075720d-a7cc-4c0d-b8fb-c949faa0f48c.jpg" width="320" height="300"/>
+<img src = "https://user-images.githubusercontent.com/88774925/209554730-7075720d-a7cc-4c0d-b8fb-c949faa0f48c.jpg" width="270" height="250"/>
 
 
 하지만, **2번 노드의 루트 노드는 1번 노드**이므로 3번의 부모 노드도 1번 노드이어야 한다.
@@ -243,7 +243,7 @@ def dfs(graph, v, visited):     # v: 시작 노드를 매개변수로 입력 받
 | --- | --- | --- |
 | 1 | 2 | 1 |
 
-<img src = "https://user-images.githubusercontent.com/88774925/209555457-6a2415c3-9cef-4998-80ee-86ca35973340.jpg" width="320" height="300"/>
+<img src = "https://user-images.githubusercontent.com/88774925/209555457-6a2415c3-9cef-4998-80ee-86ca35973340.jpg" width="270" height="250"/>
 
 
 <br/>    
@@ -383,7 +383,7 @@ def unionParent(parent,a,b):
 
 - 구현 관점에선 다음과 같다.(우선순위 큐 사용)
 
-<img src = "https://user-images.githubusercontent.com/88774925/209830460-88e4db3a-0a05-48c1-84f2-7f4a50584c3e.jpg" width = "470" height = "560" />
+<img src = "https://user-images.githubusercontent.com/88774925/209830460-88e4db3a-0a05-48c1-84f2-7f4a50584c3e.jpg" width = "470" height = "477" />
 
 
 
@@ -434,7 +434,7 @@ def prim(graph, start_node):
 
 ### 다익스트라 vs 벨만-포드
 
-<img src = "https://user-images.githubusercontent.com/88774925/209627939-2a619387-d5db-4d09-ab22-c755bd400380.jpg" width = "700" height = "400" />
+<img src = "https://user-images.githubusercontent.com/88774925/209627939-2a619387-d5db-4d09-ab22-c755bd400380.jpg" width = "600" height = "300" />
 
 **음수 간선의 순환**
 
