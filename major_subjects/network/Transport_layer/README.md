@@ -78,7 +78,7 @@
 - 연결형 서비스
   - 연결형 서비스로 가상 회선 방식을 제공한다.
   - 3-way handshaking 과정으로 연결 설정
-  - 4-way handshaking으로 연결 해제
+  - 4-way handshaking 과정으로 연결 해제
 
 - 흐름 제어
   - 데이터 처리 속도를 조절하여 수신자의 버퍼 오버플로우를 방지
@@ -96,9 +96,14 @@
   - 점대점(Point to Point)
     - 각 연결이 정확히 2개의 종단점을 가지고 있다.
   - 따라서 multicasting, broadcasting을 지원하지 않는다.
+
 ### UDP
-
-
+<img width="279" alt="image" src="https://user-images.githubusercontent.com/110087065/209864120-400211b1-e0d5-489a-8b61-2f52d79f5322.png">
+- UDP는 packet이 목적지에 제대로 도착한다는 보장이 없다.
+- UDP는 한번만 전송하고 재전송을 하지 않는다.
+- in-order한 특성을 갖는 TCP와 다르게, UDP는 un-ordered한 특성을 가져 패킷을 보내는 순서를 신경쓰지 않는다.
+- 따라서 신뢰성이 부족한 UDP는 손실이 나도 허용 가능하고 속독 중요한 서비스에 사용된다.
+  - EX) DNS, SNMP, Video Streaming
 ### TCP/UDP 정리
 <img width="450" alt="image" src="https://user-images.githubusercontent.com/110087065/209862424-91c3871e-547d-41fc-a123-0c1a86ffc976.png">
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/110087065/209862792-41ccc551-51aa-419c-b632-9567f062f85b.png">
