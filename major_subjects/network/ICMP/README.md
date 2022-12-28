@@ -1,5 +1,5 @@
 
-## ICMP(Internet Control Message Protocol)
+## ICMPv4(Internet Control Message Protocol Version 4)
 - ICMP란 네트워크 내 장치가 데이터 전송과 관련된 오류를 전달하기 위해 사용하는 프로토콜이다.
 - ICMP의 가장 주요 책임은 오류 보고이다. 어떤 이유로 인해 패킷을 전달하지 못하면 송신자에게 보고한다.
 - ICMP 주요방법은 데이터가 대상에 도달하는지와 도달 시간이 적절한지 확인한다.
@@ -27,7 +27,7 @@
   - 멀티캐스트 주소를 가진 데이터그램에 대한 ICMP 오류 메시지를 생성하지 않는다.
   - loopback address, broadcast address 같은 특수 주소를 가진 데이터그램에 대한 ICMP 오류 메시지를 생성하지 않는다.
   
-### 5 types of Error Reporting Messages are handled
+### 5 types of Error Reporting Messages
 1 Destination unreachable
   - 라우터가 데이터그램을 라우팅할 수 없거나 호스트가 데이터그램을 전달할 수 없는 경우
   - 데이터그램은 폐기되고 라우터 또는 호스트는 데이터그램을 시작한 Source host로 Destination unreachable message를 전송한다.
@@ -50,5 +50,27 @@
 5 Redirection Message
   - 호스트는 다른 네트워크로 향하는 데이터그램을 잘못된 라우터로 보낼 수 있다.
   - 이 경우 데이터그램을 수신한 라우터는 데이터그램을 올바른 라우터로 전달하고 Redirection Message를 호스트로 전송한다.
+
+
+### Query Message
+1 Echo request and reply
+  - echo request message는 호스트나 라우터에서 전송한다.
+  - echo request message를 수신한 호스트나 라우터는 echo reply message를 보낸다.
+  - echo request and reply message는 네트워크 관리자가 IP 프로토콜의 작동을 확인하는데 사용할 수 있다.
+  - echo request and reply message는 호스트의 도달 가능성을 테스트 할 수 있다. EX)PING
+  
+2 Timestamp request and reply
+  - Timestamp request and reply message는 시간이 동기화되지 않은 경우에도 소스와 대상 시스템간의 왕복 시간을 계산하는데 사용할 수 있습니다.
+  - Timestamp request and reply message는 정확한 단방향 시간을 알고 있는 경우, 두 시스템에서 두 시간을 동기화할 수 있습니다.
+
+### Debugging Tools
+- 호스트 라우터가 살아 있는지 실행 중 인지 확인할 수 있다.
+- 패킷의 경로를 추적할 수 있다.
+- ICMP에서 디버깅을 위해 사용하는 두 가지 도구로 Ping, traceroute가 존재한다.
+
+### ICMP Package
+- ICMP message의 송수신을 처리하는 방법에 대한 아이디어르 제공하기 위해 두 모듈로 구성된 ICMP Package가 존재한다.
+- Input Modulem, Output Module
+<img width="546" alt="image" src="https://user-images.githubusercontent.com/110087065/209854368-2c56756b-1c88-4022-a7bc-17a05e9f2fcc.png">
 
 
