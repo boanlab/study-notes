@@ -66,7 +66,7 @@ sudo docker run hello-world
 ```
 docker run hello-world
 ```
-는 권한 관련 문제로 동작하지 않는다. [여기](https://stackoverflow.com/questions/48957195/how-to-fix-docker-got-permission-denied-issue)에 따르면 이를 해결하는 방안이 존재한다. 
+는 권한 관련 문제로 동작하지 않는다. [여기](https://stackoverflow.com/questions/48957195/how-to-fix-docker-got-permission-denied-issue)에 따르면 이를 해결하는 방안이 존재한다.
 ```bash
 sudo groupadd docker
 sudo usermod -aG docker $USER
@@ -74,7 +74,7 @@ newgrp docker
 ```
 이제 `sudo` 없이도 `docker` 명령어를 사용할 수 있다.
 ## Contents
-1. 간단한 이론
-2. Docker 명령어
-3. DockerFile 작성
-4. Docker Compose 작성
+1. [간단한 이론](./basics/introduction.md)
+2. [Docker 명령어](./basics/commands.md)
+3. [DockerFile 작성](./basics/dockerfile.md)
+4. [Docker Compose 작성](./basics/docker_compose.md)
