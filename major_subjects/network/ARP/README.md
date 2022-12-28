@@ -27,8 +27,8 @@
 
 ### ARP Packet
 <img width="684" alt="image" src="https://user-images.githubusercontent.com/110087065/209835738-44a52cdf-fdc6-43f1-8381-3746fd79de42.png">
-- Data 부분에 ARP 구조가 존재한다.
-- Destination address, Source address에는 MAC 주소로 존재한다.
+- Data 부분에 ARP 구조가 존재한다.<br/>
+- Destination address, Source address에는 MAC 주소로 존재한다.<br/>
 
 ### ARP Operation
 <img width="691" alt="image" src="https://user-images.githubusercontent.com/110087065/209836108-1e1f8855-e159-4525-951f-e9274c1182a3.png">
