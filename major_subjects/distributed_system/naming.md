@@ -13,7 +13,8 @@
             - 이름은 명명된 개체의 위치에 대한 힌트를 제공할 수 있음
             - 이름은 명명된 개체가 허용하는 일련의 작업을 나타낼 수 있습니다
         
-        ![Untitled](Naming%2013ccc2d4301143a190f021b3f9a51338/Untitled.png)
+        <img src="naming/1.png" width="500"/>
+
         
     - Different types of names
         - address 주소
