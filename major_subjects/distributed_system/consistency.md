@@ -129,7 +129,7 @@
         - Writes done by a single process are seen by all other processes in the order in which they were issued
         - Writes from different processes may be seen in a different order by different processes
         
-        <img src="consistency/4.png" width="500"/>
+        <img src="consistency/17.jpeg" width="500"/>
         
 
 ### Weak Consistency models
@@ -142,7 +142,7 @@ key point : LOCK → mutual exclusion의 목적
     
     Sync 와 operator 들이 group으로 sync가 일어난다
     
-    <img src="consistency/5.png" width="500"/>
+    <img src="consistency/4.png" width="500"/>
     
 - *Release Consistency*
     
@@ -154,17 +154,17 @@ key point : LOCK → mutual exclusion의 목적
     
     Rel : arrival at barrier
     
-    <img src="consistency/6.png" width="500"/>
+    <img src="consistency/5.png" width="500"/>
     
 - *Entry Consistency*
     
     특정 item에 대해서만 lock을 건다
     
-    <img src="consistency/7.png" width="500"/>
+    <img src="consistency/6.png" width="500"/>
     
 - Summary of Data-centric Consistency Model
     
-    <img src="consistency/8.png" width="500"/>
+    <img src="consistency/7.png" width="500"/>
     
 
 - data centric consistency vs client centric consistency
@@ -206,24 +206,24 @@ eventual consistency는 따라서 업데이트가 모든 복제본에 전파되�
     
      
     
-    <img src="consistency/9.png" width="500"/>
+    <img src="consistency/8.png" width="500"/>
     
 - *Monotonic-Write Consistency*
     - A write operation by a process on a data item x is completed before any successive write operation on x by the same process
         
-        <img src="consistency/10.png" width="500"/>
+        <img src="consistency/9.png" width="500"/>
         
-        <img src="consistency/11.png" width="500"/>
+        <img src="consistency/10.png" width="500"/>
         
 - *Read-Your-Writes Consistency*
     - The effect of a write operation by a process on a data item x will always be seen by as successive read operation on x by the same process
         
-        <img src="consistency/12.png" width="500"/>
+        <img src="consistency/11.png" width="500"/>
         
 - *Writes-Follow-Reads Consistency*
     - A write operation by a process on a data item x, following a previous read operation on x by the same process, is guaranteed to take place on the same or a more recent value of x that was read
         
-        <img src="consistency/13.png" width="500"/>
+        <img src="consistency/12.png" width="500"/>
         
 
 ### Consistency Protocols
@@ -241,20 +241,20 @@ eventual consistency는 따라서 업데이트가 모든 복제본에 전파되�
     - Read operations are allowed on a local copy while write operations are forwarded to a fixed primary copy
     - Issues : bottleneck if implemented as a blocking operation
     
-    <img src="consistency/14.png" width="500"/>
+    <img src="consistency/13.png" width="500"/>
     
 - Local-write protocols
     - All write operations are performed locally and forwarded to the rest of replicas
     - non-blocking protocol
     - Primary copy migrates between processes that wish to perform a write operation
     
-    <img src="consistency/15.png" width="500"/>
+    <img src="consistency/14.png" width="500"/>
     
 - Active Replication
     - group coordination을 둔다.
     - sender-driven vs receiver-driven
         
-        <img src="consistency/16.png" width="500"/>
+        <img src="consistency/15.png" width="500"/>
         
 - Quorum-based Protocols
     - Quorum set
@@ -265,7 +265,7 @@ eventual consistency는 따라서 업데이트가 모든 복제본에 전파되�
     - Write operations
         - up-to-date copies ≥ W
     
-    <img src="consistency/17.png" width="500"/>
+    <img src="consistency/16.png" width="500"/>
     
     (a)  A correct choice of read and write set
     (b)  A choice that may lead to write-write conflicts since W <= N/2
