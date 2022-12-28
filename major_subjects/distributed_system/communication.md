@@ -12,7 +12,7 @@
     - RPC
         1. Basic RPC Operation
         
-        ![Untitled](Communication%20d5c6048eb1d54485935c42e70cecfdd4/Untitled%201.png)
+        <img src="communication/1.png" width="500"/>
         
         1. Asynchronous RPCs
             
