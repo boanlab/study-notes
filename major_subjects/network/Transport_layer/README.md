@@ -24,7 +24,8 @@
 
 ### Encapsulation and Decapsulation
 <img width="708" alt="image" src="https://user-images.githubusercontent.com/110087065/209858285-e2d3535f-0028-44d4-b1f9-2a4823c32709.png">
-- Encapsulation
+
+- Encapsulation<br/>
   - 헤더에 전송 정보를 붙여나가는 것
   
 - Decapsulation
