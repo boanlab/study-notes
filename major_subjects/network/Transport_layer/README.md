@@ -67,8 +67,11 @@
   
   
 
-## TCP/UDP
-- Transport layer에서 대표적으로 사용되는 프로토콜로 TCP와 UDP가 존재한다.
+## TCP/UDP (Transmission Control Protocol / User Datagram Protocol)
+- TCP와 UDP는 TCP/IP의 Transport layer에서 사용되는 프로토콜이다.
+
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/110087065/209862424-91c3871e-547d-41fc-a123-0c1a86ffc976.png">
+
 
 ### TCP
 
