@@ -18,7 +18,6 @@ latest: Pulling from library/ubuntu
 Digest: sha256:27cb6e6ccef575a4698b66f5de06c7ecd61589132d5a91d098f7f3f9285415a9
 Status: Downloaded newer image for ubuntu:latest
 docker.io/library/ubuntu:latest
-
 ```
 이렇게 이미지 이름만 적는 경우, 자동으로 `latest` 버전의 Docker image를 `pull` 한다. 만약 특정 버전을 원하는 경우, `NAME:TAG`으로 설정을 할 수 있다. 만일 `ubuntu`이미지의 22.04 버전이 아닌, 16.04 버전을 원한다면, 다음처럼 해보자.
 ```
