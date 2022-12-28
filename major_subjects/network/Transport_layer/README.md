@@ -99,15 +99,15 @@
   
 ### TCP Header
 <img width="575" alt="image" src="https://user-images.githubusercontent.com/110087065/209865869-2605304f-bbf2-4ce5-9965-373bee195fed.png">
-- Source Port: 보내는 곳의 포트번호
+- Source Port: 보내는 곳의 포트번호<br/>
 - Destination Port: 받는 곳의 포트번호
-- Sequence Number: 송신자가 지정하는 순서 번호, 전송되는 바이트 수를 기준으로 증가
-- Data Offset: TCP Segment의 시작 위치를 기준으로 데이터의 시작 위치를 표현 = TCP 헤더의 크기
-- Reserved: 사용하지 않지만 나중을 위한 예약 필드로 0으로 채워짐
-- Flag Bit: SYN, ACK, FIN 등의 제어 번호
-- Window: 수신 윈도우으 버퍼 크기 지정
-- Checksum: TCP Segment에 포함되는 프로토콜 헤더와 데이터에 대한 오류 검출 용도
-- Urgent Pointer: 긴급 데이터를 처리하기 위한 부분으로 URG 플래 비트가 지정된 경우에만 유효
+- Sequence Number: 송신자가 지정하는 순서 번호, 전송되는 바이트 수를 기준으로 증가<br/>
+- Data Offset: TCP Segment의 시작 위치를 기준으로 데이터의 시작 위치를 표현 = TCP 헤더의 크기<br/>
+- Reserved: 사용하지 않지만 나중을 위한 예약 필드로 0으로 채워짐<br/>
+- Flag Bit: SYN, ACK, FIN 등의 제어 번호<br/>
+- Window: 수신 윈도우으 버퍼 크기 지정<br/>
+- Checksum: TCP Segment에 포함되는 프로토콜 헤더와 데이터에 대한 오류 검출 용도<br/>
+- Urgent Pointer: 긴급 데이터를 처리하기 위한 부분으로 URG 플래 비트가 지정된 경우에만 유효<br/>
 
 
 ### UDP
