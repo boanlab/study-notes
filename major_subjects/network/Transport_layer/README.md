@@ -17,9 +17,9 @@
  - 특정 호스트 내 하나의 프로세스를 정의하는 식별자
  
  - ICANN 범위
-  - well-known ports: 0 ~ 1023, ICANN에 의해 배정되고 제어
-  - registered ports: 1024 ~ 49151, ICANN에 의해 배정되고 제어되지 않음.
-  - dynamic ports: 49152 ~ 65535, 제어되거나 등록되지 않음
+    - well-known ports: 0 ~ 1023, ICANN에 의해 배정되고 제어
+    - registered ports: 1024 ~ 49151, ICANN에 의해 배정되고 제어되지 않음.
+    - dynamic ports: 49152 ~ 65535, 제어되거나 등록되지 않음
 
 
 ### Encapsulation and Decapsulation
