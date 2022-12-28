@@ -24,8 +24,15 @@
 
 ### Encapsulation and Decapsulation
 <img width="708" alt="image" src="https://user-images.githubusercontent.com/110087065/209858285-e2d3535f-0028-44d4-b1f9-2a4823c32709.png">
+- Encapsulation
+  - 헤더에 전송 정보를 붙여나가는 것
+  
+- Decapsulation
+  - 수신측에서 최초로 보낸 데이터 형탤 데이터를 풀어내는 것
 
-
+- trailer
+  - 데이터를 전달할 때 데이터의 꼬리에 추가하는 정보
+  
 
 ### Multiplexing and Demultiplexing
 
