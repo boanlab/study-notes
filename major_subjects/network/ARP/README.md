@@ -24,3 +24,14 @@
 
 
 ## ARP Package
+- ARP Package에는 Cache Table, Queues, Output Module, Input Module, Cache-Control Module 다섯 가지 구성요소가 포함되어 있다.
+
+### Cache Table
+- 캐시 테이블에 저장된 주소는 다음 몇 분 내에 동일한 수신자를 대상으로 하는 데이터그램에 사용할 수 있습니다.
+- Fields in Cache Table
+  - 상태: FREE, PENDING(보류), RESOLVED(해결)
+  - 하드웨어 유형
+### Queues
+### Output Module
+### Input Module
+### Cache-Control Module
