@@ -2,7 +2,7 @@
 
 - 분산시스템의 Network Communication Model
     
-    ![Untitled](Communication%20d5c6048eb1d54485935c42e70cecfdd4/Untitled.png)
+    <img src="communication/1.png" width="500"/>
     
 
 - Types of Communication
@@ -12,15 +12,15 @@
     - RPC
         1. Basic RPC Operation
         
-        <img src="communication/1.png" width="500"/>
+        <img src="communication/2.png" width="500"/>
         
         1. Asynchronous RPCs
             
-            ![Untitled](Communication%20d5c6048eb1d54485935c42e70cecfdd4/Untitled%202.png)
+            <img src="communication/3.png" width="500"/>
             
         2. Multicast RPCs
             
-            ![Untitled](Communication%20d5c6048eb1d54485935c42e70cecfdd4/Untitled%203.png)
+            <img src="communication/4.png" width="500"/>
             
     - ZeroMQ
         
@@ -43,11 +43,11 @@
     - Asynchronous persistent communication through support of middleware-level queues
     - Queue Managers 를 통한 메시지 라우팅을 관리한다
         
-        ![Untitled](Communication%20d5c6048eb1d54485935c42e70cecfdd4/Untitled%204.png)
+        <img src="communication/5.png" width="500"/>
         
     - Message Broker handles application heterogeneity in an MQ system
         
-        ![Untitled](Communication%20d5c6048eb1d54485935c42e70cecfdd4/Untitled%205.png)
+        <img src="communication/6.png" width="500"/>
         
 
 - Application-level Multicasting
