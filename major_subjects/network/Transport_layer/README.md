@@ -82,7 +82,7 @@
 
 - 흐름 제어
   - 데이터 처리 속도를 조절하여 수신자의 버퍼 오버플로우를 방지
-  
+
 - 신뢰성이 높은 전송
   - Dupack-based retransmission
     - 정상적인 상황에서는 ACK 값이 연속적으로 전송되어야 한다.
@@ -95,7 +95,7 @@
     - 전송이 양방향으로 동시에 발생 가능하다.
   - 점대점(Point to Point)
     - 각 연결이 정확히 2개의 종단점을 가지고 있다.
-  - 따라서 multicasting, broadcasting을 지원하지 않는다.
+  - 따라서 1:1 통신만 가능하고 multicasting, broadcasting을 지원하지 않는다.
   
 ### TCP Header
 <img width="575" alt="image" src="https://user-images.githubusercontent.com/110087065/209865869-2605304f-bbf2-4ce5-9965-373bee195fed.png">
