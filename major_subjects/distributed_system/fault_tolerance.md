@@ -14,7 +14,7 @@
     - Availability : A(t)
         - average fraction of time that C has been up and running in interval [0,t)
             
-            ![Untitled](Fault%20Tolerance%2048381afb1833439aa6b054ac851e14ee/Untitled.png)
+            <img src="fault/1.png" width="500"/>
             
         - Reliability and availability make sence only if we have an accurate notion of what a failure is
 - 주요 Term 정리
@@ -111,7 +111,7 @@
     - Flat group : more overhead 가능
     - Hierarchical group : Not fault tolerant and scalable(장애허용과 확장성은 불가) but easly to implement(구현이 쉽다)
         
-        ![Untitled](Fault%20Tolerance%2048381afb1833439aa6b054ac851e14ee/Untitled%201.png)
+        <img src="fault/2.png" width="500"/>
         
 
 ### Groups and Failure Masking (그룹 및 장애 마스킹)
@@ -134,11 +134,11 @@ Arbitrary failure 허용 가능하려면 총 3K+1개의 group members가 필요�
         1. BA1 : Every non-faulty back up process stores the same value
         2. BA2 : If the primary is non-faulty, then every non-faulty back up process stores exactly what the primary had sent
         
-        ![Untitled](Fault%20Tolerance%2048381afb1833439aa6b054ac851e14ee/Untitled%202.png)
+        <img src="fault/3.png" width="500"/>
         
         (3K member로 불충분한 상황 예시)
         
-        ![Untitled](Fault%20Tolerance%2048381afb1833439aa6b054ac851e14ee/Untitled%203.png)
+        <img src="fault/4.png" width="500"/>
         
         (3K+1 member로 충분한 상황 예시)
         
@@ -148,7 +148,7 @@ Arbitrary failure 허용 가능하려면 총 3K+1개의 group members가 필요�
 - Consensus 방법 1 : Flooding-based Consensus
     - 모든 프로세스로 부터 command 집합을 다 받아서 가지고있는 프로세스가 결정을 내린다
     
-    ![Untitled](Fault%20Tolerance%2048381afb1833439aa6b054ac851e14ee/Untitled%204.png)
+    <img src="fault/5.png" width="500"/>
     
 - Realistic Consensus : Paxos, Raft
 
@@ -189,7 +189,7 @@ How can we reliably detect that a process has actually crashed?
         1. cannot locate server → just report back to client (클라이언트에 다시 보고한다)
         2. request was lost → just resend message (메시지를 다시 보낸다)
         
-        ![Untitled](Fault%20Tolerance%2048381afb1833439aa6b054ac851e14ee/Untitled%205.png)
+        <img src="fault/6.png" width="500"/>
         
         (a) : 정상
         
@@ -213,7 +213,7 @@ How can we reliably detect that a process has actually crashed?
         5. C (→ P → M) : crash before doing anything
         6. C (→ M → P) : crash before doing anything
         
-        ![Untitled](Fault%20Tolerance%2048381afb1833439aa6b054ac851e14ee/Untitled%206.png)
+        <img src="fault/7.png" width="500"/>
         
 - Reliable RPC 에서 Lost Reply Messages (손실된 응답 메시지) 에 대한 문제
     - client는 응답을 받지 못한다
@@ -246,7 +246,7 @@ How can we reliably detect that a process has actually crashed?
     1. Two-phase commit
     2. Three-phase commit
 
-![Untitled](Fault%20Tolerance%2048381afb1833439aa6b054ac851e14ee/Untitled%207.png)
+<img src="fault/8.png" width="500"/>
 
 - Two-phase Commit Protocol (2PC)
     - Phase 1a: Coordinator sends VOTE-REQUEST to participants
@@ -264,7 +264,7 @@ How can we reliably detect that a process has actually crashed?
     - Phase 2b: Each participant waits for GLOBAL-COMMIT or GLOBAL-ABORT
     and handles accordingly
     
-    ![Untitled](Fault%20Tolerance%2048381afb1833439aa6b054ac851e14ee/Untitled%208.png)
+    <img src="fault/9.png" width="500"/>
     
 - Three-phase Commit Protocol (3PC)
     - Phase 1a: Coordinator sends VOTE_REQUEST to participants
@@ -274,7 +274,7 @@ How can we reliably detect that a process has actually crashed?
     - Phase 3a: (Prepare to commit) Coordinator waits until all participants have ACKed receipt of PREPARE_COMMIT message, and then sends GLOBAL_COMMIT to all
     - Phase 3b: (Prepare to commit) Participant waits for GLOBAL_COMMIT and handles accordingly
     
-    ![Untitled](Fault%20Tolerance%2048381afb1833439aa6b054ac851e14ee/Untitled%209.png)
+    <img src="fault/10.png" width="500"/>
     
 - Recovery
     - when failure occurs, we need to bring the system into an error-free state
@@ -288,11 +288,11 @@ How can we reliably detect that a process has actually crashed?
                 
 - Recovery line
     
-    ![Untitled](Fault%20Tolerance%2048381afb1833439aa6b054ac851e14ee/Untitled%2010.png)
+    <img src="fault/11.png" width="500"/>
     
 - Independent Check pointing
     
-    ![Untitled](Fault%20Tolerance%2048381afb1833439aa6b054ac851e14ee/Untitled%2011.png)
+    <img src="fault/12.png" width="500"/>
     
     - each process independently takes checkpoints
     - Upon a failure, work backwards to locate a consistent cut
@@ -340,7 +340,7 @@ How can we reliably detect that a process has actually crashed?
     - Process Rreceives and subsequently delivers m3
     - 만약, m2를 기록하지 않는다면?
 
-![Untitled](Fault%20Tolerance%2048381afb1833439aa6b054ac851e14ee/Untitled%2012.png)
+<img src="fault/13.png" width="500"/>
 
 - Message-logging Schemes 메시지 로깅 체계
     - Notations 표기법
