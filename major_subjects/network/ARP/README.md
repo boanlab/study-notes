@@ -17,11 +17,20 @@
 ## the ARP Protocol
 - ARP는 IP 프로토콜에서 논리 주소를 받아 해당하는 물리 주소에 매핑하고 Data link 계층으로 전달합니다.
 
-### Packet Format
-### Encapsulation
-### Operation
-### Proxy ARP
+### ARP 구조
+<img width="671" alt="image" src="https://user-images.githubusercontent.com/110087065/209835380-6b018bdf-2b98-439d-a702-d2142f4cbb54.png">
+- Hardware Type: 하드웨어 주소의 유형을 나타낸다.
+- Protocol Type: 프로토콜 유형(버전)을 나타낸다.
+- Hardware Address Length: 이더넷 통신일 경우 0x06
+- Protocol Address Length: IPv4일 경우 0x04
+- 그 외 IP주소와 MAC주소를 사용하는 곳들로 구성
 
+### ARP Packet
+<img width="684" alt="image" src="https://user-images.githubusercontent.com/110087065/209835738-44a52cdf-fdc6-43f1-8381-3746fd79de42.png">
+- Data 부분에 ARP 구조가 존재한다.
+- Destination address, Source address에는 MAC 주소로 존재한다.
+
+### ARP Operation
 
 ## ARP Package
 <img width="678" alt="image" src="https://user-images.githubusercontent.com/110087065/209832471-6a84d6f2-07b2-4a83-b64d-0d794fb8da10.png">
