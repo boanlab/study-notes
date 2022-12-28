@@ -81,6 +81,8 @@
   
   
 ## IP Package
+<img width="521" alt="image" src="https://user-images.githubusercontent.com/110087065/209860743-cbf4cce8-bd2b-4111-9bb3-7b31c208f9f0.png">
+
 - Header-Adding Module
   - 목적지 IP 주소오 함께 상위 프로토콜에게 데이터를 받는다.
   - IP 헤더를 추가하여 IP 데이터그램의 데이터를 캡슐화한다.
