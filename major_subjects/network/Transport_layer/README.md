@@ -5,8 +5,8 @@
 
 ### Process to Process Communication
 <img width="537" alt="image" src="https://user-images.githubusercontent.com/110087065/209857074-d2a290df-d716-403a-bfcb-b9c1dd77fecc.png">
-- 전송 계층 프로토콜으 프로세스 대 프로세스 통신 제공
-- 메시지르 적절한 프로세스로 전달
+- 전송 계층 프로토콜은 프로세스 대 프로세스 통신 제공
+- 메시지를 적절한 프로세스로 전달
 
 
 ### Addressing : Port Numbers
