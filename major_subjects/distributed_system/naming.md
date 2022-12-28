@@ -54,7 +54,7 @@ Flat names(Identifiers) :
     
     - Home-based Approaches (가정 기반 접근 방식)
         
-        ![Untitled](Naming%2013ccc2d4301143a190f021b3f9a51338/Untitled%201.png)
+        <img src="naming/2.png" width="500"/>
         
         - 대규모 네트워크에서 모바일 엔터티를 지원하는 인기있는 접근 방식
         - 엔터티의 현재 위치를 추적하는 home location이 있음→ 고정된 home address가 필요하다
@@ -72,13 +72,13 @@ Flat names(Identifiers) :
             
     - Hierarchical Approaches (계층적 접근)
         
-        ![Untitled](Naming%2013ccc2d4301143a190f021b3f9a51338/Untitled%202.png)
+        <img src="naming/3.png" width="500"/>
         
         (hierarchial local service) 계층적 위치 서비스 HLS : 기본 네트워크가 계층적으로 분할되는 대규모 검색 트리를 구축한다. 각 도메인은 별도의 디렉토리 노드로 표시된다.
         
         HLS : 트리구성
         
-        ![Untitled](Naming%2013ccc2d4301143a190f021b3f9a51338/Untitled%203.png)
+        <img src="naming/4.png" width="500"/>
         
         - 특성
             1. 엔터티의 주소는 잎(말단) 또는 중간 노드에 저장된다
@@ -87,7 +87,7 @@ Flat names(Identifiers) :
             4. 엔터티의 정보를 서로 다른 leaf(말단) 도메인에 저장한다
         - HLS : 조회 작업 (E를 조회하는 과정)
             
-            ![Untitled](Naming%2013ccc2d4301143a190f021b3f9a51338/Untitled%204.png)
+            <img src="naming/5.png" width="500"/>
             
             1. 로컬 leaf 노드에서 조회 시작
             2. E 에 대해 아는 부모(중간) 노드까지 올라간다
@@ -95,7 +95,7 @@ Flat names(Identifiers) :
             4. 상향 조회는 항상 루트에서 중지한다
         - HLS : 삽입작업
             
-            ![Untitled](Naming%2013ccc2d4301143a190f021b3f9a51338/Untitled%205.png)
+            <img src="naming/6.png" width="500"/>
             
             1. 도메인 D에 삽입요청이 들어옴
             2. E에 대한 레코드가 없으므로 요청이 부모에게 전달된다
@@ -111,7 +111,7 @@ Flat names(Identifiers) :
             - 두가지 유형의 노드가 있는 레이블이 지정된 방향 그래프로 표시됨
             - Naming graph
                 
-                ![Untitled](Naming%2013ccc2d4301143a190f021b3f9a51338/Untitled%206.png)
+                <img src="naming/7.png" width="500"/>
                 
                 - A graph in which a leaf node represents a named entity
                 - A directory node is an entity that refers to other nodes
@@ -135,14 +135,14 @@ Flat names(Identifiers) :
                 - 소프트링크
                     - Allow a node N to contain in a name of another node
                 
-                ![Untitled](Naming%2013ccc2d4301143a190f021b3f9a51338/Untitled%207.png)
+                <img src="naming/8.png" width="500"/>
                 
             - Mounting
                 - 마운트 포인트를 사용하여 다름 네임스페이스에 접근을 할 수 있다.
                 - 이름 확인(name resolution)을 사용하여 다른 이름 공간을 병합(merge)할 수 있음.
                 - Mounting remote name spaces through a specific access protocol
                     
-                    ![Untitled](Naming%2013ccc2d4301143a190f021b3f9a51338/Untitled%208.png)
+                    <img src="naming/9.png" width="500"/>
                     
             - Name-space Implementation
                 - 네이밍 그래프의 노드를 분산하여 이름 확인 프로세스와 이름 공간 관리를 여러 시스템에 분산합니다.
@@ -213,20 +213,20 @@ Flat names(Identifiers) :
             - Name Resolution 2가지 탐색 방법
                 - Iterative Name Resolution
                     
-                    ![Untitled](Naming%2013ccc2d4301143a190f021b3f9a51338/Untitled%209.png)
+                    <img src="naming/10.png" width="500"/>
                     
-                    ![Untitled](Naming%2013ccc2d4301143a190f021b3f9a51338/Untitled%2010.png)
+                    <img src="naming/11.png" width="500"/>
                     
                 - Recursive Name Resolution
                     
-                    ![Untitled](Naming%2013ccc2d4301143a190f021b3f9a51338/Untitled%2011.png)
+                    <img src="naming/12.png" width="500"/>
                     
-                    ![Untitled](Naming%2013ccc2d4301143a190f021b3f9a51338/Untitled%2012.png)
+                    <img src="naming/13.png" width="500"/>
                     
                 - 만약 클라이언트와 서버의 사이가 멀다면 재귀가 효율적일 수 있다
                 - 만약 클라이언트와 서버의 사이가 가깝다면 반복이 더 효율적일 수 도 있다
                     
-                    ![Untitled](Naming%2013ccc2d4301143a190f021b3f9a51338/Untitled%2013.png)
+                    <img src="naming/14.png" width="500"/>
                     
     - Attribute-based Naming 속성 기반 네이밍
         - 대부분의 경우 속성을 사용하여 엔터티 이름을 지정하고 조회하는 것이 훨신 더 편리하다.
@@ -240,8 +240,8 @@ Flat names(Identifiers) :
             
             Lightweight Directory Access Protocol - LDAP
             
-            ![Untitled](Naming%2013ccc2d4301143a190f021b3f9a51338/Untitled%2014.png)
+            <img src="naming/15.png" width="500"/>
             
             Dirictory Information Tree
             
-            ![Untitled](Naming%2013ccc2d4301143a190f021b3f9a51338/Untitled%2015.png)
+            <img src="naming/16.png" width="500"/>
