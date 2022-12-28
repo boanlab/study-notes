@@ -1,7 +1,133 @@
 # 그래프 (Graph)
 
+## 그래프 순회 (Graph traversal)
+- 모든 정점을 방문하는 알고리즘
+- 동일한 정점이 처리되지 않도록 방문(visited) 표시 사용
+- 대표적인 두 가지 방법 존재
+	- 깊이 우선 탐색 (DFS)
+ 	- 너비 우선 탐색 (BFS)
+
+## 깊이 우선 탐색(DFS)
+
+### 정의
+
+- 그래프에서 **깊이**를 우선적으로 탐색하는 알고리즘
+- 다음 분기로 넘어가기 전에 해당 분기를 완벽하게 탐색하는 방식
+
+### 특징
+
+- 자기 자신을 호출하는 순환 알고리즘 형태
+- 스택 자료구조 사용
+- 전위 순회 등 모든 트리 순회 방법은 DFS의 한 종류
+- 어떤 노드를 방문했었는 지에 대한 여부 반드시 검증 필요
+    - 무한 루프 가능성 방지
+    
+
+### 원리
+
+1. 탐색 시작 노드를 스택에 삽입하고 방문 처리를 한다.
+    - 방문처리는 visited(리스트) 등을 통해 구현한다.
+2. 스택의 최상단 노드에 방문하지 않은 인접 노드가 있으면 그 인접 노드를 스택에 넣고 방문처리를 한다.
+    
+    방문하지 않은 인접 노드가 없으면 스택에서 최상단 노드를 꺼낸다.
+    
+3. 2번의 과정을 수행할 수 없을 때까지 반복한다.
+
+
+<img src = "https://user-images.githubusercontent.com/88774925/209828825-d6370854-6881-4490-a0fe-264418ee4326.jpg" width = "670" height = "350" />
+
+- 방문 처리된 노드 : 주황색
+- 현재 처리하는 스택의 최상단 노드 : 파란색
+- 먼저, 시작 노드인 1을 스택에 삽입하고 방문처리를 한다.
+    - 스택 : [1]
+- 스택 최상단 노드인 1에 방문하지 않은 인접노드는 2,3,8 번 노드이다. 그 중에서 **가장 작은** 2번 노드를 스택에 넣고 방문처리를 한다.
+    - 스택 : [1,2]
+
+<img src = "https://user-images.githubusercontent.com/88774925/209829183-ba8b565b-c3c1-427a-ab41-358416a01925.jpg" width = "630" height = "310" />
+
+
+
+- 스택의 최상단 노드인 2번 노드에 방문하지 않은 7번 노드를 스택에 넣고 방문처리를 한다.
+    - 스택 : [1,2,7]
+- 스택의 최상단 노드인 7번 노드에 방문하지 않은 인접 노드인 6번을 스택에 넣는다. (작은 값을 먼저 넣음)
+    - 스택 : [1,2,7,6]
+
+
+<img src = "https://user-images.githubusercontent.com/88774925/209829227-d87ae810-eb10-493c-b9b2-0c77d1890455.jpg" width = "630" height = "310" />
+
+
+- 스택의 최상단 노드인 6번 노드에 방문하지 않은 인접노드가 없으므로 **스택에서 6번 노드를 꺼낸다.**
+    - 스택 : [ 1,2,7 ]
+- 최상단 노드인 7번 노드에 방문하지 않은 인접노드인 8번 노드를 스택에 넣고 방문처리를 한다.
+    - 스택 : [1,2,7,8]
+
+이 과정을 반복하면 BFS 결과값은 1→2→7→6→8→3→4→5 이다.
+
+### DFS vs BFS
+
+**DFS**
+
+- 루트노드에서 시작해 다음 분기로 넘어가기 전 모든 분기 탐색 (깊이 우선)
+- 스택 자료구조 이용
+- 재귀함수 사용
+- BFS 보다는 간단하나 속도만 보면 느림
+- 검색 대상의 **규모가 클 때**, 경로의 **특징을 저장**해야 할 때
+    - 각각 경로의 특징을 저장 가능
+
+**BFS**
+
+- 루트노드에서 인접한 노드부터 탐색(너비 우선)
+- 큐 자료구조 이용
+- 검색 대상의 **규모가 크지 않고** **최단 거리**를 구해야 할 때 이용
+    - 검색 시작 지점으로부터 검색 대상이 멀지 않을 때
+    - 각각 경로의 특징 저장 불가능
+
+### 코드(Stack)
+
+```python
+def dfs_iteration(graph, root):
+    # visited = 방문한 노드 기록 리스트
+    visited = []
+    # stack 자료구조 이용
+    stack = [root]
+    
+    while(stack): #스택에 남은것이 없을 때까지 반복
+        node = stack.pop() # node : 현재 방문하고 있는 노드
+        
+        #현재 node가 방문한 적 없다 -> visited에 추가한다.
+        #그리고 해당 node의 자식 node들을 stack에 추가한다.
+        if(node not in visited):
+            visited.append(node)
+            stack.extend(graph[node])
+    return visited
+```
+
+### 코드(Recursive)
+
+```python
+def dfs(graph, v, visited):     # v: 시작 노드를 매개변수로 입력 받는다. visited : 방문 처리 리스트
+
+    visited[v] = True # 방문처리
+    print(v, end = ' ')
+
+    for i in graph[v]:
+        if not visited[i]:
+            dfs(graph,i,visited) # 재귀호출을 이용하여 현재 노드와 연결된 다른 노드를 재귀적으로 방문
+```
+
+- 방문하지 않은 노드가 있다면 재귀적으로 가장 깊숙한 곳까지 방문했다가 다시 돌아와서
+    
+    다른 방향으로 깊이 방문하게 되는 방법
+    
+
+### 활용
+
+- 순열과 조합 구현 시
+
+
+
 ---
-# 위상 정렬(Topological sort)
+## 위상 정렬(Topological sort)
 
 - 그래프 관련 알고리즘
 - 정렬 알고리즘의 일종
@@ -17,7 +143,7 @@
     2. 새롭게 진입차수가 0이된 노드를 큐에 넣는다.
     
     
-<img src = "https://user-images.githubusercontent.com/88774925/209552066-bf57249f-bfa0-4a70-9ef1-88c82b29cba2.jpg" width="500" height="350"/>
+<img src = "https://user-images.githubusercontent.com/88774925/209552066-bf57249f-bfa0-4a70-9ef1-88c82b29cba2.jpg" width="450" height="300"/>
 
 | 노드 | 1  | 2 | 3 | 4 | 5 | 6 | 7 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -28,7 +154,7 @@
 - 진입차수가 0인 1번 노드를 처음으로 큐에 넣는다. (1번 과정)
 
 
-<img src = "https://user-images.githubusercontent.com/88774925/209552880-609db32e-54ee-4324-9bff-04f5c0cef305.jpg" width="500" height="350"/>
+<img src = "https://user-images.githubusercontent.com/88774925/209552880-609db32e-54ee-4324-9bff-04f5c0cef305.jpg" width="450" height="300"/>
 
 | 노드 | 1  | 2 | 3 | 4 | 5 | 6 | 7 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -98,7 +224,7 @@
 이 경우 노드의 트리 구조는 다음과 같다.  
 
 
-<img src = "https://user-images.githubusercontent.com/88774925/209554730-7075720d-a7cc-4c0d-b8fb-c949faa0f48c.jpg" width="320" height="300"/>
+<img src = "https://user-images.githubusercontent.com/88774925/209554730-7075720d-a7cc-4c0d-b8fb-c949faa0f48c.jpg" width="270" height="250"/>
 
 
 하지만, **2번 노드의 루트 노드는 1번 노드**이므로 3번의 부모 노드도 1번 노드이어야 한다.
@@ -117,7 +243,7 @@
 | --- | --- | --- |
 | 1 | 2 | 1 |
 
-<img src = "https://user-images.githubusercontent.com/88774925/209555457-6a2415c3-9cef-4998-80ee-86ca35973340.jpg" width="320" height="300"/>
+<img src = "https://user-images.githubusercontent.com/88774925/209555457-6a2415c3-9cef-4998-80ee-86ca35973340.jpg" width="270" height="250"/>
 
 
 <br/>    
@@ -183,6 +309,120 @@ def unionParent(parent,a,b):
 
 <br/>
 
+## 프림 알고리즘(Prim)
+
+### 정의
+
+- 크루스칼과 마찬가지로 최소 비용 신장 트리를 구하는 알고리즘
+- 임의의 시작 정점을 기준으로 가장 작은 간선과 연결된 정점을 선택하며 확장시키는 알고리즘
+
+### 크루스칼 vs 프림
+
+**크루스칼**
+
+- 간선 위주의 알고리즘
+- 간선을 오름차순으로 정렬해두고 시작
+- 간선을 차례로 대입하면서 트리를 구성하므로, 사이클이 이루어지는 지 항상 확인 필요
+    - 서로소 알고리즘을 통해 수시로 사이클 체크
+
+**프림**
+
+- 정점 위주의 알고리즘
+- 임의이 시작점에서 가까운 정점을 선택하면서 트리를 구성하므로 사이클을 이루지 않음
+
+간선 수가 적은 희소 그래프 : 크루스칼 알고리즘이 적합
+
+간선이 많은 밀집 그래프 : 프림 알고리즘이 적합
+
+### 원리
+
+1. 임의의 시작 노드를 선택한다. 이 노드를 visited 리스트에 담는다.(방문표시)
+2. 방문한 노드(visited 리스트에 있는) 와 방문하지 않은 노드 사이의 간선 중 최소인 간선을 찾는다.
+3. 그 간선이 연결하는 두 노드 중, visited 리스트에 없는 노드를 visited에 넣는다.
+4. 모든 노드가 visited에  포함될 때 까지 2,3 과정을 반복한다.
+
+참고 : visited는 보통 boolean 배열로 구현
+
+즉, 방문한 노드 중에서 방문하지 않은 노드로 잇는 최소의 간선을 찾고 잇는다.
+
+때문에 사이클을 별도로 체크할 필요가 없어진다.
+
+<img src = "https://user-images.githubusercontent.com/88774925/209829972-2911176f-9296-43c0-8529-1779f0870af4.jpg" width = "600" height = "350" />
+
+- 임의로 1번 노드를 시작노드로 가정했을 때, 1번으로 부터 최소 간선인 2번 노드로 가는 간선을 선택
+    - visited = [1] → [1,2] 으로 업데이트
+- visited에 있는 노드를 잇는 간선 중 최소 간선인 2-6 간선을 선택
+    - visited = [1,2] → [1,2,6] 으로 업데이트
+    - 
+<img src =  "https://user-images.githubusercontent.com/88774925/209830230-7b108ddb-08af-4042-8432-e7053fb6390d.jpg" width = "600" height = "350" />
+
+
+- 다음 간선은 6-4(23) 선택
+    - visited = [1,2,6] → [1,2,4,6] 으로 업데이트
+- 다음 간선은 4-3(7) 선택
+    - visited = [1,2,4,6] → [1,2,3,4,6] 으로 업데이트
+
+<img src = "https://user-images.githubusercontent.com/88774925/209830290-3252a6ed-91d6-464c-a051-46a9f8aac153.jpg" width = "600" height = "350" />
+
+- 다음 간선은 4-7(13)을 선택
+    - visited = [1,2,3,4,6] → [1,2,3,4,6,7] 으로 업데이트
+- 그 다음 간선은 6-7[(25)를 선택하려 했으나 **모두 visited에 있는 노드(방문한 노드)**
+    
+    따라서, **선택할 수 없다**. (2-3도 마찬가지)
+    
+    - 크루스칼 처럼 사이클을 계산할 필요 없음
+- 따라서, **6-5(53) 간선을 선택**해야 함
+    - visited = [1,2,3,4,6] → [1,2,3,4,5,6,7]
+
+<img src = "https://user-images.githubusercontent.com/88774925/209830342-61a2d80b-4bc0-4aed-929d-caff19fda98d.jpg" width = "600" height = "350" />
+
+- 모든 노드가 visited에 들어갔으므로 과정 종료
+- 크루스칼 알고리즘 결과와 동일함
+
+### 구현 관점
+
+- 구현 관점에선 다음과 같다.(우선순위 큐 사용)
+
+<img src = "https://user-images.githubusercontent.com/88774925/209830460-88e4db3a-0a05-48c1-84f2-7f4a50584c3e.jpg" width = "470" height = "477" />
+
+
+
+- graph : 정점과 간선의 정보를 담은 리스트
+    - 크루스칼은 간선 수만큼만 저장했지만 프림에선 모든 정점에 대해서 각각 저장
+- priority queue : 우선순위 큐를 사용하여 cost , w 를 저장
+- visited : 방문 판단 리스트로 여기서는 0으로 false, 1로 true를 나타냄
+
+### 코드
+
+```python
+def prim(graph, start_node):
+    visited[start_node] = 1 # 방문한 노드는 1로 방문 표시
+    candidate = graph[start_node] # 인접 간선을 추출
+    heapq.heapify(candidate) # 우선순위 큐 생성
+    mst = [] # mst(결과)
+    total_cost = 0 # 전체 가중치
+
+    while candidate: # 인접 간선에 대해 반복
+        cost, u, v = heapq.heappop(candidate) # 가중치가 가장 적은 간선 추출
+        if visited[v] == 0: # 방문하지 않았다면
+            visited[v] = 1 # 방문 갱신
+            mst.append((u,v)) # mst 삽입
+            total_cost += cost # 전체 가중치 갱신
+
+            for edge in graph[v]: # 다음 인접 간선 탐색
+                if visited[edge[2]] == 0: # 방문한 노드가 아니라면, (사이클 방지)
+                    heapq.heappush(candidate, edge) # 우선순위 큐에 edge 삽입
+
+    return total_cost
+```
+
+### 시간복잡도
+
+- O(n2)
+
+
+
+
 ---
 ## 벨만-포드 알고리즘(Bellman-Ford)
 
@@ -194,7 +434,7 @@ def unionParent(parent,a,b):
 
 ### 다익스트라 vs 벨만-포드
 
-<img src = "https://user-images.githubusercontent.com/88774925/209627939-2a619387-d5db-4d09-ab22-c755bd400380.jpg" width = "700" height = "400" />
+<img src = "https://user-images.githubusercontent.com/88774925/209627939-2a619387-d5db-4d09-ab22-c755bd400380.jpg" width = "600" height = "300" />
 
 **음수 간선의 순환**
 
