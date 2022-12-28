@@ -19,11 +19,11 @@
 
 ### ARP 구조
 <img width="671" alt="image" src="https://user-images.githubusercontent.com/110087065/209835380-6b018bdf-2b98-439d-a702-d2142f4cbb54.png">
-- Hardware Type: 하드웨어 주소의 유형을 나타낸다.
-- Protocol Type: 프로토콜 유형(버전)을 나타낸다.
-- Hardware Address Length: 이더넷 통신일 경우 0x06
-- Protocol Address Length: IPv4일 경우 0x04
-- 그 외 IP주소와 MAC주소를 사용하는 곳들로 구성
+- Hardware Type: 하드웨어 주소의 유형을 나타낸다.<br/>
+- Protocol Type: 프로토콜 유형(버전)을 나타낸다.<br/>
+- Hardware Address Length: 이더넷 통신일 경우 0x06<br/>
+- Protocol Address Length: IPv4일 경우 0x04<br/>
+- 그 외 IP주소와 MAC주소를 사용하는 곳들로 구성<br/>
 
 ### ARP Packet
 <img width="684" alt="image" src="https://user-images.githubusercontent.com/110087065/209835738-44a52cdf-fdc6-43f1-8381-3746fd79de42.png">
@@ -32,10 +32,10 @@
 
 ### ARP Operation
 <img width="691" alt="image" src="https://user-images.githubusercontent.com/110087065/209836108-1e1f8855-e159-4525-951f-e9274c1182a3.png">
-- A가 B에게 데이터를 전송하고 싶은데 MAC 주소를 모르는 상황
-- LAN의 모든 컴퓨터에 broadcast로 ARP request를 보낸다.
-- B가 이 패킷을 받고 ARP reply를 보낸다. ARP reply에는 B의 MAC 주소가 존재한다.
-- A는 B의 reply를 받고 ARP Table에 B의 MAC 주소를 저장한다. 
+- A가 B에게 데이터를 전송하고 싶은데 MAC 주소를 모르는 상황<br/>
+- LAN의 모든 컴퓨터에 broadcast로 ARP request를 보낸다.<br/>
+- B가 이 패킷을 받고 ARP reply를 보낸다. ARP reply에는 B의 MAC 주소가 존재한다.<br/>
+- A는 B의 reply를 받고 ARP Table에 B의 MAC 주소를 저장한다. <br/>
 
 ## ARP Package
 <img width="678" alt="image" src="https://user-images.githubusercontent.com/110087065/209832471-6a84d6f2-07b2-4a83-b64d-0d794fb8da10.png">
