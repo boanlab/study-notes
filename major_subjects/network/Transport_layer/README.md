@@ -107,11 +107,11 @@
   
 ### UDP segment
 <img width="206" alt="image" src="https://user-images.githubusercontent.com/110087065/209865060-9247b994-98cd-4d2a-a1f9-9ad71836696f.png">
-- 전송 계층의 목적인 프로세스간의 통신을 지원하기 위해 포트번호와 최소한의 정보만 가진다.
-- source port: 보내는 곳의 포트번호
-- dest port: 받는 곳의 포트번호
-- length: UDP segment의 길이
-- checksum: UDP segment가 목적지까지 도달하는 과정에서 정보의 변화가 있는 체크하는 항목
+- 전송 계층의 목적인 프로세스간의 통신을 지원하기 위해 포트번호와 최소한의 정보만 가진다.<br/>
+- source port: 보내는 곳의 포트번호<br/>
+- dest port: 받는 곳의 포트번호<br/>
+- length: UDP segment의 길이<br/>
+- checksum: UDP segment가 목적지까지 도달하는 과정에서 정보의 변화가 있는 체크하는 항목<br/>
 
 ### TCP/UDP 정리
 <img width="450" alt="image" src="https://user-images.githubusercontent.com/110087065/209862424-91c3871e-547d-41fc-a123-0c1a86ffc976.png">
