@@ -27,7 +27,7 @@
     - 업데이트 예정
 
 - [컴퓨터구조](computer_architecture/README.md)
-    - 업데이트 예정
+    - [Intro](computer_architecture/Intro.md)
 
 - [운영체제](operating_system/README.md)
     - [운영체제 개요](operating_system/introduction.md)
