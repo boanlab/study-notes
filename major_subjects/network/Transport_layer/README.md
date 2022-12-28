@@ -71,7 +71,7 @@
 - TCP와 UDP는 TCP/IP의 Transport layer에서 사용되는 프로토콜이다.
 
 ### TCP
-- TCP는 전송 계층에서 사용하는 프로토콜로 장치들 간에 논리적인 접속을 성립학 위하여 연결을 설정하여 신뢰성을 보장하는 연결형 서비스이다.
+- TCP는 전송 계층에서 사용하는 프로토콜로 장치들 간에 논리적인 접속을 성립하기 위하여 연결을 설정하여 신뢰성을 보장하는 연결형 서비스이다.
 - TCP는 네트워크에 연결된 컴퓨터에서 실행되는 프로그램 간에 데이터, 메시지, 세그먼트 등을 안정적, 순차적, 결함 없이 교환 가능하게 한다.
 
 ### TCP 특징
@@ -105,6 +105,13 @@
 - 따라서 신뢰성이 부족한 UDP는 손실이 나도 허용 가능하고 속독 중요한 서비스에 사용된다.<br/>
   - EX) DNS, SNMP, Video Streaming
   
+### UDP segment
+<img width="206" alt="image" src="https://user-images.githubusercontent.com/110087065/209865060-9247b994-98cd-4d2a-a1f9-9ad71836696f.png">
+- 전송 계층의 목적인 프로세스간의 통신을 지원하기 위해 포트번호와 최소한의 정보만 가진다.
+- source port: 보내는 곳의 포트번호
+- dest port: 받는 곳의 포트번호
+- length: UDP segment의 길이
+- checksum: UDP segment가 목적지까지 도달하는 과정에서 정보의 변화가 있는 체크하는 항목
 
 ### TCP/UDP 정리
 <img width="450" alt="image" src="https://user-images.githubusercontent.com/110087065/209862424-91c3871e-547d-41fc-a123-0c1a86ffc976.png">
