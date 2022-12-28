@@ -113,7 +113,7 @@
 - length: UDP segment의 길이<br/>
 - checksum: UDP segment가 목적지까지 도달하는 과정에서 정보의 변화가 있는 체크하는 항목<br/>
 
-### TCP/UDP 정리
+### TCP/UDP 비교
 <img width="450" alt="image" src="https://user-images.githubusercontent.com/110087065/209862424-91c3871e-547d-41fc-a123-0c1a86ffc976.png">
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/110087065/209862792-41ccc551-51aa-419c-b632-9567f062f85b.png">
 
