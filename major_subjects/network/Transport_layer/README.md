@@ -70,14 +70,37 @@
 ## TCP/UDP (Transmission Control Protocol / User Datagram Protocol)
 - TCP와 UDP는 TCP/IP의 Transport layer에서 사용되는 프로토콜이다.
 
-### TCP/UDP 특징
+### TCP
+- TCP는 전송 계층에서 사용하는 프로토콜로 장치들 간에 논리적인 접속을 성립학 위하여 연결을 설정하여 신뢰성을 보장하는 연결형 서비스이다.
+- TCP는 네트워크에 연결된 컴퓨터에서 실행되는 프로그램 간에 데이터, 메시지, 세그먼트 등을 안정적, 순차적, 결함 없이 교환 가능하게 한다.
+
+### TCP 특징
+- 연결형 서비스
+  - 연결형 서비스로 가상 회선 방식을 제공한다.
+  - 3-way handshaking 과정으로 연결 설정
+  - 4-way handshaking으로 연결 해제
+
+- 흐름 제어
+  - 데이터 처리 속도를 조절하여 수신자의 버퍼 오버플로우를 방지
+  
+- 신뢰성이 높은 전송
+  - Dupack-based retransmission
+    - 정상적인 상황에서는 ACK 값이 연속적으로 전송되어야 한다.
+    - ACK 값이 중복을 올 경우 패킷 이상을 감지하고 재전송을 요청한다.
+  - Timeout-based retransmission
+    - 일정시간동안 ACK 값 수신을 못할 경우 재전송을 요청한다.
+
+- Full-Duplex, Point to Point
+  - 전이중(Full-Duplex)
+    - 전송이 양방향으로 동시에 발생 가능하다.
+  - 점대점(Point to Point)
+    - 각 연결이 정확히 2개의 종단점을 가지고 있다.
+  - 따라서 multicasting, broadcasting을 지원하지 않는다.
+### UDP
+
+
+### TCP/UDP 정리
 <img width="450" alt="image" src="https://user-images.githubusercontent.com/110087065/209862424-91c3871e-547d-41fc-a123-0c1a86ffc976.png">
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/110087065/209862792-41ccc551-51aa-419c-b632-9567f062f85b.png">
 
-
-### TCP
-- TCP는 네틍
-
-### UDP
-  
   
