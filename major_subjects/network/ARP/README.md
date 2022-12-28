@@ -24,6 +24,7 @@
 
 
 ## ARP Package
+- ARP Package에는 Cache Table, Queues, Output Module, Input Module, Cache-Control Module 다섯 가지 구성요소가 포함되어 있다.
 
 ### Cache Table
 ### Queues
