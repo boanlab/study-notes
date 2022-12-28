@@ -309,6 +309,120 @@ def unionParent(parent,a,b):
 
 <br/>
 
+## 프림 알고리즘(Prim)
+
+### 정의
+
+- 크루스칼과 마찬가지로 최소 비용 신장 트리를 구하는 알고리즘
+- 임의의 시작 정점을 기준으로 가장 작은 간선과 연결된 정점을 선택하며 확장시키는 알고리즘
+
+### 크루스칼 vs 프림
+
+**크루스칼**
+
+- 간선 위주의 알고리즘
+- 간선을 오름차순으로 정렬해두고 시작
+- 간선을 차례로 대입하면서 트리를 구성하므로, 사이클이 이루어지는 지 항상 확인 필요
+    - 서로소 알고리즘을 통해 수시로 사이클 체크
+
+**프림**
+
+- 정점 위주의 알고리즘
+- 임의이 시작점에서 가까운 정점을 선택하면서 트리를 구성하므로 사이클을 이루지 않음
+
+간선 수가 적은 희소 그래프 : 크루스칼 알고리즘이 적합
+
+간선이 많은 밀집 그래프 : 프림 알고리즘이 적합
+
+### 원리
+
+1. 임의의 시작 노드를 선택한다. 이 노드를 visited 리스트에 담는다.(방문표시)
+2. 방문한 노드(visited 리스트에 있는) 와 방문하지 않은 노드 사이의 간선 중 최소인 간선을 찾는다.
+3. 그 간선이 연결하는 두 노드 중, visited 리스트에 없는 노드를 visited에 넣는다.
+4. 모든 노드가 visited에  포함될 때 까지 2,3 과정을 반복한다.
+
+참고 : visited는 보통 boolean 배열로 구현
+
+즉, 방문한 노드 중에서 방문하지 않은 노드로 잇는 최소의 간선을 찾고 잇는다.
+
+때문에 사이클을 별도로 체크할 필요가 없어진다.
+
+<img src = "https://user-images.githubusercontent.com/88774925/209829972-2911176f-9296-43c0-8529-1779f0870af4.jpg" width = "600" height = "350" />
+
+- 임의로 1번 노드를 시작노드로 가정했을 때, 1번으로 부터 최소 간선인 2번 노드로 가는 간선을 선택
+    - visited = [1] → [1,2] 으로 업데이트
+- visited에 있는 노드를 잇는 간선 중 최소 간선인 2-6 간선을 선택
+    - visited = [1,2] → [1,2,6] 으로 업데이트
+    - 
+<img src =  "https://user-images.githubusercontent.com/88774925/209830230-7b108ddb-08af-4042-8432-e7053fb6390d.jpg" width = "600" height = "350" />
+
+
+- 다음 간선은 6-4(23) 선택
+    - visited = [1,2,6] → [1,2,4,6] 으로 업데이트
+- 다음 간선은 4-3(7) 선택
+    - visited = [1,2,4,6] → [1,2,3,4,6] 으로 업데이트
+
+<img src = "https://user-images.githubusercontent.com/88774925/209830290-3252a6ed-91d6-464c-a051-46a9f8aac153.jpg" width = "600" height = "350" />
+
+- 다음 간선은 4-7(13)을 선택
+    - visited = [1,2,3,4,6] → [1,2,3,4,6,7] 으로 업데이트
+- 그 다음 간선은 6-7[(25)를 선택하려 했으나 **모두 visited에 있는 노드(방문한 노드)**
+    
+    따라서, **선택할 수 없다**. (2-3도 마찬가지)
+    
+    - 크루스칼 처럼 사이클을 계산할 필요 없음
+- 따라서, **6-5(53) 간선을 선택**해야 함
+    - visited = [1,2,3,4,6] → [1,2,3,4,5,6,7]
+
+<img src = "https://user-images.githubusercontent.com/88774925/209830342-61a2d80b-4bc0-4aed-929d-caff19fda98d.jpg" width = "600" height = "350" />
+
+- 모든 노드가 visited에 들어갔으므로 과정 종료
+- 크루스칼 알고리즘 결과와 동일함
+
+### 구현 관점
+
+- 구현 관점에선 다음과 같다.(우선순위 큐 사용)
+
+<img src = "https://user-images.githubusercontent.com/88774925/209830460-88e4db3a-0a05-48c1-84f2-7f4a50584c3e.jpg" width = "470" height = "560" />
+
+
+
+- graph : 정점과 간선의 정보를 담은 리스트
+    - 크루스칼은 간선 수만큼만 저장했지만 프림에선 모든 정점에 대해서 각각 저장
+- priority queue : 우선순위 큐를 사용하여 cost , w 를 저장
+- visited : 방문 판단 리스트로 여기서는 0으로 false, 1로 true를 나타냄
+
+### 코드
+
+```python
+def prim(graph, start_node):
+    visited[start_node] = 1 # 방문한 노드는 1로 방문 표시
+    candidate = graph[start_node] # 인접 간선을 추출
+    heapq.heapify(candidate) # 우선순위 큐 생성
+    mst = [] # mst(결과)
+    total_cost = 0 # 전체 가중치
+
+    while candidate: # 인접 간선에 대해 반복
+        cost, u, v = heapq.heappop(candidate) # 가중치가 가장 적은 간선 추출
+        if visited[v] == 0: # 방문하지 않았다면
+            visited[v] = 1 # 방문 갱신
+            mst.append((u,v)) # mst 삽입
+            total_cost += cost # 전체 가중치 갱신
+
+            for edge in graph[v]: # 다음 인접 간선 탐색
+                if visited[edge[2]] == 0: # 방문한 노드가 아니라면, (사이클 방지)
+                    heapq.heappush(candidate, edge) # 우선순위 큐에 edge 삽입
+
+    return total_cost
+```
+
+### 시간복잡도
+
+- O(n2)
+
+
+
+
 ---
 ## 벨만-포드 알고리즘(Bellman-Ford)
 
