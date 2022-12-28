@@ -99,6 +99,15 @@
   
 ### TCP Header
 <img width="575" alt="image" src="https://user-images.githubusercontent.com/110087065/209865869-2605304f-bbf2-4ce5-9965-373bee195fed.png">
+- Source Port: 보내는 곳의 포트번호
+- Destination Port: 받는 곳의 포트번호
+- Sequence Number: 송신자가 지정하는 순서 번호, 전송되는 바이트 수를 기준으로 증가
+- Data Offset: TCP Segment의 시작 위치를 기준으로 데이터의 시작 위치를 표현 = TCP 헤더의 크기
+- Reserved: 사용하지 않지만 나중을 위한 예약 필드로 0으로 채워짐
+- Flag Bit: SYN, ACK, FIN 등의 제어 번호
+- Window: 수신 윈도우으 버퍼 크기 지정
+- Checksum: TCP Segment에 포함되는 프로토콜 헤더와 데이터에 대한 오류 검출 용도
+- Urgent Pointer: 긴급 데이터를 처리하기 위한 부분으로 URG 플래 비트가 지정된 경우에만 유효
 
 
 ### UDP
@@ -106,7 +115,7 @@
 - UDP는 packet이 목적지에 제대로 도착한다는 보장이 없다.<br/>
 - UDP는 한번만 전송하고 재전송을 하지 않는다.<br/>
 - in-order한 특성을 갖는 TCP와 다르게, UDP는 un-ordered한 특성을 가져 패킷을 보내는 순서를 신경쓰지 않는다.<br/>
-- 따라서 신뢰성이 부족한 UDP는 손실이 나도 허용 가능하고 속독 중요한 서비스에 사용된다.<br/>
+- 따라서 신뢰성이 부족한 UDP는 손실이 나도 허용 가능하고 속도가 중요한 서비스에 사용된다.<br/>
   - EX) DNS, SNMP, Video Streaming
   
 ### UDP segment
@@ -114,8 +123,8 @@
 - 전송 계층의 목적인 프로세스간의 통신을 지원하기 위해 포트번호와 최소한의 정보만 가진다.<br/>
 - source port: 보내는 곳의 포트번호<br/>
 - dest port: 받는 곳의 포트번호<br/>
-- length: UDP segment의 길이<br/>
-- checksum: UDP segment가 목적지까지 도달하는 과정에서 정보의 변화가 있는 체크하는 항목<br/>
+- length: UDP Segment의 길이<br/>
+- checksum: UDP Segment에 포함되는 프로토콜 헤더와 데이터에 대한 오류 검출 용도<br/>
 
 ### TCP/UDP 비교
 <img width="450" alt="image" src="https://user-images.githubusercontent.com/110087065/209862424-91c3871e-547d-41fc-a123-0c1a86ffc976.png">
