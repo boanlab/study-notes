@@ -38,13 +38,24 @@
 
 ### Output Module
 - Output Module은 해결됮 않은 패킷을 해당 대기열로 보낸다.
+- IP 주소가 들어오면 실행된다.
+- 테이블을 보고 들어온 IP 주소가 있는지 확인한다.
+  1. IP 주소가 이미 테이블에 있고 상태가 RESOLVED, 즉 이미 MAC 주소까지 알고 있다면 다음 작업 실행
+  2. 상태가 PENDING, 즉 ARP request를 보냈지만 아직 응답을 받지 못해 들어온 IP주소의 MAC 주소를 모른다면 패킷을 큐에 넣는다. 
+- 테이블에 IP 주소가 없는 상황이라면 상태가 PENDING인 행을 테이블에 하나 추가한다. 이 행에 IP 주소를 기록한 후 MAC 주소를 공란으로 둔다. 이후 큐를 만들어 큐에 패킷을 넣고 ARP 요청을 전송한다.
 
 ### Input Module
 - Input Module은 대기열에서 패킷을 제거학 확인된 물리 주소와 함께 전송을 위해 데이터 링크 계층으로 보낸다.
+- 주로 ARP 페킷이 들어오면 실행된다.
+- ARP 테이블에 IP가 존재하면 다음 작업 실행
+  1. 상태가 RESOLVED라도 MAC 주소를 갱신한다.
+  2. 상태가 PENDING이면 MAC 주소를 갱신하고 상태를 RESOLVED로 바꾼다. 그리고 큐에 있는 패킷을 모두 꺼내 전송한다.
+- IP가 존재하지 않으면 테이블에 행을 추가하고 완벽하게 기록한다.
+- 패킷이 ARP request라면 ARP reply를 전송한다.
 
 ### Cache-Control Module
 - Cache-Control Module은 ARP table을 확인하여 갱신하는 모듈이다.
-- 주기적으로 wake-up
+- 주기적으로 실행된다.
 - 어떤 행의 상태가 FREE라면 갱신하지 않는다.
 - 어떤 행의 상태가 PENDING이라면 다음과 같이 진행한다.
   1. attempt 횟수를 1 늘린다. attempt 횟수가 일정 이상인 경우 상태를 FREE로 바꾸고 큐를 제거한다.
