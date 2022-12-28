@@ -37,7 +37,7 @@ To maintain a global state : 시간을 전역상태로 유지하며 메시지를
     
     T1의 실제 시간 = Tr + d
     
-    보정 방법 : $Tr$ + ($(T1 - T0)/2$)
+    보정 방법 : $Tr$ + ((T1 - T0)/2)
     
     1. Berkeley Algorithm
         
