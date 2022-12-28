@@ -96,6 +96,10 @@
   - 점대점(Point to Point)
     - 각 연결이 정확히 2개의 종단점을 가지고 있다.
   - 따라서 multicasting, broadcasting을 지원하지 않는다.
+  
+### TCP Header
+<img width="575" alt="image" src="https://user-images.githubusercontent.com/110087065/209865869-2605304f-bbf2-4ce5-9965-373bee195fed.png">
+
 
 ### UDP
 <img width="279" alt="image" src="https://user-images.githubusercontent.com/110087065/209864120-400211b1-e0d5-489a-8b61-2f52d79f5322.png">
