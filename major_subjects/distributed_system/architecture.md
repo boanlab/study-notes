@@ -108,9 +108,7 @@ Decentralized Architectures 분산 아키텍처 - P2P시스템 → 거의 모든
     
     - Unstructured P2P
         
-    <img src="architecture/Untitled%204.png" width="500"/>
-    
-        searching 방식 : Flooding / Random walk
+    <img src="architecture/Untitled%204.png" width="500"/> searching 방식: Flooding/Randomwalk
     
     - Super-peer Networks
     
