@@ -65,7 +65,7 @@
 - 최소 힙(min heap) : 부모 노드의 키 값이 자식 노드의 키 값보다 작거나 같은 완전 이진 트리
   - key(부모 노드) <= key(자식 노드)
 
-![image](https://user-images.githubusercontent.com/57708995/209881164-e39515e8-1bce-45e4-9d80-c57bc8a79efe.png)
+![image](https://user-images.githubusercontent.com/57708995/209904567-82ec2c53-4eab-4154-a3e8-10f4d1541a81.png)
 
 ## 힙 정렬 (Heap Sort)
 
