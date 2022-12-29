@@ -1,4 +1,4 @@
-# IPv6 Addressing
+# IPv6 Addresses
 
 ### Introduction
 
