@@ -144,24 +144,6 @@ void insertion_sort(int list[], int n){
     
   }
 }
-
-void main() {
-
-  int i;
-  int list[5] = {8, 5, 6, 2, 4};
-
-  // 삽입 정렬 수행
-  insertion_sort(list, 5);
-
-  // 정렬 결과 출력
-  for(i=0; i<5; i++){
-    printf("%d\n", list[i]);
-    
-    // 2,4,5,6,8
-    
-  }
-}
-
 ```
 
 ### 장점
@@ -212,7 +194,7 @@ void main() {
     - 재귀를 사용하여 부분 리스트 크기가 0이나 1이 될 때까지 반복한다.
 
 ### 예시
-![퀵 정렬](https://github.com/Apdul0329/study-notes/blob/main/major_subjects/algorithm/sample/sort/quickSort/quick%20sort.PNG?raw=true)
+![퀵 정렬](sample/sort/image/quick_sort.png)
 
 #
 
@@ -241,7 +223,8 @@ void main() {
 - 작은 값이 승자가 되어 올라가는 토너먼트 형식이다.
 - 루트 노드에는 최소값인 원소값이 들어간다.
 - 트리의 각 노드는 두 자식의 노드 값의 승자를 자신의 값으로 한다.
-![승자 트리](../../../../../../../../tmp/img1.daumcdn.png)
+
+![승자 트리](sample/sort/image/winner_tree.png)
 
 ### 패자 트리(Loser Tree)
 - 부모 노드가 두 개의 자식 노드보다 더 작은 값을 나타내는 완전 이진 트리이다.
@@ -249,7 +232,8 @@ void main() {
 - 최상위 0번 노드에 최종 승자를 저장한다.
 - 패자는 부모노드에 저장하고, 승자는 부모의 부모 노드로 올라가서 다시 비교한다.
 - 루트노드에 마지막 패자를 저장하고 최종 승자는 0번 노드에 저장한다.
-![패자 트리](img_1.png)
+
+![패자 트리](sample/sort/image/loser_tree.png)
 
 ## 선택(Selection) 문제 알고리즘
 
@@ -265,4 +249,4 @@ void main() {
 - **피봇**의 결정에 따라 시간 복잡도가 영향을 받는다.
   - **Bad 분할**: 분할된 두 그룹 하나의 크기가 입력 크기의 3/4와 이상으로 분할한 분할
   - **Good 분할**: 분할된 두 그룹 하나의 크기가 입력 크기의 3/4보다 미만으로 분할한 분활
-![Good/Bad 분할](img.png)
+![good/bad](sample/sort/image/good_bad.png)
