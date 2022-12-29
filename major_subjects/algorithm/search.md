@@ -183,34 +183,6 @@ int binsearch (int data[], int n, int key) {
 
     return -1;                            //탐색 실패
 }
-
-
- 
-int main() {
-
-    int a[10] = { 2, 8, 13, 16, 20, 22, 34, 45, 56, 77 };  // 
-    int index;
-    int key;
- 
-    scanf("%d", &key);
-
-    index = binsearch(a, 10, key);
-
-    if (index == -1) {
-
-        printf("자료가 없습니다!\n");
-
-    }
-    else {
-
-        printf("자료가 %d번째에 있습니다.\n", index + 1);
-
-    }
-    
-    return 0;
-
-}
-
 ```
 
 </br>
@@ -354,7 +326,9 @@ Double Red 가 모두 해결되었다.
 4. 문자열의 마지막이 될 때까지 위의 과정을 반복한다.
 
 ### 예제
-![트라이](../../../../../../../../tmp/trie-example-base.png)
+
+![트라이](sample/search/image/trie.png)
+
 - 루트 노드는 빈 문자열에 연관되므로 비어있다.
 - 주황색으로 된 노드들이 입력된 문자열이다.
 - [be, bee, can, cat, de]가 들어가 있다.
