@@ -183,34 +183,6 @@ int binsearch (int data[], int n, int key) {
 
     return -1;                            //탐색 실패
 }
-
-
- 
-int main() {
-
-    int a[10] = { 2, 8, 13, 16, 20, 22, 34, 45, 56, 77 };  // 
-    int index;
-    int key;
- 
-    scanf("%d", &key);
-
-    index = binsearch(a, 10, key);
-
-    if (index == -1) {
-
-        printf("자료가 없습니다!\n");
-
-    }
-    else {
-
-        printf("자료가 %d번째에 있습니다.\n", index + 1);
-
-    }
-    
-    return 0;
-
-}
-
 ```
 
 </br>
@@ -230,6 +202,163 @@ int main() {
 
 
 ---
+## 이진 탐색 트리 (Binary Search Tree)
+
+### 정의
+-  이진 트리에서 어떠한 규칙에 따라 나열한 트리이다. 
+    -  이 규칙은 모든 노드에 대해서 **왼쪽 노드보다 오른쪽 노드가 더 크게 나열**하는 것이다.
+
+### 특징
+
+- 이진 탐색에 트리의 개념이 더해진 것으로 특정 값을 탐색하는 것에 빠른 성능을 보여준다.
+- 이진 탐색 트리는 아래와 조건을 만족한다.
+    1. 각 노드에 중복되지 않는 키(key)가 있다.
+    2. 루트노드의 왼쪽 서브 트리는 해당 노드의 키보다 작은 키를 갖는 노드들로 이루어져 있다.
+    3. 루트노드의 오른쪽 서브 트리는 해당 노드의 키보다 큰 키를 갖는 노드들로 이루어져 있다.
+    4. 좌우 서브 트리도 모두 이진 탐색 트리여야 한다. 
+
+### 원리
+- 탐색
+    1. 루트 노드의 키와 찾고자 하는 값을 비교한다. 찾고자 하는 값이라면 탐색을 종료한다.
+    2. 찾고자 하는 값이 루트 노드의 키보다 작다면 왼쪽 서브 트리로 탐색을 진행한다.
+    3. 찾고자 하는 값이 루트노드의 키보다 크다면 오른쪽 서브트리로 탐색을 진행한다.
+
+- 삽입(탐색과 과정 비슷)
+    1. 삽입할 값을 루트 노드와 비교해 같다면 오류를 발생한다(중복 값 허용 X)
+    2. 삽입할 값이 루트 노드의 키보다 작다면 왼쪽 서브 트리를 탐색해서 비어있다면 추가하고, 비어있지 않다면 다시 값을 비교한다.
+    3. 삽입할 값이 루트노드의 키보다 크다면 오른쪽 서브트리를 탐색해서 비어있다면 추가하고, 비어있지 않다면 다시 값을 비교한다.
+
+- 삭제
+    1. 삭제하려는 노드가 단말 노드(leaf node, 자식이 없는 노드) 일 경우
+        - 삭제할 노드의 부모 노드가 있다면 부모 노드의 자식 노드를 NULL로 만들고, 삭제할 노드를 삭제(메모리 해제) 해주면 된다.
+    2. 삭제하려는 노드의 서브 트리가 하나인 경우(왼쪽 혹은 오른쪽 서브 트리)
+        - 삭제할 노드의 자식노드를 삭제할 노드의 부모노드가 가리키게 하고 해당 노드를 삭제하면 된다. 
+    3. 삭제하려는 노드의 서브 트리가 두 개인 경우
+    	- 삭제할 노드 왼쪽 서브 트리의 가장 큰 자손을 해당 노드의 자리에 올린다.
+        - 삭제할 노드 오른쪽 서브 트리의 가장 작은 자손을 해당 노드의 자리에 올린다.
+
+### 코드
+-삽입
+```python
+
+class BST:
+    def __init__(self, root):
+        self.root = root
+
+    def insert(self, value):
+        self.current_node = self.root # current_node를 루트 노드로 초기화 시킨다.
+        while True:
+            if value < self.current_node.value: # 삽입하고자 하는 값이 current_node의 값보다 작을 때
+                if self.current_node.left != None: # 현재 노드의 왼쪽 자식 노드가 있는지 확인한다.
+                    self.current_node = self.current_node.left # 있으면 current_node를 갱신한다.
+                else:
+                    self.current_node.left = Node(value) # 없을 경우에는 current_node의 왼쪽 자식 노드에 삽입하고자 하는 노드를 삽입한다.
+                    break
+            else: # 삽입하고자 하는 값이 current_node의 값보다 클 때. 작을 때의 경우의 반대로 구현한다.
+                if self.current_node.right != None:
+                    self.current_node = self.current_node.right
+                else:
+                    self.current_node.right = Node(value)
+                    break
+                    
+```
+- 탐색
+```python
+
+def search(self, value):
+    self.current_node = self.root
+    while self.current_node:
+        if self.current_node.value == value:
+            return True # current_node의 값이 찾고자 하는 값일 경우 True를 리턴한다.
+        elif self.current_node.value > value: # current_node의 값이 찾고자 하는 값보다 더 클 경우
+            self.current_node = self.current_node.left # 찾고자 하는 값은 현재 노드의 왼쪽 노드에 있는 것이므로 current_node를 왼쪽 자식 노드인 current_node.left로 갱신해준다.
+        else:
+            self.current_node = self.current_node.right # 반대의 경우는 current_node.right로 갱신한다.
+    return False #  못 찾을 경우 마지막 current_node에는 None값이 들어가므로 while문을 빠져나오게 된다. 그리고 False를 리턴한다.
+    
+```
+
+- 삭제
+```python
+
+def delete(self, value):
+        # 삭제할 노드가 있는지 검사하고 없으면 False리턴
+        # 검사를 한 후에는 삭제할 노드가 current_node, 삭제할 노드의 부모 노드가 parent가 된다.
+        is_search = False
+        self.current_node = self.root
+        self.parent = self.root
+        while self.current_node:
+            if self.current_node.value == value:
+                is_search = True
+                break
+            elif value < self.current_node.value:
+                self.parent = self.current_node
+                self.current_node = self.current_node.left
+            else:
+                self.parent = self.current_node
+                self.current_node = self.current_node.right
+        if is_search == False:
+            return False
+		
+        # 삭제할 노드가 자식 노드를 갖고 있지 않을 때
+        if self.current_node.left == None and self.current_node.right == None:
+            if value < self.parent.value:
+                self.parent.left = None
+            else:
+                self.parent.right = None
+        
+        # 삭제할 노드가 자식 노드를 한 개 가지고 있을 때(왼쪽 자식 노드)
+        if self.current_node.left != None and self.current_node.right == None:
+            if value < self.parent.value:
+                self.parent.left = self.current_node.left
+            else:
+                self.parent.right = self.current_node.left
+        
+        # 삭제할 노드가 자식 노드를 한 개 가지고 있을 때(오른쪽 자식 노드)
+        if self.current_node.left == None and self.current_node.right != None:
+            if value < self.parent.value:
+                self.parent.left = self.current_node.right
+            else:
+                self.parent.right = self.current_node.right                
+
+        # 삭제할 노드가 자식 노드를 두 개 가지고 있을 때
+        if self.current_node.left != None and self.current_node.right != None:
+            self.change_node = self.current_node.right
+            self.change_node_parent = self.current_node.right
+            while self.change_node.left != None:
+                self.change_node_parent = self.change_node
+                self.change_node = self.change_node.left
+            if self.change_node.right != None:
+                self.change_node_parent.left = self.change_node.right
+            else:
+                self.change_node_parent.left = None
+                
+            if value < self.parent.value:
+                self.parent.left = self.change_node
+                self.change_node.right = self.current_node.right
+                self.change_node.left = self.current_node.left
+            else:
+                self.parent.right = self.change_node
+                self.change_node.left = self.current_node.left
+                self.change_node.right = self.current_node.right
+
+        return True
+        
+```
+
+### 장점
+
+- 배열보다 속도가 빠르다.
+- 검색이 반복될 때마다 목표값을 찾을 확률은 두 배가 되므로 속도가 빠르다.
+
+### 단점
+
+- 최악의 경우 한쪽으로 편향된 트리가 될 수 있고, 시간복잡도가 O(n)에 가까워진다.
+    - AVL 트리, 레드-블랙 트리로 해결 가능하다.
+
+### 시간복잡도
+
+- O(logN)
 
 ## 레드 블랙 트리(Red-Black Tree)
 
@@ -354,7 +483,9 @@ Double Red 가 모두 해결되었다.
 4. 문자열의 마지막이 될 때까지 위의 과정을 반복한다.
 
 ### 예제
-![트라이](../../../../../../../../tmp/trie-example-base.png)
+
+![트라이](sample/search/image/trie.png)
+
 - 루트 노드는 빈 문자열에 연관되므로 비어있다.
 - 주황색으로 된 노드들이 입력된 문자열이다.
 - [be, bee, can, cat, de]가 들어가 있다.

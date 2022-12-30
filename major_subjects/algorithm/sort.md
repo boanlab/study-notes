@@ -144,24 +144,6 @@ void insertion_sort(int list[], int n){
     
   }
 }
-
-void main() {
-
-  int i;
-  int list[5] = {8, 5, 6, 2, 4};
-
-  // 삽입 정렬 수행
-  insertion_sort(list, 5);
-
-  // 정렬 결과 출력
-  for(i=0; i<5; i++){
-    printf("%d\n", list[i]);
-    
-    // 2,4,5,6,8
-    
-  }
-}
-
 ```
 
 ### 장점
@@ -212,10 +194,71 @@ void main() {
     - 재귀를 사용하여 부분 리스트 크기가 0이나 1이 될 때까지 반복한다.
 
 ### 예시
-![퀵 정렬](https://github.com/Apdul0329/study-notes/blob/main/major_subjects/algorithm/sample/sort/quickSort/quick%20sort.PNG?raw=true)
+![퀵 정렬](sample/sort/image/quick_sort.png)
 
 #
 
+## 쉘 정렬(shell sort)
+
+### 정의
+
+- 삽입 정렬의 장점은 살리고 단점은 보안하여 좀 더 빠르게 정렬하는 알고리즘
+- 먼저 정렬할 배열의 요소를 그룹으로 나눠 각 그룹 별로 삽입 정렬을 수행하고, 그 그룹을 합치면서 정렬을 반복하여 요소의 이동 횟수를 줄이는 방법이다.
+
+### 원리
+
+1. 정렬할 배열을 일정한 기준(간격)에 따라 분류한다.
+2. 각 부분 배열을 삽입 정렬로 정렬한다.
+3. 다시 전체 배열을 더 적은 개수의 부분 배열로 분류한다.
+4. 위의 과정(2,3)을 부분 배열의 길이가 1이 될 때까지 반복한다.
+
+### 예제
+- 배열의 요소가 8, 1, 4, 2, 7, 6, 3, 5 순으로 저장, 오름차순을 기준으로 정렬할 때
+<img width="423" alt="shell_sort" src="https://user-images.githubusercontent.com/57708995/209865735-f070b807-58b7-4589-a537-f8848049aae1.png">
+
+### 코드
+
+```python
+
+def Shellsort(arr):
+
+    h = 1
+    while h < len(arr):
+        h = 3*h + 1
+    h = h//3
+
+    while h > 0:
+        for i in range(h,len(arr)):
+            k=i-h
+            key=arr[i]
+            while k>=0 and key < arr[k]:
+                arr[k+h] = arr[k]
+                k=k-h
+            arr[k+h] = key
+        h = h//3
+    return arr
+		 
+```
+
+### 장점
+
+- 멀리 있는 원소들끼리 빠르게 비교 및 교환이 이루어진다.
+- 삽입 정렬의 장점을 가져오고 단점을 보완하여, 삽입 정렬에 비해 정렬 속도가 빠르다.
+- 간격이 좋을 경우 좋은 속도를 보장할 수 있다.
+
+### 단점
+
+- 일반적인 삽입 정렬에 비해 구현이 까다롭다.
+- 간격에 영향을 많이 받는다.
+	- 데이터를 나누는 값(h)은 보통 전체에서 h/2를 하지만 이보다 h/3 + 1 이 더 빠르다.
+
+### 시간복잡도
+
+- 최선 : O(n)
+- 평균 : O(n^1.5)
+- 최악 : O(n^2)
+
+#
 # 특정 순서 원소 찾기
 
 ## 방법
@@ -241,7 +284,8 @@ void main() {
 - 작은 값이 승자가 되어 올라가는 토너먼트 형식이다.
 - 루트 노드에는 최소값인 원소값이 들어간다.
 - 트리의 각 노드는 두 자식의 노드 값의 승자를 자신의 값으로 한다.
-![승자 트리](../../../../../../../../tmp/img1.daumcdn.png)
+
+![승자 트리](sample/sort/image/winner_tree.png)
 
 ### 패자 트리(Loser Tree)
 - 부모 노드가 두 개의 자식 노드보다 더 작은 값을 나타내는 완전 이진 트리이다.
@@ -249,7 +293,8 @@ void main() {
 - 최상위 0번 노드에 최종 승자를 저장한다.
 - 패자는 부모노드에 저장하고, 승자는 부모의 부모 노드로 올라가서 다시 비교한다.
 - 루트노드에 마지막 패자를 저장하고 최종 승자는 0번 노드에 저장한다.
-![패자 트리](img_1.png)
+
+![패자 트리](sample/sort/image/loser_tree.png)
 
 ## 선택(Selection) 문제 알고리즘
 
@@ -265,4 +310,4 @@ void main() {
 - **피봇**의 결정에 따라 시간 복잡도가 영향을 받는다.
   - **Bad 분할**: 분할된 두 그룹 하나의 크기가 입력 크기의 3/4와 이상으로 분할한 분할
   - **Good 분할**: 분할된 두 그룹 하나의 크기가 입력 크기의 3/4보다 미만으로 분할한 분활
-![Good/Bad 분할](img.png)
+![good/bad](sample/sort/image/good_bad.png)

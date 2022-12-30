@@ -44,6 +44,7 @@
 - Distributed system organized in a middleware layer
 
 <img src="introduction/Untitled 2.png" width="500"/>
+
 ### 분산 시스템의 속성
 
 - Heterogeneity 이기종성
