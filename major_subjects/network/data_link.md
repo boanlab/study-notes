@@ -17,14 +17,14 @@ vpn
 ## VLAN
 <br/>
 
-# 이더넷(Ethernet)
+# 3.이더넷(Ethernet)
 ## 이더넷의 연결 형태
 ## 이더넷의 종류
 ## 이더넷의 역사
 ## 이더넷의 프레임 포맷
 <br/>
 
-# 무선통신
+# 4.무선통신
 ## 무선 통신의 종류
 ## IEEE802.11
 ## IEEE802.11b, IEEE802.11g
@@ -35,14 +35,14 @@ vpn
 ## WiMax
 <br/>
 
-# PPP(Point-to-Point Protocol)
+# 5.PPP(Point-to-Point Protocol)
 ## ppp란
 ## LCP와 NCP
 ## PPP의 프레임 포맷
 ## PPPoE(PPP over Ethernet)
 <br/>
 
-# 그 밖의 데이터 링크
+# 6.그 밖의 데이터 링크
 ## ATM
 ## POS
 ## FDDI
@@ -58,7 +58,7 @@ vpn
 ## 고속 PLC
 <br/>
 
-# 공중 액세스망
+# 7.공중 액세스망
 ## 아날로그 전화 회선
 ## 이동 통신 서비스
 ## ADSL
