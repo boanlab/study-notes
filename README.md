@@ -62,9 +62,9 @@
     - [컴파일러 개요](05_compiler/README.md)
     - [변수, 바인딩, 식 및 제어문](06_variable/README.md)
     - [자료형](07_data-type/README.md)
-    - [영역과 수명](08_area-life/README.md) 업데이트 예정
-    - [기억장소 배당](09_memory-space/README.md) 업데이트 예정
-    - [부프로그램](10_supplementary-program/README.md) 업데이트 예정
+    - [영역과 수명](08_area-life/README.md)
+    - [기억장소 배당](09_memory-space/README.md)
+    - [부프로그램](10_supplementary-program/README.md)
 
 - [컴퓨터구조](major_subjects/computer_architecture/README.md)
     - 업데이트 예정
