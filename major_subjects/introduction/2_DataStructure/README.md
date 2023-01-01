@@ -300,7 +300,7 @@
     
     - DFS(Depth First Search)
         
-        <img src="../src/ds_24.jpeg" width="521", height="215">
+        <img src="../src/ds_24.jpeg" width="521" height="215">
         <!-- ![ds_24](../src/ds_24.jpeg) -->
         
     - BFS(Breadth First Search)
