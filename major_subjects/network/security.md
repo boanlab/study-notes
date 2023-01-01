@@ -1,13 +1,6 @@
-firewall
-ids/ips
-anti virus
 web application firewall
 
 pki
-
-ipsec and vpn
-tls/ssl and https
-<br/>
 
 # 보안의 구성 요소
 ## 방화벽
@@ -19,7 +12,8 @@ tls/ssl and https
 ### 애플리케이션 게이트웨이 타입
 - 애플리케이션을 중간에 두고 부정 연결을 차단
 
-## IDS
+## IDS/IPS
+
 ## 안티 바이러스
 ## 퍼스널 방화벽
 <br/>
