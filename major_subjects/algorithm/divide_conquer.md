@@ -85,3 +85,74 @@ def merge(left,right):
 ### 시간복잡도
 
 - O(nlog₂n)
+
+#
+
+## 피보나치 수열 (Fibonacci)
+
+### 정의
+
+- 첫째 및 둘째 항이 1이며 그 뒤의 모든 항은 바로 앞 두 항의 합인 수열
+- F(n) = F(n-1) + F(n-2)
+
+### 원리
+
+- 피보나치 수열을 행렬로 정의하여 분할 후 행렬곱으로 구하는 원
+
+</br>
+
+- n번째 피보나치 수를 Fn이라 하는 2 x 2 행렬
+
+<p align="center"><img src="https://user-images.githubusercontent.com/113777043/210164058-574a1555-a266-4eb3-9f80-d46a7cf779c7.png"></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/113777043/210164101-919afcf8-8faa-4ed0-9295-44637dc5ab00.png"></p>
+
+- n이 1이 될 때까지 반으로 계속 분할하고 계산하면 Fn을 구할 수 있다.
+
+**n = 짝수**
+<p align="center"><img src="https://user-images.githubusercontent.com/113777043/210164140-01b1cd36-e015-4667-9fec-88321cd6786e.png"></p>
+
+**n = 홀수**
+<p align="center"><img src="https://user-images.githubusercontent.com/113777043/210164171-84640964-cd66-4bd2-ba89-05191660ae6a.png"></p>
+
+</br>
+
+### 코드
+
+```java
+public static matrix pow (matrix A, int n) {
+
+        if (n > 1) {
+
+            A = pow (A, n/2);
+            //짝수일 경우 반으로 나누기
+            A = multi (A, A);
+
+            if (n % 2 == 1) {
+                //홀수일 경우
+
+                matrix B = new matrix(); // {1, 1}
+                                         // {1, 0}
+                A = multi (A, B);
+
+            }
+        }
+
+        return A;
+
+    }
+
+```
+
+### 장점
+
+- 재귀함수를 사용하지 않고 행렬과 분할정복을 사용하여 메모리, 시간 측면에서 효율적이다.
+
+### 단점
+
+- 분할한 데이터들을 스택에 담기에 스택 오버플로우가 발생할 
+
+### 시간복잡도
+
+- 재귀 => O(2^n)
+- 행렬과 분할정복 => O(log2n)
