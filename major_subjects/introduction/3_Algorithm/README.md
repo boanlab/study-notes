@@ -39,7 +39,7 @@
     > 
     
 - 연산 시간 증가 순서
-    - $O(1)<O(logn)<O(n)<O(nlogn)<O(n^2)<O(n^3)<O(2^n)$
+    - $$O(1)<O(logn)<O(n)<O(nlogn)<O(n^2)<O(n^3)<O(2^n)$$
 
 # 알고리즘 설계 기법
 
@@ -133,8 +133,7 @@
 
 ### 탐욕 알고리즘(Greedy)이란?
 
-<img src=../src/algo_6.png style="background-color:white; padding:20px;">
-<!-- ![algo_6](../src/algo_6.png) -->
+![algo_6](../src/algo_6.png)
 
 - 특정 문제에서 전후 관계와는 상관없이 가장 최선인 최적해를 선택하는 방식
 - 간단하고 효율적으로 문제에 대한 최적해를 구할 수 있음
