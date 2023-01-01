@@ -85,3 +85,34 @@ def merge(left,right):
 ### 시간복잡도
 
 - O(nlog₂n)
+
+#
+
+## 피보나치 수열 (Fibonacci)
+
+### 정의
+
+- 첫째 및 둘째 항이 1이며 그 뒤의 모든 항은 바로 앞 두 항의 합인 수열
+- F(n) = F(n-1) + F(n-2)
+
+### 원리
+
+- 재귀 사용 => 시간복잡도 O(2^n)이므로 비효율적
+- 행렬과 분할정복 사용 => 시간복잡도 O(log2n)
+
+</br>
+
+- n번째 피보나치 수를 Fn이라 하는 2 x 2 행렬
+
+<p align="center"><img src="https://user-images.githubusercontent.com/113777043/210164058-574a1555-a266-4eb3-9f80-d46a7cf779c7.png"></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/113777043/210164101-919afcf8-8faa-4ed0-9295-44637dc5ab00.png"></p>
+
+- n이 1이 될 때까지 반으로 계속 분할하고 계산하면 Fn을 구할 수 있다.
+
+**n = 짝수**
+<p align="center"><img src="https://user-images.githubusercontent.com/113777043/210164140-01b1cd36-e015-4667-9fec-88321cd6786e.png"></p>
+
+**n = 홀수**
+<p align="center"><img src="https://user-images.githubusercontent.com/113777043/210164171-84640964-cd66-4bd2-ba89-05191660ae6a.png"></p>
+
