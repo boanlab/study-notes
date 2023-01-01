@@ -24,7 +24,16 @@
     - [NP-완전 문제](algorithm/np.md)
 
 - [프로그래밍 언어](programming_language/README.md)
-    - 업데이트 예정
+    - [C](language/c/README.md)
+    - [C++](language/c++/README.md)
+    - [Java](language/java/README.md)
+    - [Python](language/python/README.md)
+    - [JavaScript](language/javascript/README.md)
+    - [TypeScript](language/typescript/README.md)
+    - [Java Spring](language/java_spring/README.md)
+    - [Kotlin](language/kotlin/README.md)
+    - [Go](language/go/README.md)
+    - [Rust](language/rust/README.md)
 
 - [컴퓨터구조](computer_architecture/README.md)
     - 업데이트 예정
