@@ -1,7 +1,7 @@
 # Introduction
 
 ## Contents
----
+
 ### [1. 컴퓨터와 데이터](./1_Computer/README.md)
 
 - 컴퓨터 및 컴퓨터 과학
