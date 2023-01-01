@@ -97,9 +97,6 @@ def merge(left,right):
 
 ### 원리
 
-- 재귀 사용 => 시간복잡도 O(2^n)이므로 비효율적
-- 행렬과 분할정복 사용 => 시간복잡도 O(log2n)
-
 </br>
 
 - n번째 피보나치 수를 Fn이라 하는 2 x 2 행렬
@@ -116,3 +113,44 @@ def merge(left,right):
 **n = 홀수**
 <p align="center"><img src="https://user-images.githubusercontent.com/113777043/210164171-84640964-cd66-4bd2-ba89-05191660ae6a.png"></p>
 
+</br>
+
+### 코드
+
+```java
+public static matrix pow (matrix A, int n) {
+
+        if (n > 1) {
+
+            A = pow (A, n/2);
+            //짝수일 경우 반으로 나누기
+            A = multi (A, A);
+
+            if (n % 2 == 1) {
+                //홀수일 경우
+
+                matrix B = new matrix(); // {1, 1}
+                                         // {1, 0}
+                A = multi (A, B);
+
+            }
+        }
+
+        return A;
+
+    }
+
+```
+
+### 장점
+
+- 재귀함수를 사용하지 않고 행렬과 분할정복을 사용하여 메모리, 시간 측면에서 효율적이다.
+
+### 단점
+
+- 분할한 데이터들을 스택에 담기에 스택 오버플로우가 발생할 
+
+### 시간복잡도
+
+- 재귀 => O(2^n)
+- 행렬과 분할정복 => O(log2n)
