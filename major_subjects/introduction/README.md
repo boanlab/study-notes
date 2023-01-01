@@ -1,14 +1,14 @@
 # Introduction
 
 ## Contents
----
-### [1. 컴퓨터와 데이터](Computer/README.md)
+
+### [1. 컴퓨터와 데이터](./1_Computer/README.md)
 
 - 컴퓨터 및 컴퓨터 과학
 - 컴퓨터 시스템
 - 데이터
 
-### 2. 자료구조
+### [2. 자료구조](./2_DataStructure/README.md)
 
 - 선형 자료구조
     - 배열
@@ -25,7 +25,7 @@
         - DFS
         - BFS
 
-### 3. 알고리즘
+### [3. 알고리즘](./3_Algorithm/README.md)
 
 - 정의
 - 점근 성능
@@ -42,7 +42,7 @@
     - 순차(Sequential)
     - 이진 탐색 트리(Binary Search Tree)
 
-### 4. 운영체제
+### [4. 운영체제](./4_OperatingSystem/README.md)
 
 - 작업처리 방식
     - 일괄처리 시스템(batch processing system)
@@ -71,7 +71,7 @@
         - 섹터 단위
         - 블록 단위
 
-### 5. 컴퓨터 구조
+### 5. [컴퓨터 구조](./5_ComputerArchitecture/README.md)
 
 - 컴퓨터 시스템의 하드웨어 기본 구성요소
 - 불대수
@@ -106,7 +106,7 @@
         - 채널에 의한 방식
 - 병렬 처리
 
-### 6. 프로그래밍언어
+### [6. 프로그래밍언어](./6_ProgrammingLanguage/README.md)
 
 - 프로그래밍 언어 유형
     - 기계어
@@ -127,7 +127,7 @@
     - 추상화(Abstraction)
     - 캡슐화(Encapsulation)
 
-### 7. 데이터베이스
+### [7. 데이터베이스](./7_DataBase/README.md)
 
 ---
 
@@ -157,7 +157,7 @@
     - SQL 데이터 조작어
     - 뷰
 
-### 8. 컴퓨터 네트워크
+### [8. 컴퓨터 네트워크](./8_Network/README.md)
 
 - 구성요소
     - 채널
