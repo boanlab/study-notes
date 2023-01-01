@@ -29,12 +29,16 @@
 - 일반적으로 IPS는 방화벽과 연동하여 공격을 탐지할 수 있기 때문에 방화벽 내부에 설치
 
 ## [ 방화벽 / IDS / IPS 차이 ]
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/110087065/210169848-b3b3d72b-6bc6-4874-ae08-053b51122804.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/110087065/210169848-b3b3d72b-6bc6-4874-ae08-053b51122804.png">
 
 
 ## 1-4. 안티 바이러스/퍼스널 방화벽
+- 컴퓨터나 서버 등에서 실행시키는 소프트웨어로 해당 컴퓨터를 출입하는 패킷이나 데이터, 파일 등을 감시하여 부정한 처리나 바이러스의 침투 등을 방지한다.
+- 네트워크 안의 모드 클라이언트 PC를 보호함으로써 방화벽을 통과하 공격을 방어할 수 있다.
+- 안티 바이러스/퍼스널 방화벽은 위협으로부터 OS, 즉 클라이언트 PC를 방어하기 위한 것이다.
+### PKI(공개 키 기반)
 - 
-### PKI
+
 
 ## 1-5. Web Application Firewall
 <br/>
