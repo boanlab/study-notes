@@ -56,10 +56,15 @@
 
 
 # 2. 암호화 기술의 기초
+- 기밀성이 높은 정보의 송수신을 실현하기 위해 다양한 암호화 기술이 등장했고, OSI 참조 모델의 계층별로 존재하며 상호 통신으 보장한다.
+- Application layer: SSH, SSL-Telnet, PET, PGP, S/MIME
+- Session, Transport layer: SSL/TLS
+- Network layer: IPsec
+- Datalink layer: Ethernet, PPTP(PPP)
 
 ## 2-1. 공통 키 암호 방식과 공개 키 암호 방식
 ## 2-2. 인증 기술
-<br/>
+
 
 # 3. 보안을 위한 프로토콜
 ## 3-1. IPsec과 VPN
