@@ -1,20 +1,3 @@
-telnet
-ssh
-ftp
-
-e-mail
-mime
-smtp
-pop
-imap
-
-http
-url / uri
-
-snmp
-
-p2p
-<br/>
 
 # 애플리케이션 프로토콜의 개요
 <br/>
