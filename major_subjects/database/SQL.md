@@ -22,7 +22,10 @@
         - 독자적으로는 존재 X
     - 임시 테이블
         - 질의문 처리 과정에서 임시로 만들어지는 테이블
-    - ex) CREATE TABLE 학생({이름 VARCHAR(20),학번 INT,학년 INT})
+        ```
+        CREATE TABLE 학생({이름 VARCHAR(20),학번 INT,학년 INT})
+        // '이름', '학번', '학년' 으로 구성된 학생테이블 만들기
+        ```
     - 명령어
         - PRIMARY KEY : 기본키로 생성
         - UNIQUE : 후보키로 생성
@@ -35,12 +38,17 @@
     - DROP TABLE {테이블 이름}
         - RESTRICT : 참조하는 테이블이나 제약조건 있으면 실행 실패
         - CASCADE : 참조하는 테이블이나 제약조건도 같이 삭제
-    - EX) DROP TABLE 학생 CASCADE;
+        ```
+        DROP TABLE 학생 CASCADE; //학생 테이블 삭제
+        ```
 - 스키마 제거
     - DROP SCHEMA {스키마 이름}
 - 테이블 변경
     - ALTER TABLE {테이블 이름} {ADD, DROP, ALTER} 열이름 조건
-    - EX) ALTER TABLE 학생 DROP 성적 CASCADE;
+        ```
+        ALTER TABLE 학생 DROP 성적 CASCADE; 
+        //학생 테이블에 성적 속성을 CASCADE로 삭제
+        ```
 ---
 ### 데이터 조작문(DML)
 - SELECT(검색)
@@ -54,15 +62,31 @@
     - LIKE : WHERE절에서 주로 사용하여 `포함되는 내용`을 찾을떄 사용됨
         - _ : 모든 문자 하나를 의미(EX 과목 LIKE '데이_베이스')
         - % : 글자수를 정해두지 않음(EX 과목 LIKE '데이터%')
+    ```
+    SELECT * FROM 학생 WHERE 이름 LIKE '김%' 
+    // 성이 '김'인 학생 찾기
+    ```
 - UPDATE(갱신)
     - 레코드를 수정할 때 사용
     - UPDATE 테이블 SET 튜플의속성=C WHRER 조건
+    ```
+    UPDATE 학생 SET 학년=3 WHERE 학번 = 12345678
+    //학번이 12345678인 학생의 학년을 3으로 변경
+    ```
 - INSERT(삽입)
     - 테이블에 레코드를 새로 넣을 때 사용
     - INSERT INTO 테이블(속성1,속성2,..속성N) VALUES (값1,값2,...,값N)
+    ```
+    INSERT INTO 학생(이름, 학번, 학년) VALUES('홍길동',12345678,3)
+    // 이름이 홍길동이고 학번이 12345678 학년이 3인 데이터를 학생 테이블에 추가
+    ```
 - DELETE(삭제)
     - 테이블의 레코드를 삭제
     - DELETE FROM 테이블 WHERE 속성 = C
+    ```
+    DELETE FROM 학생 WHERE 이름='홍길동'
+    //이름이 홍길동인 행을 삭제
+    ```
 ---
 ### 뷰(가상테이블)
 - 하나 이상의 `기본 테이블로부터 유도`되어 만들어지는 `가상 테이블`
@@ -90,7 +114,9 @@
     - 명령문 앞에 `EXEC SQL` 붙임
     - SQL문에서 사용되는 호스트 변수(DB에서 속성이나 필드명)앞에 : 를 붙임
     - 호스트 변수 SQLSTATE는 성공과 경고를 피드백함
-- EX) EXEC SQL DELETE FROM 학생 WHERE 학번 = :학번;
+        ```
+        EXEC SQL DELETE FROM 학생 WHERE 학번 = :학번;
+        ```
 
 
 
