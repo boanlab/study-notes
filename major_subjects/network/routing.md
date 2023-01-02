@@ -1,41 +1,14 @@
-path control -> routing
-
-static / dynamic routing
-
-autonoumous system / routing protocol
-
-egp / igp
-
-path control algorithm
-distance-vector / link-state
-
-rip
-
-ospf
-
-isis
-
-bgp
-
-mpls
-<br/>
-
 # 경로 제어(라우팅)란?
 ## IP주소와 경로 제어
 ## 정적 라우팅과 동적 라우팅
-## 동적 라우팅의 기초
-<br/>
 
 # 경로를 제어하는 범위
 ## 자율 시스템과 라우팅 프로토콜
 ## EGP와 IGP
-<br/>
 
 # 경로 제어 알고리즘
 ## 거리 벡터형
 ## 링크 상태형
-## 주요 라우팅 프로토콜
-<br/>
 
 # RIP(Routing Information Protocol)
 ## 경로 제어 정보를 브로드캐스트한다
