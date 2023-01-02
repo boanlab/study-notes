@@ -112,3 +112,12 @@
 ## UDP-Lite
 ## SCTP
 ## DCCP
+
+
+# UDP 헤더 포멧
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/110087065/210275611-61140714-8c6a-421c-923a-ce0adb9a80a9.png">
+
+# TCP 헤더 포멧
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/110087065/210275595-770f18c8-af90-423d-a69d-e543c7269f50.png">
+
+
