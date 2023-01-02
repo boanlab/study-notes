@@ -115,9 +115,10 @@
 
 
 # UDP 헤더 포멧
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/110087065/210275611-61140714-8c6a-421c-923a-ce0adb9a80a9.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/110087065/210275757-746f32c6-1297-4d2a-81db-3ca074127d88.png">
 
 # TCP 헤더 포멧
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/110087065/210275595-770f18c8-af90-423d-a69d-e543c7269f50.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/110087065/210275685-8204a241-e01b-46ac-8383-14e0097a9651.png">
+
 
 
