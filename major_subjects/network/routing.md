@@ -15,19 +15,16 @@
 ## 거리 벡터에 의한 경로 결정
 ## 서브넷 마스크를 이용한 경우의 RIP 처리
 ## RIP로 경로가 변경될 때의 처리
-## RIP2
-<br/>
 
 # OSPF(Open Shortest Path First)
 ## OSPF는 링크 상태형 라우팅 프로토콜
 ## OSPF의 기초 지식
 ## OSPF의 동작 개요
-<br/>
 
 # BGP(Border Gateway Protocol)
 ## BGP와 AS 번호
 ## BGP는 경로 벡터
-<br/>
+## isis
 
 # MPLS(Multi Protocol Label Switching)
 ## MPLS 네트워크의 동작
