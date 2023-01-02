@@ -4,3 +4,8 @@
 - [SQL](SQL.md)
 - [정규화](normalization.md)
 - [데이터 모델링](database_modeling.md)
+- [NOSQL](NOSQL.md)
+    - SQL vs NOSQL
+    - document DB
+    - key valueDB
+    - graph DB
