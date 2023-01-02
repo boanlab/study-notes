@@ -103,10 +103,7 @@
 ### Piggyback
 - TCP에서 확인 응답과 대답 데이터 패킷을 하나의 패킷으로 보내 송수신할 패킷의 수를 줄일 수 있는데 이것을 'Piggyback'이라 한다.
 - 데이터 패킷을 수신하여 바로 확인 응답이 되돌아오면 Piggyback 되지 않는다. 수신한 데이터를 애플리케이션이 처리하여 대답이 되는 데이터를 작성한 후 송신요청을 할 때까지 확인 응답의 송신을 기다릴 필요가 있다. 즉, 지연 확인 응답의 처리가 일어나지 않으면 Piggyback 되지 않는다.
-## TCP를 이용하는 애플리케이션
-### UDP-Lite
-### SCTP
-### DCCP
+
 
 # 기타 트랜스포트 프로토콜
 ## UDP-Lite
@@ -116,6 +113,7 @@
 
 # UDP 헤더 포멧
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/110087065/210275757-746f32c6-1297-4d2a-81db-3ca074127d88.png">
+
 
 # TCP 헤더 포멧
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/110087065/210275685-8204a241-e01b-46ac-8383-14e0097a9651.png">
