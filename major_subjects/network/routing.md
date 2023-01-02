@@ -65,7 +65,10 @@
     2. 경로 정보를 가르쳐준 인터페이스에게는 가르쳐준 경로 정보를 다시보내지 않는 스플릿 호리즌을 사용한다.
   
   
+# IS-IS  
+  
 # OSPF(Open Shortest Path First)
+- OSPF는 IS-IS 프로토콜을 참고하여 만들어진 링크 상태형 라우팅 프로토콜로 루프가 있는 네트워크에서 안정된 경로 제어를 할 수 있다.
 ## OSPF는 링크 상태형 라우팅 프로토콜
 ## OSPF의 기초 지식
 ## OSPF의 동작 개요
@@ -73,7 +76,6 @@
 # BGP(Border Gateway Protocol)
 ## BGP와 AS 번호
 ## BGP는 경로 벡터
-## isis
 
 # MPLS(Multi Protocol Label Switching)
 ## MPLS 네트워크의 동작
