@@ -66,7 +66,17 @@
   
   
 # IS-IS  
+- connectionless network service 및 IP 환경 하에서 동작하는 라우팅 프로토콜
+- 라우터간에 주고받는 정보용 패킷을 LSP라고 한다.
+- 라우터 식별 주소로 NSAP 주소를 사용한다.
+- IS-IS는 인터페이스 기반의 주소를 많이 쓰는 OSPF와 달리 노드 기반 주소이다.
+- 다중의 프로토콜 지원한다.
+- IS-IS 에서 노드 구분
+  - ES : HOST NODE
+  - IS : ROUTER NODE
+  - Psedo Node : Broadcast Network 상의 가상의 대표 노드
   
+
 # OSPF(Open Shortest Path First)
 - OSPF는 IS-IS 프로토콜을 참고하여 만들어진 링크 상태형 라우팅 프로토콜로 루프가 있는 네트워크에서 안정된 경로 제어를 할 수 있다.
 ## OSPF는 링크 상태형 라우팅 프로토콜
