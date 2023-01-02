@@ -24,7 +24,16 @@
     - [NP-완전 문제](algorithm/np.md)
 
 - [프로그래밍 언어](programming_language/README.md)
-    - 업데이트 예정
+    - [프로그래밍 언어 소개](programming_language/01_introduce/README.md)
+    - [언어의 변천](programming_language/02_change/README.md)
+    - [프로그래밍 언어 설계](programming_language/03_design/README.md)
+    - [프로그래밍 언어의 구문과 구현 기법](programming_language/04_syntax/README.md)
+    - [컴파일러 개요](programming_language/05_compiler/README.md)
+    - [변수, 바인딩, 식 및 제어문](programming_language/06_variable/README.md)
+    - [자료형](programming_language/07_data-type/README.md)
+    - [영역과 수명](programming_language/08_area-life/README.md)
+    - [기억장소 배당](programming_language/09_memory-space/README.md)
+    - [부프로그램](programming_language/10_supplementary-program/README.md)
 
 - [컴퓨터구조](computer_architecture/README.md)
     - 업데이트 예정

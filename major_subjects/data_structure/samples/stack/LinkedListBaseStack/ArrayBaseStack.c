@@ -3,14 +3,21 @@
 
 int *stack;
 int top = -1;
+
 int *InputData(void){
     int *data;
     int num;
+    
     printf("Insert number you want to push in stack:");
+    
     scanf("%d", &num);
+    
     printf("%d\n", num);
+    
     data = (int *)malloc(sizeof(int) * ((num)+1)); // malloc : 할당된 메모리의 '주소'가 void* 형으로 리턴된다.
+    
     printf("Insert data you want to push in stack\n");
+    
     for(int i = 0; i < (num+1); i++){
         if(i == 0){
             printf("data[%d] = the number of data array\n", i);
@@ -21,19 +28,27 @@ int *InputData(void){
             scanf("%d", &data[i]);
         }
     }
+    
     printf("\n");
+    
     for(int i = 0; i < (num+1); i++)
         printf("data[%d] = %d\n", i, data[i]);
+    
     return data;
 }
+
 void push(int *val){
     int num;
     num = val[0];
+    
     int *stack_temp;
     stack_temp = stack;
+    
     free(stack);
     stack = (int *)malloc(sizeof(int) * (num + (top+1)));
+    
     puts("\nTramsplant starts");
+    
     if(top == -1){
         printf("Stack is empty.\n");
     }
@@ -55,6 +70,7 @@ void pop(unsigned int num){
     }
     else{
         int poped_stack[num];   
+        
         for(int i = 0; i < num; i++){
             if(top < 0){
                 printf("Stack is empty.\n");
@@ -68,6 +84,7 @@ void pop(unsigned int num){
 
 void PrintStack(void){
     puts("\nPrinting stack starts.");
+    
     if(top < 0){
         printf("Stack is empty.\n");
     }
