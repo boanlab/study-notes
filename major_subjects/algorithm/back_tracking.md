@@ -93,3 +93,116 @@ def recursion(q, _visited):
             temp = visit(q, i, _visited)    # 퀸을 뒸을 때 불가능한 칸들 체크
             recursion(q+1, temp)            # 재귀 호출
 ```
+#
+
+## 미로 탈출 문제 (Mazing Problem)
+
+### 정의
+- 주어진 미로에서 입구부터 출구까지 최단경로 혹은 경로의 개수 등을 구하는 문제
+
+### 특징
+- DFS나 BFS를 사용하여 해결
+
+### 원리
+- 모든 정점 방문이 주 목적 : BFS or DFS 
+- 경로의 개수나 경로의 특징을 알아야하는 문제 : DFS (Stack)
+  - BFS는 너비 우선 탐색으로 가까운 곳부터 찾기에 모든 경로를 모름
+- 최단거리 문제 : BFS (Queue)
+  - DFS로 구할 시 처음 해답이 최단거리가 아닐 확률이 높음
+
+### 코드
+
+**최단거리 구현**
+
+- S : 시작점
+- G : 도착점
+- W : 벽
+- 도착점까지 최소한으로 이동하기 위해서는 몇칸을 가야할까?
+
+<p align="center"><img src="https://user-images.githubusercontent.com/113777043/210239624-d3ebcbf1-c676-4d6d-b759-1459e9142058.png"></p>
+
+```java
+
+String[][] map = { 
+                { "S", "0", "0", "0", "W", "0", "W" }, 
+                { "W", "0", "W", "0", "0", "0", "0" },
+                { "0", "0", "0", "W", "0", "W", "0" }, 
+                { "0", "W", "W", "0", "0", "0", "0" },
+                { "0", "0", "W", "W", "0", "W", "W" }, 
+                { "W", "0", "W", "0", "0", "0", "0" },
+                { "0", "0", "0", "W", "0", "0", "G" } };
+
+        // 0. 변수 생성
+        Queue<Integer> myQ = new LinkedList<Integer>(); // 배열에 입력된 값 1,1
+        int[][] visited = new int[7][7]; // 다녀온 경로를 기억해서 무한루프를 돌지 않도록 해주는 배열(메모장)
+        int answer = 0;
+
+        // 1. 시작 노드 입력("S"=(0,0))
+        myQ.add(0); // x좌표
+        myQ.add(0); // y좌표
+        visited[0][0] = 1;
+
+        while (!myQ.isEmpty()) {
+            // 2. 큐의 맨 앞의 노드 값을 "빼서" 저장
+            int x = myQ.poll(); // x좌표
+            int y = myQ.poll(); // y좌표
+            System.out.println(myQ.toString());
+            // 3. 해당 노드에 대한 연산 수행
+
+            // 4. 인접한 노드 저장
+            // 위쪽 노드
+            if (x - 1 >= 0) { // index 범위 안에 있고
+                if (visited[x - 1][y] == 0) { // 아직 방문하지 않았고
+                    if (!"W".equals(map[x - 1][y])) { // 가고자 하는 점이 벽("W")이 아니어야함
+                        myQ.add(x - 1);
+                        myQ.add(y);
+                        visited[x - 1][y] = visited[x][y] + 1;
+                    }
+                }
+            }
+            // 아래쪽 노드
+            if (x + 1 < 7) { // index 범위 안에 있고
+                if (visited[x + 1][y] == 0) { // 아직 방문하지 않았고
+                    if (!"W".equals(map[x+1][y])) { // 가고자 하는 점이 벽("W")이 아니어야함
+                        myQ.add(x + 1);
+                        myQ.add(y);
+                        visited[x + 1][y] = visited[x][y] + 1;
+                    }
+                }
+            }
+            // 왼쪽 노드
+            if (y - 1 >= 0) { // index 범위 안에 있고
+                if (visited[x][y - 1] == 0) { // 아직 방문하지 않았고
+                    if (!"W".equals(map[x][y - 1])) { // 가고자 하는 점이 벽("W")이 아니어야함
+                        myQ.add(x);
+                        myQ.add(y - 1);
+                        visited[x][y - 1] = visited[x][y] + 1;
+                    }
+                }
+            }
+            // 오른쪽 노드
+            if (y + 1 < 7) { // index 범위 안에 있고
+                if (visited[x][y + 1] == 0) { // 아직 방문하지 않았고
+                    if (!"W".equals(map[x][y + 1])) { // 가고자 하는 점이 벽("W")이 아니어야함
+                        myQ.add(x);
+                        myQ.add(y + 1);
+                        visited[x][y + 1] = visited[x][y] + 1;
+                    }
+                }
+            }
+//          for (int i = 0; i < 7; i++) {
+//              System.out.println(Arrays.toString(visited[i]));
+//          }
+//          System.out.println("====================");
+        }
+        answer=visited[6][6];
+        System.out.println(answer); //13
+    }
+
+```
+
+<p align="center"><img src="https://user-images.githubusercontent.com/113777043/210239870-0b43278b-540c-49cd-a9a2-2609617d5cdc.png"></p>
+
+
+
+  
