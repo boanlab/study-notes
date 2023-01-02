@@ -39,11 +39,12 @@
     - 업데이트 예정
 
 - [운영체제](operating_system/README.md)
-    - [운영체제 개요](operating_system/introduction.md)
-    - [프로세스 관리](operating_system/process_mgmt.md)
-    - [프로세스 동기화](operating_system/process_sync.md)
-    - [저장장치 관리](operating_system/storage_mgmt.md)
-    - [파일 시스템](operating_system/file_system.md)
+    - [운영체제 개요](operating_system/01_overview/README.md)
+    - [프로세스 관리](operating_system/02_processManagement/README.md)
+    - [프로세스 동기화](operating_system/03_processSynchronization/README.md)
+    - [메모리 관리](operating_system/04_memoryManagement/README.md)
+    - [저장장치 관리](operating_system/05_storageManagement/README.md)
+    - [파일 시스템](operating_system/06_fileSystem/README.md)
 
 - [컴퓨터 네트워크](network/README.md)
     - [네트워크 개요](network/introduction.md)
