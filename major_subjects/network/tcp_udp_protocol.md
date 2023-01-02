@@ -14,6 +14,7 @@
 - UDP의 경우 송신할 때에 메시지의 크기가 유지되지만, 패킷이 반드시 도달한다는 보장이 없다.
 - 필요에 따라 애플리케이션의 메시지 재전송 처리가 필요하다.
 ## TCP vs UDP
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/110087065/210268931-c57e5b29-05e8-4c99-9ec1-404d7f48cb6c.png">
 
 
 # 포트 번호
