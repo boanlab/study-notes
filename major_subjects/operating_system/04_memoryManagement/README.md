@@ -207,6 +207,9 @@ First-fit과 Best-fit이 Worst-fit에 비해서는 속도나 공간 측면에서
 - 세그먼테이션에서 논리 주소 공간은 세그먼트의 집합으로 구성되며, 각 세그먼트는 이름과 길이를 가진다.
 - 사용자는 세그먼트 이름과 오프셋을 이용하여 주소를 지정한다.
 - 컴파일러가 사용자 프로그램을 번역할 때 자동적으로 세그먼트를 구성해준다.
+- Segmentation의 논리적 주소는 <segment number, offset>으로 구성되며, 각각의 segment는 base, limit, protection bit을 가지고 있다.
+- Segmentation의 장점은, paging과 마찬가지로 segment들이 연속적으로 할당될 필요가 없고, stack과 heap이 독립적으로 커질 수 있으며, segment마다 protection을 따로 수행할 수 있는 등 paging과 유사한 장점을 가지고 있다.
+- 다만, 각각의 segment는 반드시 연속적으로 할당해야 하는 단점이 있다. 
 ----
 ### 1.5.2 하드웨어
 - 세그먼트 주소와 물리적 주소 간에 매핑
