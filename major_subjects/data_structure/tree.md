@@ -3,7 +3,7 @@
 ### 정의
 - 데이터 사이의 **계층 관계**를 나타내는 자료구조
 
-![Tree 기본사진](https://user-images.githubusercontent.com/88774925/204141631-cda1b857-0927-44a7-b296-effb5d628d70.jpg)
+<p align="center"><img src="https://user-images.githubusercontent.com/88774925/204141631-cda1b857-0927-44a7-b296-effb5d628d70.jpg" width="80%"></p>
 
 #
 
@@ -52,17 +52,15 @@
   
 # 이진 트리
 
-![이진 탐색 트리](https://user-images.githubusercontent.com/113777043/204441634-c646caa7-c0e1-40c8-a541-4dfc14cd9281.png) 
-
-
-
 ### 정의
 - 이진트리는 각 노드가 최대 두 개의 자식을 갖는 트리를 뜻한다. 
 - 각 노드는 자식이 ( 0 ~ 2 ) 개만을 갖는 것이다.
 
 ## 포화 이진 트리
 
-![포화 이진 트리](../../../../../../../../tmp/img1.daumcdn.png)
+
+
+<p align="center"><img src="https://user-images.githubusercontent.com/113777043/204441634-c646caa7-c0e1-40c8-a541-4dfc14cd9281.png" width="40%"></p>
 
 ### 정의
 - 모든 레벨이 노드로 꽉 차 있는 트리를 뜻한다.
@@ -74,8 +72,7 @@
 
 ## 완전 이진 트리
 
-![완전 이진 트리](https://user-images.githubusercontent.com/113777043/204446560-db0abad9-4ad7-471c-b5ee-9f3a87601542.png)
-
+<p align="center"><img src="https://user-images.githubusercontent.com/113777043/204446560-db0abad9-4ad7-471c-b5ee-9f3a87601542.png" width="70%"></p>
 
  ### 특징
  
@@ -85,7 +82,7 @@
 
 ## 트리 순회
 
-![트리 순회 예시](https://user-images.githubusercontent.com/88774925/204142990-68222c25-c333-4222-8ca1-15067a5d239e.jpg)
+<p align="center"><img src="https://user-images.githubusercontent.com/88774925/204142990-68222c25-c333-4222-8ca1-15067a5d239e.jpg" width="80%"></p>
 
 - 전위 순회(Preorder Traversal)
   - 루트 노드를 시작으로 왼쪽 서브 트리 -> 오른쪽 서브 트리 순으로 순회
@@ -104,8 +101,7 @@
 
 ## 이진 탐색 트리
 
-![이진 탐색 트리 설명](https://user-images.githubusercontent.com/113777043/204446617-6e41aa1c-399c-4b0c-ab69-74cd20d201b6.png)
-
+<p align="center"><img src="https://user-images.githubusercontent.com/113777043/204446617-6e41aa1c-399c-4b0c-ab69-74cd20d201b6.png" width="70%"></p>
 
   - 특징
  
@@ -133,8 +129,7 @@
 
 # 경사트리
 
-![경사트리](https://user-images.githubusercontent.com/88774925/204537118-c2767d79-2af0-49f5-b6da-fc2694332031.jpg)
-
+<p align="center"><img src="https://user-images.githubusercontent.com/88774925/204537118-c2767d79-2af0-49f5-b6da-fc2694332031.jpg" width="60%"></p>
 
 - 한 쪽으로 치우친 트리
 - 경사 이진 트리일 경우 노드 수를 n개라고 할 때 트리의 높이가 n과 같게 된다. -> 시간복잡도 O(n) (이진 트리 중 효율 최악)
@@ -143,8 +138,7 @@
 
 # 히프트리
 
-![최대히프, 최소히프](https://user-images.githubusercontent.com/57708995/204731196-e3018638-d94b-43c6-9814-c4e17350ea88.jpg)
-
+<p align="center"><img src="https://user-images.githubusercontent.com/57708995/204731196-e3018638-d94b-43c6-9814-c4e17350ea88.jpg" width="80%"></p>
 
 - 일반적인 큐와 같이 맨 마지막에 삽입되고 삭제는 우선순위 큐의 형태로 삭제되는 트리
 - 부모가 자식보다 크면 최대 히프(왼쪽), 작으면 최소 히프(오른쪽)
