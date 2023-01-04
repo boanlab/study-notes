@@ -204,6 +204,8 @@ int binsearch (int data[], int n, int key) {
 ---
 ## 이진 탐색 트리 (Binary Search Tree)
 
+<p align="center"><img src="https://user-images.githubusercontent.com/113777043/204446617-6e41aa1c-399c-4b0c-ab69-74cd20d201b6.png" width="70%"></p>
+
 ### 정의
 -  이진 트리에서 어떠한 규칙에 따라 나열한 트리이다. 
     -  이 규칙은 모든 노드에 대해서 **왼쪽 노드보다 오른쪽 노드가 더 크게 나열**하는 것이다.
@@ -414,20 +416,19 @@ def delete(self, value):
 
 - Double Red 가 발생하는 경우
 
-<img src = "https://user-images.githubusercontent.com/88774925/209565551-1e5c6d0d-fa60-41b0-b697-a191e30388c4.jpg" width="900" height="375"/>
+<p align="center"><img src="https://user-images.githubusercontent.com/88774925/209565551-1e5c6d0d-fa60-41b0-b697-a191e30388c4.jpg" width="80%"></p>
 
 - 3을 삽입했더니, 2와 3부분에 Double Red 가 발생하였다.
 
 ### 1. Restructing
 
-<img src = "https://user-images.githubusercontent.com/88774925/209565720-aa5241d3-69b0-4e8a-b31a-d911914222a6.jpg" width="900" height="375"/>
+<p align="center"><img src="https://user-images.githubusercontent.com/88774925/209565720-aa5241d3-69b0-4e8a-b31a-d911914222a6.jpg" width="80%"></p>
 
 - 새로 삽입한 3의(N)의 삼촌 노드(U)가 빨간색이므로 Restructing 전략을 수행한다.
 
 1. 새로운 노드(N), 부모 노드(P), 조상 노드(G)를 오름차순으로 정렬
-    
-<img src = "https://user-images.githubusercontent.com/88774925/209565779-4608f8e0-7912-4c61-b0a8-12802755e46f.jpg" width="900" height="375"/>
 
+<p align="center"><img src="https://user-images.githubusercontent.com/88774925/209565779-4608f8e0-7912-4c61-b0a8-12802755e46f.jpg" width="80%"></p>
     
 2. 셋 중 중간 값을 부모 노드로 바꾼다. (3번 노드를 부모 노드로 재배치)
 3. 새로 부모가 된 노드를 검은색으로 , 나머지를 빨간색으로 변경
@@ -436,16 +437,13 @@ Double Red 가 모두 해결되었다.
 
 ### 2. Recoloring
 
-<img src = "https://user-images.githubusercontent.com/88774925/209565817-096dd8b8-6d65-4949-8d1b-f77cc693614f.jpg" width="900" height="375"/>
-
-
+<p align="center"><img src="https://user-images.githubusercontent.com/88774925/209565817-096dd8b8-6d65-4949-8d1b-f77cc693614f.jpg" width="80%"></p>
 
 - 새로 삽입한 3번 노드(N)의 삼촌 노드가 빨간색이므로 Recoloring 전략을 수행한다.
 
 1. 새로운 노드(N)의 부모(P)와 삼촌(U)을 검은색으로 변경, 조상(G)를 빨간색으로 변경
 
-<img src = "https://user-images.githubusercontent.com/88774925/209565825-abf9b81d-e07d-4ae4-b080-4ff2bd65ecfe.jpg" width="670" height="270"/>
-
+<p align="center"><img src="https://user-images.githubusercontent.com/88774925/209565825-abf9b81d-e07d-4ae4-b080-4ff2bd65ecfe.jpg" width="50%"></p>
 
 2. 조상(G)가 루트 노드이므로 다시 검은색으로 변경
     - 만약, 이 때 Double Red가 발생한다면 상황에 맞게 두 전략을 사용해 반복한다.
