@@ -5,15 +5,11 @@
 
 <p align="center"><img src="https://user-images.githubusercontent.com/88774925/204141631-cda1b857-0927-44a7-b296-effb5d628d70.jpg" width="80%"></p>
 
-#
-
 ### 특징
 - 노드가 N개인 트리는 항상 N-1 개의 간선(edge) 를 가진다.
 - 루트에서 어떤 노드로 가는 경로는 유일하다.
 - 루트 노드는 단 1개 뿐이다.
 - 모든 자식 노드는 한 개의 부모 노드만을 가진다.
-
-#
 
 ### 용어
 
@@ -50,8 +46,6 @@
   - 모든 노드의 차수가 n이하인 트리를 n진 트리라고 정의한다.
   - ex) 2진 트리 -> 차수가 2 이하인 트리
   
-#
-
 ## LCRS 트리 (Left Child, Right Siblings)
 
 ### 정의
@@ -70,8 +64,6 @@
 
 - 이진트리는 각 노드가 최대 두 개의 자식을 갖는 트리를 뜻한다. 
 - 각 노드는 자식이 ( 0 ~ 2 ) 개만을 갖는 것이다.
-
-#
 
 ## 포화 이진 트리
 
@@ -156,13 +148,9 @@
 - 연산자를 만나면 스택에서 두 개의 피연산자를 꺼내어 자식 노드로 연결한다.
 - 자식 노드로 연결해서 만들어진 트리는 다시 스택으로 옮긴다.
 
-#
-
 <p align="center"><img src="https://user-images.githubusercontent.com/113777043/210470202-a590529a-a6ad-44f7-b62e-eea100f06bdf.png" width="80%"></p>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/113777043/210470376-f0aad781-47a6-4cfe-8fa4-158f52d3bedb.png" width="80%"></p>
-
-#
 
 ### 장점
 
@@ -230,8 +218,6 @@ struct node *rightRotate (struct node *z) {
 }
 ```
 
-#
-
 **RR (Right Right)**
 
 - Left Rotation 수행
@@ -260,7 +246,6 @@ struct node *leftRotate (struct node *z) {
   
 }
 ```
-#
 
 **LR (Left Right)**
 
@@ -274,7 +259,6 @@ y = z->left;
 y = leftRotate(y);
 z = rightRotate(z);
 ```
-#
 
 **RL (Right Left)**
 
@@ -289,13 +273,10 @@ y = z->right;
 y = rightRotate(y);
 z = leftRotate(z);
 ```
-#
 
 ### 시간복잡도
 
 -  O(logn) (n : 노드의 개수)
-
-##
 
 ## 분리 집합
 
@@ -335,7 +316,7 @@ int find_root(int x) {
 
 
 - **Union (합집합)**
-- 
+
   - 각 두 집합의 대표 노드(루트)를 찾고 한 집합의 대표노드의 부모를 다른 집합의 대표노드로 설정
 
 <p align="center"><img src="https://user-images.githubusercontent.com/113777043/210486367-66f8e341-5596-4570-8194-c8adf81c784c.png"></p>
