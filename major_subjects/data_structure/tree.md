@@ -312,11 +312,12 @@ z = leftRotate(z);
 
 #### 연산
 
-**Find**
-- 노드 x가 어느 집합에 포함되어 있는지 찾는 메소드
-- 한 노드에 대해 Find 연산을 할 때마다 그 노드의 부모노드를 항상 root로 만들어준다.
+- **Find**
+- 
+  - 노드 x가 어느 집합에 포함되어 있는지 찾는 메소드
+  - 한 노드에 대해 Find 연산을 할 때마다 그 노드의 부모노드를 항상 root로 만들어준다.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/113777043/210489854-993f552c-6738-4cb9-9609-215f7df4e1b1.png"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/113777043/210489854-993f552c-6738-4cb9-9609-215f7df4e1b1.png" width = "80%"></p>
 
 ```c
 int find_root(int x) {
@@ -333,8 +334,9 @@ int find_root(int x) {
 ```        
 
 
-**Union (합집합)**
-- 각 두 집합의 대표 노드(루트)를 찾고 한 집합의 대표노드의 부모를 다른 집합의 대표노드로 설정
+- **Union (합집합)**
+- 
+  - 각 두 집합의 대표 노드(루트)를 찾고 한 집합의 대표노드의 부모를 다른 집합의 대표노드로 설정
 
 <p align="center"><img src="https://user-images.githubusercontent.com/113777043/210486367-66f8e341-5596-4570-8194-c8adf81c784c.png"></p>
 
