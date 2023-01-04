@@ -85,7 +85,7 @@
         - 섹터 단위
         - 블록 단위
 
-### 5. [컴퓨터 구조](5_computer_architecture.md)
+### [5. 컴퓨터 구조](5_computer_architecture.md)
 
 - 컴퓨터 시스템의 하드웨어 기본 구성요소
 
