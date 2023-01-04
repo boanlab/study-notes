@@ -60,7 +60,7 @@
 - 167.199.170.82/27 이란 주소가 있을 때, 주소의 개수, 시작 주소, 끝 주소 를 구하는 방법.
   - n = 27
   - 따라서 network mask는 11111111 11111111 11111111 11100000
-  - 주소의 개수: 2^32 - 2^n = 32
+  - 주소의 개수: 2^32 / 2^n = 32
   - 시작 주소  
   <img width="480" alt="image" src="https://user-images.githubusercontent.com/110087065/209618647-7619541a-0144-4507-be6e-bced602cf370.png">
   
@@ -88,7 +88,7 @@
   - destination IP주소가 255.255.255.255 이면 그 네트워크의 모든 호스트가 패킷을 쳐다보게된다.
   
 - loopback address
-  - 27.x.y.z 형태의 주소를 목적지 IP로 가지면, loopback address라고 부른다. loopback address를 목적지로하는 패킷은 이름에서 알 수 있듯이 나갔다가 자신에게 다시 돌아오게된다. 주로 네트워크 서비스 어플리케이션의 점검에 사용되고 흔한 loopback 주소로는 localhost를 의미하는 127.0.0.1이 있다.
+  - 127.x.y.z 형태의 주소를 목적지 IP로 가지면, loopback address라고 부른다. loopback address를 목적지로하는 패킷은 이름에서 알 수 있듯이 나갔다가 자신에게 다시 돌아오게된다. 주로 네트워크 서비스 어플리케이션의 점검에 사용되고 흔한 loopback 주소로는 localhost를 의미하는 127.0.0.1이 있다.
 
 ## 4. NAT
 - NAT(Network Address Translation)는 제한된 수의 인터넷 IPv4 주소 문제를 해결하기 위해 개발되었습니다. 여러 디바이스에서 인터넷에 액세스해야 하지만 하나의 IPv4 인터넷 주소만 ISP(인터넷 서비스 공급자)에 의해 할당되는 경우 NAT를 사용합니다.
