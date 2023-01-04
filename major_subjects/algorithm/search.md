@@ -470,7 +470,7 @@ def delete(self, value):
 
 <p align="center"><img src="https://user-images.githubusercontent.com/88774925/209565720-aa5241d3-69b0-4e8a-b31a-d911914222a6.jpg" width="80%"></p>
 
-- 새로 삽입한 3의(N)의 삼촌 노드(U)가 빨간색이므로 Restructing 전략을 수행한다.
+- 새로 삽입한 3의(N)의 삼촌 노드(U)가 검은색이므로 Restructing 전략을 수행한다.
 
 1. 새로운 노드(N), 부모 노드(P), 조상 노드(G)를 오름차순으로 정렬
 
@@ -532,11 +532,11 @@ Double Red 가 모두 해결되었다.
 
 ### 예제
 
-![트라이](sample/search/image/trie.png)
-
 - 루트 노드는 빈 문자열에 연관되므로 비어있다.
 - 주황색으로 된 노드들이 입력된 문자열이다.
-- [be, bee, can, cat, de]가 들어가 있다.
+- [be, bee, can, cat, cd]가 들어가 있다.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/113777043/210564889-b59a3f23-10e6-4531-b424-3f6be39db3e0.png" width="60%"></p>
 
 ### 장점
 
