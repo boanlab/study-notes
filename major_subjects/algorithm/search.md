@@ -470,7 +470,7 @@ def delete(self, value):
 
 <p align="center"><img src="https://user-images.githubusercontent.com/88774925/209565720-aa5241d3-69b0-4e8a-b31a-d911914222a6.jpg" width="80%"></p>
 
-- 새로 삽입한 3의(N)의 삼촌 노드(U)가 색이므로 Restructing 전략을 수행한다.
+- 새로 삽입한 3의(N)의 삼촌 노드(U)가 검은색이므로 Restructing 전략을 수행한다.
 
 1. 새로운 노드(N), 부모 노드(P), 조상 노드(G)를 오름차순으로 정렬
 
