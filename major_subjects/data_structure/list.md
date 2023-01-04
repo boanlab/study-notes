@@ -71,15 +71,15 @@
 
  - Node
 
-```
- - *Llink // 이전 노드를 가리키는 포인터
- -  Data  // 데이터를 담을 변수
- - *Rlink // 다음 노드를 가리키는 포인터
-```
+    ```
+     - *Llink // 이전 노드를 가리키는 포인터
+     -  Data  // 데이터를 담을 변수
+     - *Rlink // 다음 노드를 가리키는 포인터
+    ```
 
  - Node 추가
 
- ![image](https://user-images.githubusercontent.com/113777043/204078990-c0a340f7-0fd1-4941-96b9-a61b781034d5.png)
+    ![image](https://user-images.githubusercontent.com/113777043/204078990-c0a340f7-0fd1-4941-96b9-a61b781034d5.png)
 
     - newnode와 선행노드 연결
 
@@ -96,7 +96,7 @@
 
  - Node 삭제
 
- ![image](https://user-images.githubusercontent.com/113777043/204079011-a935fbe2-6758-4e3d-8dba-db390e3cafda.png)
+    ![image](https://user-images.githubusercontent.com/113777043/204079011-a935fbe2-6758-4e3d-8dba-db390e3cafda.png)
 
     ```
     - // 선행노드와의 연결부터 끊어준다
@@ -107,20 +107,21 @@
 ---
 
 ## 환형 연결 리스트(원형 연결 리스트)
+
 ![2-3-1](https://user-images.githubusercontent.com/57708995/204690252-68bb3a17-e739-4926-a392-e1b3fc17a54b.JPG)
 
 - Node
 
-```
- -  head // 마지막 노드를 가리키는 포인터
- -  item  // 데이터를 담을 변수
- -  head->link // 첫 번째 노드를 가리키는 포인터
-```
+    ```
+     -  head // 마지막 노드를 가리키는 포인터
+     -  item  // 데이터를 담을 변수
+     -  head->link // 첫 번째 노드를 가리키는 포인터
+    ```
 
  - Node 추가
 
- ![image](https://user-images.githubusercontent.com/57708995/204696674-fd5c00c3-3a65-4f37-85be-6f74dcddae66.png)
- ![image](https://user-images.githubusercontent.com/57708995/204696817-c8d61be5-5170-49a2-ac4e-8a4b7108f3d3.png)
+     ![image](https://user-images.githubusercontent.com/57708995/204696674-fd5c00c3-3a65-4f37-85be-6f74dcddae66.png)
+     ![image](https://user-images.githubusercontent.com/57708995/204696817-c8d61be5-5170-49a2-ac4e-8a4b7108f3d3.png)
 
     
     - 첫 번째 노드 생성
@@ -144,8 +145,9 @@
         ```
 
  - Node 삭제
+
     ```
-    Node* rpos = cur;             //소멸 대상의 주소 값을 rpos에 저장
+    Node* rpos = cur;         //소멸 대상의 주소 값을 rpos에 저장
 	LData rdata = rpos->data; //삭제할 데이터 임시 저장
 	before->link = cur->link; //소멸 대상을 리스트에서 제거
 	cur = before;             //cur이 가리키는 위치를 재조정
