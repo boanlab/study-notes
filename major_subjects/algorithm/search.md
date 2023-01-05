@@ -539,6 +539,8 @@ Double Red 가 모두 해결되었다.
 - 주황색으로 된 노드들이 입력된 문자열이다.
 - [be, bee, can, cat, cd]가 들어가 있다.
 
+**"sscannbebee"**
+
 <p align="center"><img src="https://user-images.githubusercontent.com/113777043/210564889-b59a3f23-10e6-4531-b424-3f6be39db3e0.png" width="60%"></p>
 
 ### 장점
