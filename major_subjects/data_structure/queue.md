@@ -51,7 +51,7 @@
     - is_empty : front == rear
     - 큐의 한 부분은 사용 불가 (rear + 1 자리에 front 가 있음을 판단하기 위함)
 
-    ![CircularQueue](https://user-images.githubusercontent.com/88774925/204096370-8ca1d47b-f261-4469-8b5d-0ce514da4659.jpg)
+    <img src = "https://user-images.githubusercontent.com/88774925/204096370-8ca1d47b-f261-4469-8b5d-0ce514da4659.jpg" width = "700, height = 700"/>
 
   - 장점
     - 선형 큐에 비해 상대적으로 메모리 낭비가 발생하지 않는다.
