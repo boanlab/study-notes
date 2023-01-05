@@ -57,14 +57,19 @@
  - 오퍼랜드 필드에 데이터가 저장된 위치를 명시할 때 연산에 사용할 데이터 위치를 찾는 방법을 주소 지정 방식(addressing mode)이라고 한다.
  - 즉시 주소 지정 방식(immediate addressing mode)
     - 연산에 사용할 데이터를 오퍼랜드 필드에 직접 명시하는 방식 (건너갈 필요 없음)
-    - 표현할 수 있는 데이터의 크기가 작지만, 다른 주소 지정 방식들보다 빠르다.
+    - 표현할 수 있는 데이터의 크기가 작지만, 다른 주소 지정 방식들보다 빠르다.   
+    <img src="../src/Immediate-addressing.jpg" width="300px" height="100px" title="bigpicture" alt="bigpicture"></img>
  - 직접 주소 지정 방식(direct addressing mode)
-    - 오퍼랜드 필드에 유효 주소를 직접적으로 명시하는 방식 (한 번 건너가면 접근 가능)
+    - 오퍼랜드 필드에 유효 주소를 직접적으로 명시하는 방식 (한 번 건너가면 접근 가능)   
+    <img src="../src/Direct-addressing.jpg" width="400px" height="150px" title="bigpicture" alt="bigpicture"></img>
  - 간접 주소 지정 방식(indirect addressing mode)
-    - 유효 주소의 주소를 오퍼랜드 필드에 명시 (두 번 건너가야 접근 가능)
+    - 유효 주소의 주소를 오퍼랜드 필드에 명시 (두 번 건너가야 접근 가능)   
+    <img src="../src/Indirect-addressing.jpg" width="400px" height="150px" title="bigpicture" alt="bigpicture"></img>
  - 레지스터 주소 지정 방식(register addressing mode)
     - 직접 주소 지정 방식과 비슷하게 연산에 사용할 데이터를 저장한 레지스터를 오퍼랜드 필드에 직접 명시하는 방법
-    - 메모리에 접근하는 것보다 CPU안에 있는 레지스터에 접근하는 것이 더 빠르므로 직접 주소 지정 방식보다 빠르다.
+    - 메모리에 접근하는 것보다 CPU안에 있는 레지스터에 접근하는 것이 더 빠르므로 직접 주소 지정 방식보다 빠르다.   
+    <img src="../src/Register-addressing.jpg" width="400px" height="150px" title="bigpicture" alt="bigpicture"></img>
  - 레지스터 간접 주소 지정 방식(register indirect addressing mode)
-    - 연산에 사용할 데이터를 메모리에 저장하고, 그 주소를 저장한 레지스터를 오퍼랜드 필드에 명시하는 방법
+    - 연산에 사용할 데이터를 메모리에 저장하고, 그 주소를 저장한 레지스터를 오퍼랜드 필드에 명시하는 방법   
+    <img src="../src/Register-indirect-addressing.jpg" width="400px" height="150px" title="bigpicture" alt="bigpicture"></img>
  
