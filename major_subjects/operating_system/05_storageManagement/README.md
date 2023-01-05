@@ -18,7 +18,7 @@
 
 ---
 
-## [입출력 시스템](./12_IOSystem/README.md)
+## [입출력 시스템](./12_IOSystem/READMD.md)
 
 - 개관
 
