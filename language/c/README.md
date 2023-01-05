@@ -29,7 +29,7 @@
 - [C언어 기본문법](basics/grammar.md)
 - [포인터](basics/pointer.md)
 - [문자열 처리](basics/string.md)
-- [파일 입출력](basics/file_io.md)
+- [파일 입출력](basics/file_input_output.md)
 - [동적 메모리 할당](basics/dynamic_memory.md)
 
 ## Case Study
