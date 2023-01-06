@@ -1,4 +1,4 @@
-# 특이값 분해
+# Singular Value Decomposition
 
 ## SVD란?
 
