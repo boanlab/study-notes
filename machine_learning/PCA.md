@@ -1,4 +1,4 @@
-# PCA
+# Principal Components Analysis
 
 ## PCA란?
 
