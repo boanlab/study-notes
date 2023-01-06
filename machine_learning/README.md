@@ -8,7 +8,7 @@
         - [Naive bayes](https://github.com/boanlab/study-notes/blob/main/machine_learning/Naive_Bayes.md)
         - [Logistic regression](https://github.com/boanlab/study-notes/blob/main/machine_learning/Logistic_Regression.md)
         - [SVM](https://github.com/boanlab/study-notes/blob/main/machine_learning/SVM.md)
-        - [AdaBoost] (https://github.com/boanlab/study-notes/blob/main/machine_learning/AdaBoost.md)
+        - [AdaBoost](https://github.com/boanlab/study-notes/blob/main/machine_learning/AdaBoost.md)
     - [회귀](https://github.com/boanlab/study-notes/blob/main/machine_learning/Regression.md)
         - [Linear regression]
         - [Tree-based regression]
