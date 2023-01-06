@@ -10,11 +10,11 @@
         - [SVM](https://github.com/boanlab/study-notes/blob/main/machine_learning/SVM.md)
         - [AdaBoost](https://github.com/boanlab/study-notes/blob/main/machine_learning/AdaBoost.md)
     - [회귀](https://github.com/boanlab/study-notes/blob/main/machine_learning/Regression.md)
-        - [Linear regression]
-        - [Tree-based regression]
-- [비지도학습]
-    - [K-means clustering]
+        - [Linear regression](https://github.com/boanlab/study-notes/blob/main/machine_learning/Linear_regression.md)
+        - [Tree-based regression](https://github.com/boanlab/study-notes/blob/main/machine_learning/Tree-based_regression.md)
+- [비지도학습](https://github.com/boanlab/study-notes/blob/main/machine_learning/Unsupervised_Learning.md)
+    - [K-means clustering](https://github.com/boanlab/study-notes/blob/main/machine_learning/K-means_clustering.md)
 
-- [차원축소]
-    - [Principal component analysis]
-    - [Singular value decomposition]
+- [차원축소](https://github.com/boanlab/study-notes/blob/main/machine_learning/Dimensionality_reduction.md)
+    - [PCA](https://github.com/boanlab/study-notes/blob/main/machine_learning/PCA.md)
+    - [SVD](https://github.com/boanlab/study-notes/blob/main/machine_learning/SVD.md)
