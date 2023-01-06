@@ -15,6 +15,6 @@
 - [비지도학습]
     - [K-means clustering]
 
-- [데이터 단순화]
+- [차원축소]
     - [Principal component analysis]
     - [Singular value decomposition]
