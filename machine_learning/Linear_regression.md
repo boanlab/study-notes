@@ -1,4 +1,4 @@
-# 선형 회귀
+# Linear regression
 
 ## 선형 회귀란?
 
