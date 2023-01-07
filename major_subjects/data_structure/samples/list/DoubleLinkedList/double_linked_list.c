@@ -87,9 +87,10 @@ int main() {
     for (int i=0; i<10; i++) {
         
         Insert(phead,i);
-        PrintList(phead,ptail);
 
     }
+    PrintList(phead,ptail);
+
     printf("노드 추가 : 1번 클릭\n");
     printf("노드 삭제 : 2번 클릭\n");
     scanf("%d",&select);
@@ -102,7 +103,17 @@ int main() {
         scanf("%d",&before_data);
         Node* before_node = SearchNode(phead,ptail,before_data);
         Insert(before_node, data);
+
+    }else if (select == 2) {
+
+        printf("삭제할 노드의 데이터를 입력하세요 : ");
+        scanf("%d",&data);
+        Node* delete_node = SearchNode(phead, ptail, data);
+        Delete(delete_node);
+
     }
+
+    PrintList(phead,ptail);
 
     
 }
