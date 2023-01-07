@@ -17,12 +17,23 @@
 
 ## OSI 참조 모델 각 계층의 역할
 - application layer
+  - 특정 애플리케이션에 특화된 프로토콜
 - presentation layer
+  - 기기 고유의 데이터 포맷과 네트워크 공통의 데이터 포맷 교환
 - session layer
+  - 통신의 관리
+  - 커넥션의 확립/끊기
+  - 트랜스포트층 이하의 층 관리
 - transport layer
+  - 양끝 노드 간의 데이터 전송 관리
+  - 데이터 전송의 신뢰성을 제공
 - network layer
+  - 주소 관리와 경로 선택
 - datalink layer
+  - 직접 연결된 기기 간의 데이터 프레임의 식별 및 전송
 - physical layer
+  - 0과 1을 전압의 고저나 빛의 점멸로 변환
+  - 커넥터나 케이블 모양을 규정
 
 # 네트워크의 구성 요소
 ## 통신 매체와 데이터 링크
