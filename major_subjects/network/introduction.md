@@ -15,6 +15,13 @@
 - OSI 프로토콜이란, 서로 다른 컴퓨터 간에 통신을 하기 위해 ISO가 표준화했더 네트워크 아키텍처이다.
 - OSI 참조 모델을 바탕으로 각 계층의 프로토콜과 계층 간의 인터페이스에 대한 표준을 정하였다.
 ## OSI 참조 모델 각 계층의 역할
+- application layer
+- presentation layer
+- session layer
+- transport layer
+- network layer
+- datalink layer
+- physical layer
 
 # 네트워크의 구성 요소
 ## 통신 매체와 데이터 링크
