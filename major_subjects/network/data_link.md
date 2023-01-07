@@ -34,14 +34,11 @@
 ## IEEE802.11b, IEEE802.11g
 ## IEEE802.11a
 ## IEEE802.11n
-## 무선 LAN 사용 시 주의할 점
 ## Bluetooth
 
 # 5.PPP(Point-to-Point Protocol)
 ## PPP란
 ## LCP와 NCP
-## PPP의 프레임 포맷
-## PPPoE(PPP over Ethernet)
 
 # 6.그 밖의 데이터 링크
 ## ATM
