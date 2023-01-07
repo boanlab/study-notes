@@ -1,12 +1,5 @@
-이더넷
-ieee802.11
-vlan
-ppp
-vpn
-<br/>
 
 # 1.데이터 링크의 역할
-<br/>
 
 # 2.데이터 링크의 기술
 ## MAC 주소
@@ -15,14 +8,11 @@ vpn
 ## MAC 주소에 의한 전송
 ## 루프를 검출하기 위한 기술
 ## VLAN
-<br/>
 
 # 3.이더넷(Ethernet)
 ## 이더넷의 연결 형태
 ## 이더넷의 종류
-## 이더넷의 역사
 ## 이더넷의 프레임 포맷
-<br/>
 
 # 4.무선통신
 ## 무선 통신의 종류
@@ -32,15 +22,12 @@ vpn
 ## IEEE802.11n
 ## 무선 LAN 사용 시 주의할 점
 ## Bluetooth
-## WiMax
-<br/>
 
 # 5.PPP(Point-to-Point Protocol)
-## ppp란
+## PPP란
 ## LCP와 NCP
 ## PPP의 프레임 포맷
 ## PPPoE(PPP over Ethernet)
-<br/>
 
 # 6.그 밖의 데이터 링크
 ## ATM
@@ -56,7 +43,6 @@ vpn
 ## InfiniBand
 ## DOCSIS
 ## 고속 PLC
-<br/>
 
 # 7.공중 액세스망
 ## 아날로그 전화 회선
@@ -68,5 +54,4 @@ vpn
 ## VPN
 ## 공중 무선 LAN
 ## 그 밖의 공중 통신 서비스(X.25, 프레임 릴레이, ISDN)
-<br/>
 
