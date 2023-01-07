@@ -68,6 +68,8 @@
 # TCP/IP
 ## TCP/IP 프로토콜의 계층 모델
 ### TCP/IP와 OSI 참조 모델
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/110087065/211167968-87cd638b-940a-48fc-8b82-469f1fbdc41d.png">
+
 ### 하드웨어층
 ### 데이터 링크층
 ### 인터넷층
