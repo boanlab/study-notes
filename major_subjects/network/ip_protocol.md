@@ -1,26 +1,9 @@
-ip protocol
-
-ip address
-routing
 
 class
 broadcast address
 subnet mask
 cidr / vlsm
 public / private ip address
-
-mtu
-fragment
-
-//
-
-dns
-arp
-icmp
-dhcp
-nat
-ip tunneling
-<br/>
 
 # IP는 인터넷층의 프로토콜
 ## IP는 OSI 참조 모델의 제3층에 해당
@@ -69,7 +52,6 @@ ip tunneling
 <br/>
 
 # IPv4 헤더
-<br/>
 
 # IP 관련 기술
 ## DNS
@@ -77,4 +59,5 @@ ip tunneling
 ## ICMP
 ## DHCP
 ## NAT
+## IP 터널링
 
