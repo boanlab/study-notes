@@ -76,6 +76,16 @@
 - 상위층에 의존하는 프로토콜
 - 상위층이 IP인 경우 NCP가 IPCP이다.
 - IPCP에서는 IP 주소 설정, TCP/IP 헤더를 압축할 것인지 등의 정보를 주고받는다.
+## PPP의 프레이 포맷
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/110087065/211174952-6de3cd94-9d1b-4b5e-a412-411a9692577c.png">
+– Flag (1 Byte) : PPP 프레임의 시작 지점을 나타낸다. 항상 ‘01111110’으로 고정된다.
+– Address (1 Byte) : HDLC에서 프레임 목적지 주소를 의미한다. 하지만 PPP는 두 장비간 연결이므로 의미 없는 필드다. 그래서 브로드캐스트 주소 ‘11111111’의 값으로 고정된다.
+– Control (1 Byte) : HDLC에서 여러 제어 목적에 사용되나, PPP에서는 ‘00000011’으로 고정된다.
+– Protocol (2 Byte) : 프레임 내 Information에 캡슐화된 데이터그램의 프로토콜을 식별한다. 아래에 좀 더 자세히 살펴보도록 하겠다.
+– Information (가변) : 데이터 또는 제어 정보를 포함한다.
+– Padding (가변) : PPP 프레임 크기를 맞추기 위해 더미 바이트를 추가할 수 있다.
+– FCS (2 or 4 Byte) : 전송 중 에러로부터 프레임을 보호하기 위한 방법이다. CRC checksum과 비슷하다.
+– Flag (1 Byte) : PPP 프레임의 끝 지점을 나타낸다. 항상 ‘01111110’으로 고정된다.
 
 # 6.그 밖의 데이터 링크
 ## ATM
