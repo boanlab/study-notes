@@ -328,13 +328,19 @@ class MainClass {
 ## 2D Arrays ( Two Dimensional )
 
 ```
-int[][] arr = {{1,2,3},
-               {4,5,6}};
+int[][] arr = {
+                {1,2,3},
+                {4,5,6}
+              };
 ```
 ```
 String[][] animals;
 
-stringValues = new String[][] {{"lion", "tiger"}, {"cat", "dog"}, {"fox", "wolf"}};     
+stringValues = new String[][] {
+                                {"lion", "tiger"},
+                                {"cat", "dog"},
+                                {"fox", "wolf"}
+                              };     
 ```
 
 **Row-Major**
