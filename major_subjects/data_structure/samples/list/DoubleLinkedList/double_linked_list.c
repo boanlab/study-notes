@@ -10,111 +10,168 @@ typedef struct DLL_Node {
 
 }Node;
 
-//이중 연결리스트 초기화
-void Init (Node* phead, Node* ptail) {
+Node* phead;
+Node* ptail;
+int size;
 
+//이중 연결리스트 초기화
+void Init () {
+
+    phead = (Node*)malloc(sizeof(Node));
+    ptail = (Node*)malloc(sizeof(Node));
 
     phead -> llink = phead;
     phead -> rlink = ptail;
 
+    
     ptail -> llink = phead;
     ptail -> rlink = ptail;
 
-}
-
-//이중 연결리스트 출력
-void PrintList (Node* phead, Node* ptail) {
-
-    Node* p;
-
-    for (p = phead-> rlink; p == ptail; p = p -> rlink ) {
-
-        printf(" |%d| ", p -> data);
-
-    }
-    printf("\n");
+    size = 0;
 
 }
 
 //이중 연결리스트 삽입
-void Insert (Node* before, int data) {
+int InsertAfter (int value, Node* before) {
+
+    if (before == ptail) {
+        
+        printf("꼬리 뒤에는 연결X");
+        return 0;
+
+    }
 
     Node* newnode = (Node*)malloc(sizeof(Node));
 
-    newnode -> data = data;
+    newnode -> data = value;
 
+    before -> rlink -> llink = newnode;
+    newnode -> rlink = before -> rlink;
     newnode -> llink = before;
     before -> rlink = newnode;
 
-    newnode -> rlink = before -> rlink;
-    before -> rlink -> llink = newnode;
+    size++;
+
+}
+
+int InsertBefore (int value, Node* after) {
+
+    if (after == phead) {
+
+        printf("머리 앞에는 연걸X");
+        return 0;
+
+    }
+
+    Node* newnode = (Node*)malloc(sizeof(Node));
+
+    newnode -> data = value;
+    after -> llink -> rlink = newnode;
+    newnode -> llink = after -> llink;
+    newnode -> rlink = after;
+    after -> llink = newnode;
+
+    size++;
 
 }
 
 //이중 연결리스트 삭제
-void Delete (Node* removed) {
+int DeleteNode (Node* removed) {
+
+    if (removed == phead || removed == ptail) {
+
+        printf("머리나 꼬리는 지울 수 없습니다.");
+        return 0;
+    }
 
     removed -> llink -> rlink = removed -> rlink;
     removed -> rlink -> llink = removed -> llink;
     free(removed);
+    size--;
 
 }
 
-Node* SearchNode (Node* phead, Node* ptail, int insert_data) {
+void DeleteAll () {
 
-    Node* p;
-    for (p = phead-> rlink; p == ptail; p = p -> rlink ) {
+    Node* temp = phead -> rlink;
+    Node* delete_node;
 
-        if (p -> data == insert_data) {
+    while (temp != ptail) {
 
-            return p;
-        }
+        delete_node = temp;
+        temp = temp -> rlink;
+        free(delete_node);
 
     }
+    size = 0;
+    phead -> rlink = ptail;
+    ptail -> llink = phead;
+
+    printf("Finish Delete All");
 }
+
+//value 가진 Node 찾기
+Node* SearchNode (int value) {
+
+    Node* p = phead -> rlink;
+    
+    while (p != ptail) {
+
+        if (p -> data == value) {
+
+            
+            return p;
+        }
+        p = p -> rlink;
+    }
+
+    printf("찾는 노드가 없습니다.");
+    return p;
+}
+
+//이중 연결리스트 출력
+void PrintList () {
+
+    Node* p = phead -> rlink;
+    if (p == ptail) printf("빈 리스트\n");
+
+    while (p != ptail) {
+
+        printf(" |%d| ", p -> data);
+        p = p -> rlink;
+
+    }
+    printf("\n\n");
+
+}
+
+
 
 int main() {
 
-    Node* phead = (Node*)malloc(sizeof(Node));
-    Node* ptail = (Node*)malloc(sizeof(Node));
-    int select;
-    int data;
-    int before_data;
-
-    Init(phead, ptail);
     
-    //0부터 10까지의 데이터를 가진 노드 삽입
-    for (int i=0; i<10; i++) {
-        
-        Insert(phead,i);
 
-    }
-    PrintList(phead,ptail);
+    Init();
 
-    printf("노드 추가 : 1번 클릭\n");
-    printf("노드 삭제 : 2번 클릭\n");
-    scanf("%d",&select);
+    InsertAfter(10,phead);
+    InsertAfter(20,SearchNode(10));
+    InsertAfter(30,SearchNode(20));
+    InsertAfter(40,SearchNode(30));
+    PrintList();
+    //10, 20, 30, 40
 
-    if (select == 1) {
+    DeleteNode(SearchNode(30));
+    DeleteNode(SearchNode(10));
+    PrintList();
+    //20, 40
 
-        printf("추가할 노드의 데이터를 입력하세요 : ");
-        scanf("%d",&data);
-        printf("어떤 노드의 뒤에 추가할 것인가요? ");
-        scanf("%d",&before_data);
-        Node* before_node = SearchNode(phead,ptail,before_data);
-        Insert(before_node, data);
-
-    }else if (select == 2) {
-
-        printf("삭제할 노드의 데이터를 입력하세요 : ");
-        scanf("%d",&data);
-        Node* delete_node = SearchNode(phead, ptail, data);
-        Delete(delete_node);
-
-    }
-
-    PrintList(phead,ptail);
-
+    InsertBefore(11,SearchNode(20));
+    InsertBefore(31,SearchNode(40));
+    PrintList();
+    //21,20,31,40
+    
+   
+    DeleteAll();
     
 }
 
