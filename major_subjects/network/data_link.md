@@ -158,7 +158,11 @@
 - Kornet Premium은 네트워크에서 고객에게 필요한 부가서비스를 제공하는 이더넷 서비스이다.
 - Kornet Express는 초고속 백본망으로 연결되는 Metro Ethernet 방식의 인터넷 전용 회선이다.
 - Kornet Hotline은 초고속 인터넷망과 전용 회선으로 구성된 고품질 인테넛 전용 회선이다.
-## VPN
-- 
+## VPN(Virtual Private Network)
+- 떨어진 지역을 이어주는 VPN 서비스의 예로는 IP-VAP와 광역 이더넷을 들 수 있다.
+- IP-VPN
+  - IP 네트워크로 VPN을 구축한다.
+- 광역 이더넷
+  - 통신 사업자가 제공하는 떨어진 지역을 잇는 인터넷 연결 서비스이다.
 ## 공중 무선 LAN
 - 
