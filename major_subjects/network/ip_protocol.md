@@ -78,7 +78,6 @@
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110087065/211366965-c8ce1e89-8a0c-4146-ac38-3bc99bd6a145.png">
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/110087065/211367010-3ae653b5-a97c-4f4d-8397-ce857ebcdaad.png">
 
-- 이를 통해, 클래스에 구애받지 않고 IP 주소의 네트워크부를 정할 수 있게 되었다.
 - 서브넷 마스크와 IP 주소를 AND 연산하여 네트워크 주소를 구할 수 있다.
 ## CIDR과 VLSM
 ## 글로벌 주소와 프라이빗 주소
