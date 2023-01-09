@@ -75,12 +75,11 @@
 - 서브넷 마스크는 식별자를 도입해서 IP 주소에 대한 네트워크 아이디와 호스트 아이디를 구분하기 위해 사용된다.
 - 서브 네트워크의 도입으로 IP 주소는 'IP 주소'와 '서브넷 마스크'(서브 네트워크 마스크, 넷마스크) 2개의 식별자로 표현 가능하다.
 - 서브넷 마스크는 32비트로 된 수치로, IP 주소의 네트워크를 나타내는 비트에 대응하는 부분의 비트는 1이 되고, 호스트부를 나타내는 비트에 대응하는 부분의 비트는 0이 된다.
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/110087065/211366965-c8ce1e89-8a0c-4146-ac38-3bc99bd6a145.png">
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/110087065/211367010-3ae653b5-a97c-4f4d-8397-ce857ebcdaad.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/110087065/211368671-4947134f-735a-43ba-bc9f-f01c9cdfe884.png">
 
 - 서브넷 마스크와 IP 주소를 AND 연산하여 네트워크 주소를 구할 수 있다.
-## CIDR과 VLSM
-## 글로벌 주소와 프라이빗 주소
+## CIDR, VLSM
+## Global address, Private address
 
 # 경로 제어(라우팅)
 ## IP 주소와 경로 제어(라우팅)
