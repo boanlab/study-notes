@@ -1,6 +1,6 @@
 # 프로그래밍 언어(Programming language)
 
-## 1 [프로그래밍 언어 소개](01_introduce/README.md)
+## [1. 프로그래밍 언어 소개](01_introduce/README.md)
 
 - 프로그래밍 언어란 무엇인가?
 
@@ -16,7 +16,7 @@
 
 ---
 
-## 2 [언어의 변천](02_change/README.md)
+## [2. 언어의 변천](02_change/README.md)
 
 - 디지털 컴퓨터 이전의 언어
 
@@ -42,7 +42,7 @@
 
 ---
 
-## 3 [프로그래밍 언어 설계](03_design/README.md)
+## [3. 프로그래밍 언어 설계](03_design/README.md)
 
 - 설계 기준의 역사적 변천
 
@@ -56,7 +56,7 @@
 
 ---
 
-## 4 [프로그래밍 언어의 구문과 구현 기법](04_syntax/README.md)
+## [4. 프로그래밍 언어의 구문과 구현 기법](04_syntax/README.md)
 
 - 언어 구문
 
@@ -82,7 +82,7 @@
 
 ---
 
-## 5 [컴파일러 개요](05_compiler/README.md)
+## [5. 컴파일러 개요](05_compiler/README.md)
 
 - 컴파일러 일반적 구성
 
@@ -112,7 +112,7 @@
 
 ---
 
-## 6 [변수, 바인딩, 식 및 제어문](06_variable/README.md)
+## [6. 변수, 바인딩, 식 및 제어문](06_variable/README.md)
 
 - 변수
 
@@ -170,7 +170,7 @@
 
 ---
 
-## 7 [자료형](07_data-type/README.md)
+## [7. 자료형](07_data-type/README.md)
 
 - 자료형과 형 선언
 
@@ -200,7 +200,7 @@
 
 ---
 
-## 8 [영역과 수명](08_area-life/README.md)
+## [8. 영역과 수명](08_area-life/README.md)
 
 - 블록과 영역
 
@@ -212,7 +212,7 @@
 
 ---
 
-## 9 [기억장소 배당](09_memory-space/README.md)
+## [9. 기억장소 배당](09_memory-space/README.md)
 
 - 정적 및 동적 기억장소 배당
 
@@ -232,7 +232,7 @@
 
 ---
 
-## 10 [부프로그램](10_supplementary-program/README.md)
+## [10. 부프로그램](10_supplementary-program/README.md)
 
 - 매개변수 평가와 전달 기법
 

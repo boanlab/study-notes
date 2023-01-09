@@ -6,11 +6,11 @@
 
 - 모든 프로그래밍 언어는 알파벳에 기본을 두고 있음
 
-    - 두 개의 문자 코드를 사용함
+    - 문자 코드를 사용함
 
-        - EBCDIC(Extended Binary Coded Decimal Interchange Code) - 8비트 조합
+        - `EBCDIC`(Extended Binary Coded Decimal Interchange Code) - 8비트 조합
 
-        - ASCII(American Standard Code for Information Interchange) - 7비트 조합
+        - `ASCII`(American Standard Code for Information Interchange) - 7비트 조합
 
         - 각 국가 문자 코드 문제를 위한 `유니코드`도 등장
 
@@ -42,13 +42,13 @@
 
 - 언어 구문의 형식 정의 : 그 언어를 가지고 정상적인 프로그램을 작성하는 규율들의 집합
 
-    - 때로는 순서도를 가지고 표현함
+    - 그 언어로 어떤 표현이 사용 가능하고 불가능한지 정확히 이해할 수 있음
 
 - BNF(Backus-Naur Form)
 
     - 구문 형식을 정의하는 가장 보편적인 기법
 
-    - 이후 확장한 EBNF 사용
+    - 이후 확장된 EBNF 사용
 
     - 한 언어의 구문에 대한 BNF 정의는 생성규칙들의 집합
 
@@ -81,7 +81,7 @@
 
 ### 구문 도표
 
-- 형태는 순서도와 비슷
+- 구문 형식 정의를 하는 다른 방법으로 형태는 순서도와 비슷
 
 - 다시 정의될 대상은 네모칸
 
@@ -95,10 +95,9 @@
     |원|단말 기호|
     |화살표|기호 연결|
     
-![img](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F21205B4F55D8780F02)
-![img](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F210CF75055D8785629)
-![img](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F234A1C3455D879010D)
-![img](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F257A633A55D8796B08)
+    ![img](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F21205B4F55D8780F02)
+    ![img](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F210CF75055D8785629)
+    ![img](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F234A1C3455D879010D)
 
 ### 파스 트리와 추상 구문 트리
 
@@ -132,7 +131,7 @@
 
     - 프로그램의 문서화에 많은 도움을 줌
 
-- 놀람 최소의 법칙을 위반한 예시들
+- 프로그램 신뢰성을 위반한 예시들
 
     ```
     A = B = C;
@@ -174,7 +173,7 @@
 
     - 링커(linker)
 
-        - 재배치 형태의 기계어로 된 여허 개의 프로그램을 묶어 로드 모듈이라는 어느 정도 실행 가능한 기계어로 변역해주는 번역기
+        - 재배치 형태의 기계어로 된 여러 개의 프로그램을 묶어 로드 모듈이라는 어느 정도 실행 가능한 기계어로 변역해주는 번역기
 
     - 로더(loader)
 
