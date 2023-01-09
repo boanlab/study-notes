@@ -39,10 +39,11 @@
 ## IP 주소란
 - IP 주소는 32비트의 정수 수치로 나타낸다
 - TCP/IP로 통신할 경우 IP 주소를 각각의 호스트에 할당해야 한다.
-<img width="360" alt="image" src="https://user-images.githubusercontent.com/110087065/211354755-2e467455-1fae-4d1e-8ba5-d577c781977c.png">
-
 - IP 주소는 컴퓨터 내부에서 이진수로 처리되는데 사람이 이해하기 쉽도록 32비트의 IP 주소를 8비트씩 4그룹으로 나누어 그 경계에 피리어드(.)을 넣은 후 십진수로 표현할 수 있다.
+<img width="360" alt="image" src="https://user-images.githubusercontent.com/110087065/211355118-eccb271c-e068-424e-8cd4-47eddfbbd1c6.png">
+
 - IP 주소로 표현할 수 있는 조합 가능한 수는 2^32개 즉,4,294,967,296개이다.
+- IP 주소는 NIC 별로 할당하고, 한 NIC에 여러 개의 IP 주소를 할당할 수 있기 때문에 약 43억개의 IP 주소는 부족하다.
 ## IP 주소는 네트워크부와 호스트부로 구성된다.
 ## IP 주소의 클래스
 ## 브로드캐스트 주소
