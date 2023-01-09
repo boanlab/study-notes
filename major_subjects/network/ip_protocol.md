@@ -1,26 +1,9 @@
-ip protocol
-
-ip address
-routing
 
 class
 broadcast address
 subnet mask
 cidr / vlsm
 public / private ip address
-
-mtu
-fragment
-
-//
-
-dns
-arp
-icmp
-dhcp
-nat
-ip tunneling
-<br/>
 
 # IP는 인터넷층의 프로토콜
 ## IP는 OSI 참조 모델의 제3층에 해당
@@ -36,7 +19,7 @@ ip tunneling
 
 # IP 주소 기초 지식
 ## IP 주소란
-## IP 주소는 네트워크부와 호스트불 구성된다.
+## IP 주소는 네트워크부와 호스트부로 구성된다.
 ## IP 주소의 클래스
 ## 브로드캐스트 주소
 ## IP 멀티캐스트
@@ -69,11 +52,6 @@ ip tunneling
 <br/>
 
 # IPv4 헤더
-<br/>
-
-# IPv6의 헤더 포맷
-## IPv6 확장 헤더
-<br/>
 
 # IP 관련 기술
 ## DNS
@@ -82,5 +60,4 @@ ip tunneling
 ## DHCP
 ## NAT
 ## IP 터널링
-## 기타 IP 관련 기술
 
