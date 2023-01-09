@@ -1,21 +1,13 @@
 
-class
-broadcast address
-subnet mask
-cidr / vlsm
-public / private ip address
-
 # IP는 인터넷층의 프로토콜
 ## IP는 OSI 참조 모델의 제3층에 해당
 ## 네트워크층과 데이터 링크층의 관계
-<br/>
 
 # IP 기초 지식
 ## IP 주소는 네트워크층의 주소
 ## 경로 제어(라우팅)
 ## 데이터 링크의 추상화
 ## IP는 connectionless
-<br/>
 
 # IP 주소 기초 지식
 ## IP 주소란
@@ -26,19 +18,16 @@ public / private ip address
 ## 서브넷 마스크
 ## CIDR과 VLSM
 ## 글로벌 주소와 프라이빗 주소
-## 글로벌 IP 주소는 누가 정하나?
 <br/>
 
 # 경로 제어(라우팅)
 ## IP 주소와 경로 제어(라우팅)
 ## 경로 제어표의 집약
-<br/>
 
 # IP의 분할 처리와 재구축 처리
 ## 데이터 링크에 따라 MTU가 다르다.
 ## IP 데이터그램의 분하 처리와 재구축 처리
 ## 경로 MTU 탐색
-<br/>
 
 # IPv6
 ## IPv6가 필요한 이유
