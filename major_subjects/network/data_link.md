@@ -76,7 +76,7 @@
 - 상위층에 의존하는 프로토콜
 - 상위층이 IP인 경우 NCP가 IPCP이다.
 - IPCP에서는 IP 주소 설정, TCP/IP 헤더를 압축할 것인지 등의 정보를 주고받는다.
-## PPP의 프레이 포맷
+## PPP의 프레임 포맷
 <img width="450" alt="image" src="https://user-images.githubusercontent.com/110087065/211174952-6de3cd94-9d1b-4b5e-a412-411a9692577c.png">
 – Flag (1 Byte) : PPP 프레임의 시작 지점을 나타낸다. 항상 ‘01111110’으로 고정된다.<br/>
 – Address (1 Byte) : HDLC에서 프레임 목적지 주소를 의미한다. 하지만 PPP는 두 장비간 연결이므로 의미 없는 필드다. 그래서 브로드캐스트 주소 ‘11111111’의 값으로 고정된다.<br/>
