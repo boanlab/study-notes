@@ -195,9 +195,15 @@ EX) 1080:0:0:0:0:8:800:200C:417A -> 1080::8:800:200C:417A
 
 
 # IP 관련 기술
-## DNS
-## ARP
-## ICMP
+## DNS(Domain Name System)
+- 영문/한글 주소를 IP 네트워크에서 찾아갈 수 있는 IP로 변환해 준다.
+- EX) www.naver.com 이라는 문자로 이루어진 주소를 IP 주소로 변경하여 목적지로 찾아가게 만들어주는 시스템
+## ARP(Address Resolution Protocol)
+- 네트워크 계층 주소와 링크 계층 주소 사이의 변환을 담당하는 프로토콜
+- ARP는 네트워크 계층 주소(IP 주소)를 물리 주소(MAC 주소)로 변환하기 위해 사용된다. 
+## ICMP(Internet Control Mesaage Protocol)
+- ICMP는 인터넷 환경에서 오류에 관한 처리를 지원하는 용도로 사용된다.
+- TCP/IP 기반 통신망에서 전송 과정에 문제가 발생 시, 라우터에 의해 ICMP 메시지가 발생하여 패킷 송신 호스트에게 전달된다.
 ## DHCP
 ## NAT
 ## IP 터널링
