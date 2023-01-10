@@ -134,6 +134,10 @@
 - 경로 MTU 탐색은 경로 MTU를 발견하고 송신처 호스트에서 경로 MTU의 크기로 데이터를 분할한 후 송신하는 방법이다.
 
 
+# IPv4 헤더
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/110087065/211481790-672575c8-18c2-4229-b171-a3136e390796.png">
+
+
 # IPv6
 ## IPv6의 특징
 ## IPv6에서의 IP 주소 표기 방법
@@ -142,10 +146,7 @@
 ## 링크 로컬 유니캐스트 주소
 ## 유니크 로컬 주소
 ## IPv6에서의 분할 처리
-<br/>
 
-# IPv4 헤더
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/110087065/211481790-672575c8-18c2-4229-b171-a3136e390796.png">
 
 # IP 관련 기술
 ## DNS
