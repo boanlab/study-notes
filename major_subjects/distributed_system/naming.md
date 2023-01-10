@@ -121,7 +121,7 @@ Human Readable names를 사용한다
 
             no outgoing edges
 
-            contains infromation on an entity
+            contains information on an entity
 
     - Path name
         - Absolute path name
