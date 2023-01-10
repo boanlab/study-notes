@@ -107,127 +107,127 @@ Flat names(Identifiers) :
     
 Human Readable names를 사용한다
 
-    - Name space
-        - 이름 서비스에서 인식하는 모든 유효한 이름의 모음
-        - 두가지 유형의 노드가 있는 레이블이 지정된 방향 그래프로 표시됨
-        - Naming graph
+- Name space
+    - 이름 서비스에서 인식하는 모든 유효한 이름의 모음
+    - 두가지 유형의 노드가 있는 레이블이 지정된 방향 그래프로 표시됨
+    - Naming graph
 
-            <img src="naming/7.png" width="500"/>
+        <img src="naming/7.png" width="500"/>
 
-            - A graph in which a leaf node represents a named entity
-            - A directory node is an entity that refers to other nodes
-            - Directory node (= Context node) : (node id, edge label)쌍의 디렉토리 테이블을 포함한다
-            - Leaf node (= Regular node) :
+        - A graph in which a leaf node represents a named entity
+        - A directory node is an entity that refers to other nodes
+        - Directory node (= Context node) : (node id, edge label)쌍의 디렉토리 테이블을 포함한다
+        - Leaf node (= Regular node) :
 
-                no outgoing edges
+            no outgoing edges
 
-                contains infromation on an entity
+            contains infromation on an entity
 
-        - Path name
-            - Absolute path name
-            - Relative path name
-        - Name Resolution
-            - Linking
-            - Mounting
+    - Path name
+        - Absolute path name
+        - Relative path name
+    - Name Resolution
         - Linking
-            - Hard links
-                - 이름이 바로 context를 가리킴
-                - 네이밍 크래프의 특정 경로를 따라 한 노드에서 다른 노드로 가는 이름
-            - 소프트링크
-                - Allow a node N to contain in a name of another node
-
-            <img src="naming/8.png" width="500"/>
-
         - Mounting
-            - 마운트 포인트를 사용하여 다름 네임스페이스에 접근을 할 수 있다.
-            - 이름 확인(name resolution)을 사용하여 다른 이름 공간을 병합(merge)할 수 있음.
-            - Mounting remote name spaces through a specific access protocol
+    - Linking
+        - Hard links
+            - 이름이 바로 context를 가리킴
+            - 네이밍 크래프의 특정 경로를 따라 한 노드에서 다른 노드로 가는 이름
+        - 소프트링크
+            - Allow a node N to contain in a name of another node
 
-                <img src="naming/9.png" width="500"/>
+        <img src="naming/8.png" width="500"/>
 
-        - Name-space Implementation
-            - 네이밍 그래프의 노드를 분산하여 이름 확인 프로세스와 이름 공간 관리를 여러 시스템에 분산합니다.
-            - Desirable properties
-                1. Scalable
-                2. Long lifetime
-                3. High availability
-                4. Fault isolation
-                5. Tolerance of mistrust
-            - Design considerations
-                - Bindings
+    - Mounting
+        - 마운트 포인트를 사용하여 다름 네임스페이스에 접근을 할 수 있다.
+        - 이름 확인(name resolution)을 사용하여 다른 이름 공간을 병합(merge)할 수 있음.
+        - Mounting remote name spaces through a specific access protocol
 
-                : 분산 시스템이 더 동적이기 때문에 바인딩 시간을 완화합니다
+            <img src="naming/9.png" width="500"/>
 
-                : 가능한 경우 자주 사용하는 바인딩을 캐시하고 사용 시 업데이트 합니다
+    - Name-space Implementation
+        - 네이밍 그래프의 노드를 분산하여 이름 확인 프로세스와 이름 공간 관리를 여러 시스템에 분산합니다.
+        - Desirable properties
+            1. Scalable
+            2. Long lifetime
+            3. High availability
+            4. Fault isolation
+            5. Tolerance of mistrust
+        - Design considerations
+            - Bindings
 
-                - Name resolution
+            : 분산 시스템이 더 동적이기 때문에 바인딩 시간을 완화합니다
 
-                : 이름 서버는 일반적으로 가용성과 안정성을 위해 복제됩니다
+            : 가능한 경우 자주 사용하는 바인딩을 캐시하고 사용 시 업데이트 합니다
 
-                : 순수한 이름은 네트워크 크기를 고려하여 신중하게 사용해야 합니다
+            - Name resolution
 
-                - Consistency
+            : 이름 서버는 일반적으로 가용성과 안정성을 위해 복제됩니다
 
-                    절대적으로 정확한 결과보다 접근성이 더 중요하다고 생각합니다
+            : 순수한 이름은 네트워크 크기를 고려하여 신중하게 사용해야 합니다
 
-                - Scalability
+            - Consistency
 
-                    이름 공간의 크기가 얻기 쉽다고 가정하지 말것
+                절대적으로 정확한 결과보다 접근성이 더 중요하다고 생각합니다
 
-            - Name space Implementation
-                - 대규모 이름 공간을 일반적으로 계층적으로 구성됩니다
-                - 네임 스페이스를 논리적 계층으로 분할하여 효과적으로 구현한다
-                - 세가지 수준을 구별
-                1. Global layer
+            - Scalability
 
-                    : 상위 수준 디렉토르 노드로 구성 됨.
+                이름 공간의 크기가 얻기 쉽다고 가정하지 말것
 
-                    : 주요 측면은 이러한 디렉토리 노드가 서로 다른 관리 기관에서 공동으로 관리해야 한다는 것이다
+        - Name space Implementation
+            - 대규모 이름 공간을 일반적으로 계층적으로 구성됩니다
+            - 네임 스페이스를 논리적 계층으로 분할하여 효과적으로 구현한다
+            - 세가지 수준을 구별
+            1. Global layer
 
-                    관리적 측면 : 변경 사항이 있고, 많은 수의 사용자가 있다
+                : 상위 수준 디렉토르 노드로 구성 됨.
 
-                    → 하위 수준에서 캐시 가능 - 성능은 상대적으로 중요하지 않을 수 있음
+                : 주요 측면은 이러한 디렉토리 노드가 서로 다른 관리 기관에서 공동으로 관리해야 한다는 것이다
 
-                    → 안정성 및 고가용성은 중요함 - 복제
+                관리적 측면 : 변경 사항이 있고, 많은 수의 사용자가 있다
 
-                2. Administrational layer
+                → 하위 수준에서 캐시 가능 - 성능은 상대적으로 중요하지 않을 수 있음
 
-                    : 각 그룹을 별도의 관리에 할당할 수 있는 방식으로 그룹화 할 수 있는 중간 수준 디렉토리 노드를 포함한다.
+                → 안정성 및 고가용성은 중요함 - 복제
 
-                    관리적 측면 : 글로벌 수준 노드보다 상대적으로 안정적이지만 더 자주 변경된다.
+            2. Administrational layer
 
-                    → 글로벌 계층과 유사한 가용성 및 성능 요구 사항
+                : 각 그룹을 별도의 관리에 할당할 수 있는 방식으로 그룹화 할 수 있는 중간 수준 디렉토리 노드를 포함한다.
 
-                3. Managerial layer
+                관리적 측면 : 글로벌 수준 노드보다 상대적으로 안정적이지만 더 자주 변경된다.
 
-                    : 단일 관리 내의 하위 수준 디렉토리 노드로 구성된다.
+                → 글로벌 계층과 유사한 가용성 및 성능 요구 사항
 
-                    : 주요 문제는 디렉토리 노드를 로컬 이름 서버에 효과적으로 매핑하는 것이다.
+            3. Managerial layer
 
-                    관리적 측면 : 잦은 변경과 높은 접속률
+                : 단일 관리 내의 하위 수준 디렉토리 노드로 구성된다.
 
-                    → 가용성 요구 사항은 적지만, 즉각적인 대응이 필요함.
+                : 주요 문제는 디렉토리 노드를 로컬 이름 서버에 효과적으로 매핑하는 것이다.
+
+                관리적 측면 : 잦은 변경과 높은 접속률
+
+                → 가용성 요구 사항은 적지만, 즉각적인 대응이 필요함.
 
 
-                → 변화를 얼마나 더 잘 수용가능한가? 상대적으로 비교할 수 있음
+            → 변화를 얼마나 더 잘 수용가능한가? 상대적으로 비교할 수 있음
 
-        - Name Resolution 2가지 탐색 방법
-            - Iterative Name Resolution
+    - Name Resolution 2가지 탐색 방법
+        - Iterative Name Resolution
 
-                <img src="naming/10.png" width="500"/>
+            <img src="naming/10.png" width="500"/>
 
-                <img src="naming/11.png" width="500"/>
+            <img src="naming/11.png" width="500"/>
 
-            - Recursive Name Resolution
+        - Recursive Name Resolution
 
-                <img src="naming/12.png" width="500"/>
+            <img src="naming/12.png" width="500"/>
 
-                <img src="naming/13.png" width="500"/>
+            <img src="naming/13.png" width="500"/>
 
-            - 만약 클라이언트와 서버의 사이가 멀다면 재귀가 효율적일 수 있다
-            - 만약 클라이언트와 서버의 사이가 가깝다면 반복이 더 효율적일 수 도 있다
+        - 만약 클라이언트와 서버의 사이가 멀다면 재귀가 효율적일 수 있다
+        - 만약 클라이언트와 서버의 사이가 가깝다면 반복이 더 효율적일 수 도 있다
 
-                <img src="naming/14.png" width="500"/>
+            <img src="naming/14.png" width="500"/>
 
 - Attribute-based Naming 속성 기반 네이밍
     - 대부분의 경우 속성을 사용하여 엔터티 이름을 지정하고 조회하는 것이 훨신 더 편리하다.
