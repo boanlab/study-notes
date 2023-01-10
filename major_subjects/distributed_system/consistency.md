@@ -121,7 +121,7 @@
     - 한 프로세스에서 x에 대해 먼저 읽고, 이후에 x에 썼다면 x에 인과관계가 생김. 이후의 프로세스들에는 이후에 x에 썼던 값을 읽어야 함.
     - R → W : 인과관계 발생, 이후의 R는 W에 의해 정해진다.
         
-        <img src="consistency/17.png" width="500"/>
+        <img src="consistency/17.jpeg" width="500"/>
         
 - *FIFO Consistency*
     - Removed the requirement that causally-related writes must be seen in the same order by all processes
@@ -129,7 +129,7 @@
         - Writes done by a single process are seen by all other processes in the order in which they were issued
         - Writes from different processes may be seen in a different order by different processes
         
-        <img src="consistency/3.jpeg" width="500"/>
+        <img src="consistency/3.png" width="500"/>
         
 
 ### Weak Consistency models
