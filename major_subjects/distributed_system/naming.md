@@ -105,7 +105,7 @@ Flat names(Identifiers) :
 
 ### Structured Naming
     
-    Human Readable names를 사용한다
+Human Readable names를 사용한다
         
         - Name space
             - 이름 서비스에서 인식하는 모든 유효한 이름의 모음
