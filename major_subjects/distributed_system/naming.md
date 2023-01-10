@@ -104,8 +104,8 @@ Flat names(Identifiers) :
             5. 노드는 레코드를 생성하고 주소를 저장한다
 
 ### Structured Naming
-        
-        Human Readable names를 사용한다
+    
+    Human Readable names를 사용한다
         
         - Name space
             - 이름 서비스에서 인식하는 모든 유효한 이름의 모음
