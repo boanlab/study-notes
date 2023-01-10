@@ -102,7 +102,7 @@ Flat names(Identifiers) :
             3. 노드는 E에 대해 알고있으면 요청이 더이상 전달되지 않는다
             4. 노드는 레코드를 생성하고 포인터를 저장한다
             5. 노드는 레코드를 생성하고 주소를 저장한다
-    - Structured Naming
+ ###Structured Naming
         
         Human Readable names를 사용한다
         
