@@ -145,6 +145,8 @@
 <br/>
 
 # IPv4 헤더
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/110087065/211481296-6d489681-abfa-4195-bde5-7a8d46e05695.png">
+
 
 # IP 관련 기술
 ## DNS
