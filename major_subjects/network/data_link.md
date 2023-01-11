@@ -76,6 +76,7 @@
 - 상위층에 의존하는 프로토콜
 - 상위층이 IP인 경우 NCP가 IPCP이다.
 - IPCP에서는 IP 주소 설정, TCP/IP 헤더를 압축할 것인지 등의 정보를 주고받는다.
+- IPCP : PPP 프로토콜에서 IP 에 연관되는 네트워크 제어 프로토콜(NCP)
 ## PPP의 프레임 포맷
 <img width="450" alt="image" src="https://user-images.githubusercontent.com/110087065/211174952-6de3cd94-9d1b-4b5e-a412-411a9692577c.png">
 – Flag (1 Byte) : PPP 프레임의 시작 지점을 나타낸다. 항상 ‘01111110’으로 고정된다.<br/>
