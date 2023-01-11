@@ -202,7 +202,7 @@ for ( Phone phones : Phone.values()){
 ```java
 Phone phone = Phone.IPHONE;
 
-phone.ordinal() 
+phone.ordinal() // 인덱스 출력
 // 1
 ```
 
