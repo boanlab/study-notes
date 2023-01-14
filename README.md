@@ -87,7 +87,12 @@
     - [네트워크 보안](major_subjects/network/security.md)
 
 - [데이터베이스](major_subjects/database/README.md)
-    - 업데이트 예정
+    - [데이터베이스 개론](major_subjects/database/database_environment.md)
+    - [관계형 데이터베이스](major_subjects/database/relational_database.md)
+    - [SQL](major_subjects/database/SQL.md)
+    - [정규화](major_subjects/database/normalization.md)
+    - [데이터 모델링](major_subjects/database/database_modeling.md)
+    - [NOSQL](major_subjects/database/NOSQL.md)
 
 - [분산시스템](major_subjects/distributed_system/README.md)
     - [Introduction](major_subjects/distributed_system/introduction.md)
